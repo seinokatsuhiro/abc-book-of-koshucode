@@ -1,5 +1,6 @@
 # D. 計算式の名前
 
+
 入力データから種類 `ABC` の判断を読み込み、
 それに項目 `/d` を追加し、種類 `ABCD` の判断として
 出力するという計算式は、つぎのように書けます。
@@ -57,8 +58,14 @@ $ koshu D.k
 |-- ABCD  /d 10  /a 3  /b 2  /c 5
 |-- ABCD  /d 14  /a 4  /b 7  /c 3
 |-- ABCD  /d 16  /a 2  /b 7  /c 7
-**  (5 judges)
+
+
+**  
+**  SUMMARY
+**       5 judges on ABCD
+**       5 judges in total
+**
 ```
 
-[D.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/D/D.k
+[D.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/D/D.k
 

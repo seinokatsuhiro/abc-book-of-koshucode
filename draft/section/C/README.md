@@ -1,10 +1,11 @@
 # C. 判断集合
 
+
 前節では、ひとつの判断とひとつの計算式を含んだデータを扱いました。
 この節では、判断を複数に増やしてみましょう。
-複数の判断をまとめた単位を判断集合とよぶことがあります。
+複数の判断をまとめた単位を **判断集合** とよぶことがあります。
 
-```
+``` text
 |-- ABC  /a 1  /b 2  /c 3
 |-- ABC  /a 1  /b 4  /c 5
 |-- ABC  /a 3  /b 2  /c 5
@@ -21,7 +22,7 @@
 2 回目は 1 回目とまったく同じで、
 3 回目は項目の並び順が異なっています。
 判断の項目は、その位置ではなく、名前によって参照されるため、
-3 回目も同じ判断になります。
+3 回目も同じ判断をあらわします。
 同じ判断は何回書かれていても、
 1 回書かれた場合と同じように取り扱われます。
 
@@ -44,7 +45,7 @@ $ koshu C.k
 項目 `/d` が追加された判断が出力されます。
 同じ判断が複数あっても 1 回しか出力されません。
 
-```
+``` text
 ** -*- koshu -*-
 **  
 **  INPUT
@@ -56,8 +57,15 @@ $ koshu C.k
 |-- ABCD  /d 10  /a 3  /b 2  /c 5
 |-- ABCD  /d 14  /a 4  /b 7  /c 3
 |-- ABCD  /d 16  /a 2  /b 7  /c 7
-**  (5 judges)
+
+
+**  
+**  SUMMARY
+**       5 judges on ABCD
+**       5 judges in total
+**
 ```
 
-[C.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/C/C.k
+
+[C.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/C/C.k
 

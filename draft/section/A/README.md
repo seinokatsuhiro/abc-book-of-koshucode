@@ -15,20 +15,20 @@
 数の計算を行う記号法が発達するまで、
 1000 年以上の歳月を要しています。
 
-この本では、甲州記法とよばれるデータをあらわす体系を紹介します。
+この本では、 **甲州記法** とよばれるデータをあらわす体系を紹介します。
 甲州記法は、人間とコンピュータが関係型データを
 読み・書き・計算するための表記法です。この表記法は、
 算術の体系がそうであるように、関係型データを書く方法と、
 その計算式を書く方法が含まれています。
 
-甲州記法の計算を実行する処理系を甲州計算機とよびます。
+甲州記法の計算を実行する処理系を **甲州計算機** とよびます。
 この本で使う `koshu` というコンピュータ・プログラムは
 甲州計算機のひとつです。`koshu` は、オープンソース・ソフトウェアで、
 無料で入手でき、だれでも利用できます。
 
-- [GitHub][GitHub] からダウンロードして、自身でビルドするか、
+- [GitHub][koshucode] からダウンロードして、自身でビルドするか、
 
-- Windows 向けにビルド済みの [プログラム][koshu.zip] をダウンロードできます。
+- Windows 向けにビルド済みの [プログラム][preview] をダウンロードできます。
 
 このプログラムをインストールしたら、
 コマンドが正常に動作するか確認してください。
@@ -56,6 +56,6 @@ $ koshu
 ```
 
 
-[GitHub]: https://github.com/seinokatsuhiro/koshucode
-[koshu.zip]: https://github.com/seinokatsuhiro/koshucode/archive/preview.zip
+[koshucode]: https://github.com/seinokatsuhiro/koshucode
+[preview]: https://github.com/seinokatsuhiro/koshucode/archive/preview.zip
 

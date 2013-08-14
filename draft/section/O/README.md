@@ -134,5 +134,5 @@ affirm PICK-NON  index | pick
 つぎの節では、このような無項関係について調べましょう。
 
 
-[O.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/O/O.k
+[O.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/O/O.k
 

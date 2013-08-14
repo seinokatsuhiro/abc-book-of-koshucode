@@ -1,5 +1,6 @@
 # I. 関係写像演算子
 
+
 甲州記法では、`add` や `+` のような演算子を使って、
 データの計算を表現します。
 たとえば、[`B.k`][B.k] や [`C.k`][C.k] の計算式
@@ -20,7 +21,7 @@ affirm ABCD
 
 `/a + /b = /c` などの式の `=` や、
 等しくない `<>`、大きい `<` などは、
-一般的に、**関係演算子** とよばれます。
+一般的に、 **関係演算子** とよばれます。
 これは、`/a + /b` と `/c` というふたつの式の間に
 どのような関係が成り立つかどうかを表現するからです。
 これに対して、関係写像演算子は、
@@ -69,7 +70,8 @@ affirm ABCD
 |-- ROP  /rop 'source      /desc '判断集合を関係として読み出す
 ```
 
-[B.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/B/B.k
-[C.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/C/C.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/ROP.k
+
+[B.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/B/B.k
+[C.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/C/C.k
+[ROP.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/ROP.k
 

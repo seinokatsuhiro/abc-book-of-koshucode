@@ -1,5 +1,6 @@
 # E. 条件による選択
 
+
 この節では、特定の条件をみたすデータを選び出すという計算を行います。
 例として、つぎの判断集合から、項目 `/a` と `/b`
 がそれぞれ `1` と `2` である判断を選びます。
@@ -29,12 +30,7 @@ affirm ABC2 abc2
 ```
 
 このデータと計算式を [`E.k`][E.k] というファイルに保存して、
-甲州計算機を実行すると、
-
-``` sh
-koshu E.k
-```
-
+`koshu E.k` で甲州計算機を実行すると、
 ひとつの判断だけが出力されます。
 
 ``` text
@@ -45,7 +41,12 @@ koshu E.k
 **    
 
 |-- ABC2  /a 1  /b 2  /c 3
-**  (1 judge)
+
+**  
+**  SUMMARY
+**       1 judge  on ABC2
+**       1 judge  in total
+**
 ```
 
 
@@ -99,7 +100,7 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 
 項目 `/d` は真か偽をあらわす
 `#true` か `#false` になります。
-真　`#true`　は、特定の `/a` と `/b` に対して、
+真 `#true` は、特定の `/a` と `/b` に対して、
 `/a = 1 or /b = 2` という式が成り立つこと、あるいは、正しいこと、
 偽 `#false` は、この式が成り立たないこと、
 あるいは、間違っていることをあらわします。
@@ -113,8 +114,9 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 |-- ABCD  /d #false  /a 2  /b 7  /c 7
 ```
 
-[E.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/E/E.k
-[E2.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/E/E2.k
-[E3.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/E/E3.k
-[E4.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/E/E4.k
+
+[E.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E.k
+[E2.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E2.k
+[E3.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E3.k
+[E4.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E4.k
 
