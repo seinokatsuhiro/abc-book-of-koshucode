@@ -115,8 +115,8 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 ```
 
 
-[E.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E.k
-[E2.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E2.k
-[E3.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E3.k
-[E4.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/E/E4.k
+[E.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/E/E.k
+[E2.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/E/E2.k
+[E3.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/E/E3.k
+[E4.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/E/E4.k
 

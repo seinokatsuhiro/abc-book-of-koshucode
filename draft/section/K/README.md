@@ -104,6 +104,6 @@ $ koshu K.k ../ROP.k
 ```
 
 
-[K.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/K/K.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/ROP.k
+[K.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/K/K.k
+[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/ROP.k
 

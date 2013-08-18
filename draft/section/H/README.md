@@ -162,5 +162,5 @@ affirm ABC
 ```
 
 
-[H.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/H/H.k
+[H.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/H/H.k
 

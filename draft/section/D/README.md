@@ -67,5 +67,5 @@ $ koshu D.k
 **
 ```
 
-[D.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/D/D.k
+[D.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/D/D.k
 

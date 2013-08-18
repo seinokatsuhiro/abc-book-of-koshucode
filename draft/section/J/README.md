@@ -62,7 +62,7 @@ $ koshu ../ROP.k J.k
 ファイルを与える順番を変えても、すべて同じ結果になります。
 
 
-[F.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/F/F.k
-[J.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/J/J.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/ROP.k
+[F.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/F/F.k
+[J.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/J/J.k
+[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/ROP.k
 

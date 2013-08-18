@@ -164,5 +164,5 @@ $ koshu M.k
 ```
 
 
-[M.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/M/M.k
+[M.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/M/M.k
 

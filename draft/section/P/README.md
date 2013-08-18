@@ -185,6 +185,6 @@ c : a | join b
 全項空関係 (reldau) が交わり `meet` の極限であることを憶えておきましょう。
 
 
-[P.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/P/P.k
+[P.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/P/P.k
 [dumdee]: http://ja.wikipedia.org/wiki/トゥイードルダムとトゥイードルディー
 

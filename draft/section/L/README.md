@@ -86,5 +86,5 @@ affirm XX  x | meet x    ** 判断集合 X に同じ (べき等性)
 ```
 
 
-[L.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/L/L.k
+[L.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/L/L.k
 

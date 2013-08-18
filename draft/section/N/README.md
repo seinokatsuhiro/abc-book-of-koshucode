@@ -136,6 +136,6 @@ affirm V  x | join y
 ```
 
 
-[N.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/N/N.k
+[N.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/N/N.k
 [lattice]: http://ja.wikipedia.org/wiki/束論
 

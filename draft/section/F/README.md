@@ -101,5 +101,5 @@ deny   A-PLUS-B-EQ-C neq
 ```
 
 
-[F.k]:  https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/F/F.k
+[F.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/F/F.k
 

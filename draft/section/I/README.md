@@ -71,7 +71,7 @@ affirm ABCD
 ```
 
 
-[B.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/B/B.k
-[C.k]:   https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/C/C.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-book-of-koshucode/blob/master/draft/section/ROP.k
+[B.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/B/B.k
+[C.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/C/C.k
+[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/ROP.k
 
