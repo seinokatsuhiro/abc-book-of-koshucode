@@ -72,7 +72,7 @@
 
 ``` text
 affirm ABC
-  source ABC /a /b /c
+  | source ABC /a /b /c
 ```
 
 いままで何回か出てきた、`1` `2` `3` を項目内容とする判断です。

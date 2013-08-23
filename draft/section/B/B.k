@@ -14,6 +14,6 @@
 **  計算式
 
 affirm ABCD
-  source ABC /a /b /c
+  | source ABC /a /b /c
   | add /d ( /a + /b + /c )
 

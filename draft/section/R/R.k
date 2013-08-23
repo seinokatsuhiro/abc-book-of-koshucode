@@ -23,6 +23,6 @@
 index  : source ROP-INDEX /file /rop
 rop    : source ROP /rop /desc
 
-affirm DESC    index | meet  rop
-affirm DESC-2  index | maybe rop
+affirm DESC   -fore /file /rop | index | meet  rop
+affirm DESC-2 -fore /file /rop | index | maybe rop
 

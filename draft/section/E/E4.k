@@ -16,5 +16,5 @@
 abc  : source ABC /a /b /c
 abcd : abc | add /d ( /a = 1 or /b = 2 )
 
-affirm ABCD abcd
+affirm ABCD | abcd
 

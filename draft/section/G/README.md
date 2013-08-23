@@ -138,3 +138,13 @@ A から F までの内容には、甲州記法の基本要素が含まれてい
 [概念記法]:   http://ja.wikipedia.org/wiki/概念記法
 [関係モデル]: http://ja.wikipedia.org/wiki/関係モデル
 
+<!-- ------------------------------------------------------------------
+|-- TERM  /ja0 'か  /ja '関係             /en "relation"
+|-- TERM  /ja0 'か  /ja '関係の外延       /en "extension of relation"
+|-- TERM  /ja0 'か  /ja '関係モデル       /en "relational model"
+|-- TERM  /ja0 'か  /ja '関係写像         /en "relational mapping"
+|-- TERM  /ja0 'く  /ja '組               /en "tuple"
+|-- TERM  /ja0 'な  /ja '内容線           /en "content line"
+|-- TERM  /ja0 'は  /ja '判断線           /en "judgement line"
+------------------------------------------------------------------- -->
+

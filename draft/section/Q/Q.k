@@ -19,7 +19,7 @@ index : source ROP-INDEX /file /operator
       | rename /rop /operator
 
 rop   : source ROP /rop /desc
-desc  : rop | meet index
+desc  : index | meet rop
 
-affirm DESC  desc
+affirm DESC -fore /file /rop | desc
 

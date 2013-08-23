@@ -26,7 +26,7 @@ abc2 : abc | hold /a = 1 and /b = 2
 `abc2` の計算結果を `ABC2` という種類の判断として書き出します。
 
 ``` text
-affirm ABC2 abc2
+affirm ABC2 | abc2
 ```
 
 このデータと計算式を [`E.k`][E.k] というファイルに保存して、

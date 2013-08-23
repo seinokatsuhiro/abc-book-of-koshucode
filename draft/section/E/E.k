@@ -16,5 +16,5 @@
 abc  : source ABC /a /b /c
 abc2 : abc | hold /a = 1 and /b = 2
 
-affirm ABC2 abc2
+affirm ABC2 | abc2
 

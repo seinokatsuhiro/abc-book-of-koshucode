@@ -18,13 +18,13 @@
 index : source ROP-INDEX /file /rop
 
 **  項目 /rop を抜き出す
-affirm PICK      index | pick /rop
-affirm JOIN      index | join ( source PHANTOM /rop )
+affirm PICK      | index | pick /rop
+affirm JOIN      | index | join ( source PHANTOM /rop )
 
 **  項目 /rop を取り除く
-affirm CUT       index | cut /rop
+affirm CUT       | index | cut /rop
 
 **  すべての項目を取り除く
-affirm PICK-NON  index | pick
-affirm CUT-ALL   index | cut /file /rop
+affirm PICK-NON  | index | pick
+affirm CUT-ALL   | index | cut /file /rop
 

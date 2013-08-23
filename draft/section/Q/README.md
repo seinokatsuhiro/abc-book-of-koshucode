@@ -46,9 +46,18 @@ index : source ROP-INDEX /file /operator
 
 ``` text
 rop   : source ROP /rop /desc
-desc  : rop | meet index
+desc  : index | meet rop
+```
 
-affirm DESC  desc
+この関係 `desc` を判断集合に変換して書き出すときに、
+出力結果が読みやすくなるように項目の順番を指定しましょう。
+`affirm DESC` のうしろに `-fore` オプションを書くと、
+指定した項目を先頭に移動させた判断が出力されます。
+`-fore /file /rop` のように指定することで、
+先頭が `/file` で 2 番目が `/rop` になります。
+
+``` text
+affirm DESC -fore /file /rop | desc
 ```
 
 これらをファイル [`Q.k`][Q.k] に保存し、つぎのコマンド

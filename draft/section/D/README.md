@@ -7,7 +7,7 @@
 
 ``` text
 affirm ABCD
-  source ABC /a /b /c
+  | source ABC /a /b /c
   | add /d ( /a + /b + /c )
 ```
 
@@ -33,7 +33,7 @@ abcd : abc | add /d ( /a + /b + /c )
 判断の種類をあらわす記号 `ABCD` をつけて書き出します。
 
 ``` text
-affirm ABCD abcd
+affirm ABCD | abcd
 ```
 
 この名前つき計算式を含む [`D.k`][D.k] を入力として
@@ -58,7 +58,6 @@ $ koshu D.k
 |-- ABCD  /d 10  /a 3  /b 2  /c 5
 |-- ABCD  /d 14  /a 4  /b 7  /c 3
 |-- ABCD  /d 16  /a 2  /b 7  /c 7
-
 
 **  
 **  SUMMARY

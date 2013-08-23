@@ -64,7 +64,7 @@
 x  : source X /a /b
 y  : source Y /a /b
 xy : x | meet y
-affirm XY  xy
+affirm XY | xy
 ```
 
 計算結果は、`/a` `/b` が完全に一致する判断集合になります。
@@ -114,7 +114,7 @@ affirm XY  xy
 x  : source X /a /b
 z  : source Z /c
 xz : x | meet z
-affirm XZ  xz
+affirm XZ | xz
 ```
 
 結果は `X` と `Z` のすべての組み合わせからなる判断が計算されます。

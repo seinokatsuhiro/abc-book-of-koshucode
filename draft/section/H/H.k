@@ -18,5 +18,5 @@
 |-- ABC  /a #true  /b #false
 
 affirm ABC
-  source ABC /a /b /c
+  | source ABC /a /b /c
 

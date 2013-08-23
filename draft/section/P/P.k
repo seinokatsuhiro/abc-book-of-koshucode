@@ -13,28 +13,28 @@
 |-- ROP-INDEX  /file 'P.k  /rop 'reldum
 |-- ROP-INDEX  /file 'P.k  /rop 'source
 
-index              : source ROP-INDEX /file /rop
+index               : source ROP-INDEX /file /rop
 
 **  項目 /file /rop をもつ関係
 
-index-cut          : index | hold /rop = 'cut
-index-delete       : index | hold /rop = 'delete
+index-cut           : index | hold /rop = 'cut
+index-delete        : index | hold /rop = 'delete
 
-affirm INDEX-CUT    index-cut
-affirm INDEX-DELETE index-delete
+affirm INDEX-CUT    | index-cut
+affirm INDEX-DELETE | index-delete
 
 **  項目をもたない関係
 
-some-cut           : index-cut    | cut /file /rop
-some-delete        : index-delete | cut /file /rop
+some-cut            : index-cut    | cut /file /rop
+some-delete         : index-delete | cut /file /rop
 
-affirm SOME-CUT     some-cut
-affirm SOME-DELETE  some-delete
+affirm SOME-CUT     | some-cut
+affirm SOME-DELETE  | some-delete
 
 **  事前に定義された無項関係
 
-affirm DUM  reldum
-affirm DEE  reldee
+affirm DUM | reldum
+affirm DEE | reldee
 
 **  結びを使った reldee
 
@@ -46,6 +46,6 @@ b : source B /b
 c : a | join b
 d : a | meet b
 
-affirm C  c
-affirm D  d
+affirm C | c
+affirm D | d
 

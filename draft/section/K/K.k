@@ -9,9 +9,9 @@
 
 rop   : source ROP /rop /desc        ** 演算子の説明
 index : source ROP-INDEX /file /rop  ** 演算子の索引
-desc  : rop | meet index             ** rop と index の交わり
+desc  : index | meet rop             ** index と rop の交わり
 
-affirm DESC desc
+affirm DESC | desc
 
 **
 **  ROP-INDEX

@@ -104,8 +104,8 @@
 x : source X /a /b
 y : source Y /b /c
 
-affirm Z  x | meet y
-affirm V  x | join y
+affirm Z | x | meet y
+affirm V | x | join y
 ```
 
 を [`koshu N.k`][N.k] で実行すると、

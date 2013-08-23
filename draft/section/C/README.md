@@ -30,7 +30,7 @@
 
 ```
 affirm ABCD
-  source ABC /a /b /c
+  | source ABC /a /b /c
   | add /d ( /a + /b + /c )
 ```
 
@@ -68,4 +68,8 @@ $ koshu C.k
 
 
 [C.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/C/C.k
+
+<!-- ------------------------------------------------------------------
+|-- TERM  /ja0 'は  /ja '判断集合            /en "judge set"
+------------------------------------------------------------------- -->
 

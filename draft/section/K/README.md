@@ -47,15 +47,17 @@
 |-- ROP-INDEX  /file 'F.k   /rop 'source
 ```
 
-判断種 `ROP` と `ROP-INDEX` の判断集合を関係として読み込み、
+判断種 `ROP-INDEX` と `ROP` との判断集合を関係として読み込み、
 関係写像演算子 `meet` を使って、それらを連結させます。
+この計算は `ROP-INDEX` に対して `ROP` にある説明を追加する
+というように想像できます。
 
 ``` text
 rop   : source ROP /rop /desc        ** 演算子の説明
 index : source ROP-INDEX /file /rop  ** 演算子の索引
-desc  : rop | meet index             ** rop と index の交わり
+desc  : index | meet rop             ** index と rop の交わり
 
-affirm DESC desc
+affirm DESC | desc
 ```
 
 この判断集合と計算式を含む [`K.k`][K.k] と、
@@ -66,7 +68,7 @@ affirm DESC desc
 $ koshu K.k ../ROP.k
 ```
 
-計算結果として、項目 `/file` `/rop` `/desc` をもつ判断が出力されます。
+計算結果として、項目 `/desc` `/file` `/rop` をもつ判断が出力されます。
 
 ``` text
 ** -*- koshu -*-
@@ -76,25 +78,25 @@ $ koshu K.k ../ROP.k
 **    ../ROP.k
 **    
 
-|-- DESC  /file 'E4.k  /rop 'add  /desc '項目の内容を計算し、新しい項目を追加する
-|-- DESC  /file 'D.k  /rop 'add  /desc '項目の内容を計算し、新しい項目を追加する
-|-- DESC  /file 'C.k  /rop 'add  /desc '項目の内容を計算し、新しい項目を追加する
-|-- DESC  /file 'B.k  /rop 'add  /desc '項目の内容を計算し、新しい項目を追加する
-|-- DESC  /file 'F.k  /rop 'hold  /desc '条件をみたす組を選び出す
+|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'B.k  /rop 'add
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'B.k  /rop 'source
+|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'C.k  /rop 'add
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'C.k  /rop 'source
+|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'D.k  /rop 'add
 
-|-- DESC  /file 'E3.k  /rop 'hold  /desc '条件をみたす組を選び出す
-|-- DESC  /file 'E2.k  /rop 'hold  /desc '条件をみたす組を選び出す
-|-- DESC  /file 'E.k  /rop 'hold  /desc '条件をみたす組を選び出す
-|-- DESC  /file 'F.k  /rop 'source  /desc '判断集合を関係として読み出す
-|-- DESC  /file 'E4.k  /rop 'source  /desc '判断集合を関係として読み出す
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'D.k  /rop 'source
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E.k  /rop 'hold
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'E.k  /rop 'source
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E2.k  /rop 'hold
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'E2.k  /rop 'source
 
-|-- DESC  /file 'E3.k  /rop 'source  /desc '判断集合を関係として読み出す
-|-- DESC  /file 'E2.k  /rop 'source  /desc '判断集合を関係として読み出す
-|-- DESC  /file 'E.k  /rop 'source  /desc '判断集合を関係として読み出す
-|-- DESC  /file 'D.k  /rop 'source  /desc '判断集合を関係として読み出す
-|-- DESC  /file 'C.k  /rop 'source  /desc '判断集合を関係として読み出す
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E3.k  /rop 'hold
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'E3.k  /rop 'source
+|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'E4.k  /rop 'add
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'E4.k  /rop 'source
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'F.k  /rop 'hold
 
-|-- DESC  /file 'B.k  /rop 'source  /desc '判断集合を関係として読み出す
+|-- DESC  /desc '判断集合を関係として読み出す  /file 'F.k  /rop 'source
 
 **  
 **  SUMMARY
@@ -103,7 +105,14 @@ $ koshu K.k ../ROP.k
 **
 ```
 
+判断としては、項目がどのような順番で並んでいても解釈の違いを生じませんが、
+人が読むときは、`/desc` `/file` `/rop` よりも
+`/file` `/rop` `/desc` という順番の方が読みやすいでしょう。
+判断集合を出力するときに項目の順番を指定する方法は
+[`Q.k`][Q.k] に説明されています。
+
 
 [K.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/K/K.k
+[Q.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/Q/Q.k
 [ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/ROP.k
 

@@ -59,3 +59,8 @@ $ koshu
 [koshucode]: https://github.com/seinokatsuhiro/koshucode
 [preview]: https://github.com/seinokatsuhiro/koshucode/archive/preview.zip
 
+<!-- ------------------------------------------------------------------
+|-- TERM  /ja0 'こ  /ja '甲州記法            /en "koshucode"
+|-- TERM  /ja0 'こ  /ja '甲州計算機          /en "koshu calculator"
+------------------------------------------------------------------- -->
+

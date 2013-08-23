@@ -90,8 +90,8 @@ some-delete : index-delete | cut /file /rop
 これらの関係を、つぎの式により判断集合に変換すると、
 
 ``` text
-affirm SOME-CUT      some-cut
-affirm SOME-DELETE   some-delete
+affirm SOME-CUT    | some-cut
+affirm SOME-DELETE | some-delete
 ```
 
 判断種 `SOME-CUT` の判断だけが、項目なしで出力されます。

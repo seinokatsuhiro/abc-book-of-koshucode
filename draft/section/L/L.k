@@ -20,8 +20,8 @@ x : source X /a /b
 y : source Y /b /c
 z : x | meet y
 
-affirm Z  z
+affirm Z | z
 
-affirm YX  y | meet x    ** 判断集合 Z に同じ (可換性)
-affirm XX  x | meet x    ** 判断集合 X に同じ (べき等性)
+affirm YX | y | meet x    ** 判断集合 Z に同じ (可換性)
+affirm XX | x | meet x    ** 判断集合 X に同じ (べき等性)
 

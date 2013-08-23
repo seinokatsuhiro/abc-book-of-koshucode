@@ -8,7 +8,7 @@
 **
 
 affirm ROP
-  source ROP /rop /desc
+  | source ROP /rop /desc
   | hold /rop = 'source
       or /rop = 'hold
 

@@ -28,8 +28,8 @@
 そのために、まず、`/file` だけをもつ関係をつくります。
 
 ``` text
-index      : source ROP-INDEX /file /rop
-file       : index | pick /file
+index : source ROP-INDEX /file /rop
+file  : index | pick /file
 ```
 
 つぎに、この関係 `file` で関係 `index` を分割し、
@@ -43,8 +43,13 @@ file-group : file | group /r index
 つまり、 **交わり部分関係** に分割されます。
 この場合、共有項目 `/file` を使って、
 `'O.k` から `'S.k` の 5 つに分割されます。
-それを `affirm FILE-GROUP file-group` で書き出すと、
-つぎのようになります。
+それを
+
+``` text
+affirm FILE-GROUP -fore /file | file-group
+```
+
+で書き出すと、つぎのようになります。
 場所をとりすぎないように、`/file 'O.k` についてだけ整形して示し、
 残りの判断は途中を省略します。
 
@@ -117,7 +122,7 @@ file-group : file | group /r index
 
  - 判断は項目の過不足があってもよいが、関係は項目が揃っていなければならない。
 
- - 判断は、自然言語 (日本語など) であらわされたのデータ解釈より、
+ - 判断は、自然言語 (日本語など) であらわされたのデータ解釈に比べて、
    より記号的であり、関係は判断より、さらに記号的であり、
    その結果として関係は計算に向いている。
 

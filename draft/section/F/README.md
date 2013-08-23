@@ -72,8 +72,8 @@ neq  : abc | hold ( /a + /b <> /c )
 `neq` を `deny` (否定する) で書き出します。
 
 ``` text
-affirm A-PLUS-B-EQ-C eq
-deny   A-PLUS-B-EQ-C neq
+affirm A-PLUS-B-EQ-C | eq
+deny   A-PLUS-B-EQ-C | neq
 ```
 
 この計算式を [`F.k`][F.k] というファイルに保存し、
@@ -102,4 +102,11 @@ deny   A-PLUS-B-EQ-C neq
 
 
 [F.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/F/F.k
+
+<!-- ------------------------------------------------------------------
+|-- TERM  /ja0 'こ  /ja '肯定判断            /en "affirmative judge"
+|-- TERM  /ja0 'じ  /ja '述語                /en "predicate"
+|-- TERM  /ja0 'で  /ja 'データ解釈          /en "data interpretation"
+|-- TERM  /ja0 'ひ  /ja '否定判断            /en "denied judge"
+------------------------------------------------------------------- -->
 
