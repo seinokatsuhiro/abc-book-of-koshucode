@@ -1,0 +1,22 @@
+** -*- koshu -*-
+**
+**  題名
+**    甲州記法の ABC - W 甲州計算機の拡張
+**
+**  使用法
+**    cabal install --bindir=.
+**    ./koshu-w W.k
+**
+
+|-- XY  /x 15  /y 4
+|-- XY  /x 15  /y 3
+|-- XY  /x 15  /y 2
+|-- XY  /x 15  /y 1
+|-- XY  /x 15  /y 0
+
+xy   : source XY /x /y
+xyqr : divide /x /y /q /r
+
+affirm QR -fore /x /y | xy | xyqr
+affirm QR-MAYBE -fore /x /y | xy | maybe xyqr
+

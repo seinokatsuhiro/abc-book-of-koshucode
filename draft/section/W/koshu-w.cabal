@@ -1,0 +1,32 @@
+-- The name and version of the package.
+name:                koshu-w
+version:             0.1.0.0
+
+-- A descriptions of the package.
+category:            Example
+synopsis:            Koshu calculator with 'divide' operator
+description:         This is a Koshu calculator that has
+                     the additional 'divide' operator.
+                     This package is a part of the book
+                     "The ABC of Koshucode".
+
+-- The package author and the license.
+author:              SEINO Katsuhiro
+license:             OtherLicense
+
+-- The version of Cabal needed to build this package.
+cabal-version:       >= 1.8
+build-type:          Simple
+
+
+executable koshu-w
+  -- .hs or .lhs file containing the Main module.
+  main-is:           koshu-w.hs
+  
+  -- Other library packages from which modules are imported.
+  build-depends:     base                       == 4.6.*,
+                     koshucode-baala-base       >= 0.35,
+                     koshucode-baala-core       >= 0.35,
+                     koshucode-baala-operator   >= 0.35,
+                     koshucode-baala-calculator >= 0.35
+
