@@ -59,9 +59,9 @@
 
 [X. 関係と関数][X]
 
-Y. ファイルの形式
+Y. 演算子索引
 
-Z. 索引
+Z. 用語索引 または [Google 検索][Google]
 
 
 [A]: https://github.com/seinokatsuhiro/abc-of-koshucode/tree/master/draft/section/A
@@ -92,4 +92,5 @@ Z. 索引
 [Z]: https://github.com/seinokatsuhiro/abc-of-koshucode/tree/master/draft/section/Z
 
 [zip]: https://github.com/seinokatsuhiro/abc-of-koshucode/archive/master.zip
+[Google]: https://www.google.com/cse/publicurl?cx=014037774401679920196:skkz2klef7o
 
