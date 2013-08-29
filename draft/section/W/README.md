@@ -15,10 +15,9 @@
 新しい甲州計算機 `koshu-w` は Haskell で書かれた設計書である
 [`koshu-w.hs`][koshu-w.hs] から作成される
 ということだけ記しておきます。
-
 もし、あなたがプログラミングに詳しく、
 Haskell を使える環境をもっているならば、
-つぎのコマンドで `koshu-w` をつくれます。
+つぎのようにして `koshu-w` コマンドをつくれます。
 
 ``` sh
 $ cabal install --bindir=.
@@ -27,7 +26,7 @@ $ cabal install --bindir=.
 もし `koshu-w` をつくる手段が手元になくても、
 具体的な判断をいくつか書き、
 それらを一般化したデータ解釈を与え、
-その解釈をみたすように関係写像演算子を定義して、
+その解釈をみたすように関係写像演算子を定義することで、
 甲州計算機を拡張できるということを憶えておいてください。
 
 
@@ -65,7 +64,7 @@ xyqr : divide /x /y /q /r
 affirm QR -fore /x /y | xy | xyqr
 ```
 
-この判断集合と計算式を保存した `W.k` を
+この判断集合と計算式を保存した [`W.k`][W.k] を
 拡張された甲州計算機で実行します。
 
 ``` sh
@@ -93,24 +92,28 @@ $ ./koshu-w W.k
 をみたす `/q` と `/r` が整数のなかにはないからです。
 整数のなかにはないということは、
 `/q` と `/r` について **全称否定判断** が成り立つということです。
+全称否定判断とは、すべての何々について、これこれが成り立たないという形式の判断で、
+この場合、つぎの判断に相当します。
 
  - どのような整数 `q` と `r` を選んでも、
    `/x 15` を `/y 0` で割ると、
-   その商は `/q q` で余りは `/r r` ではない。
+   その商は `/q q` で余りは `/r r` とはならない。
 
-ここで `/q` と `/r` はひとつもないという性質を `()` で置き換えて表現すると、
+ここで `/q` と `/r` は 1 つもないという性質を
+`()` で置き換えて表現すると、
 つぎのような全称否定を含意する肯定判断として書けるでしょう。
 
  - `/x 15` を `/y 0` で割ると、
    その商は `/q ()` で余りは `/r ()` である。
 
-この判断は、つぎのような形で `maybe xyqr` を使うと出力できます。
+この判断は、[R 節][R] で計算したのと同じように、
+つぎのような形で `maybe xyqr` を使うと出力できます。
 
 ``` text
 affirm QR-MAYBE -fore /x /y | xy | maybe xyqr
 ```
 
-`maybe` や `meet` などの引数に **関係写像** をとる演算子は、
+`maybe` や `meet` など、引数に **関係写像** をとる演算子は、
 自身へ入力された関係を、引数の関係写像にも与えます。
 `xy | maybe xyqr` という式に含まれる各関係写像に対して、
 入力される関係と出力される関係を記述してみましょう。
@@ -137,7 +140,7 @@ affirm QR-MAYBE -fore /x /y | xy | maybe xyqr
 具体的には、つぎようになります。
 
 ``` text
-R1  {| | |}  ** reldee
+R1  {| | |}  (reldee)
 R2  {| /x : /y | 15 : 4 | 15 : 3 | 15 : 2 | 15 : 1 | 15 : 0 |}
 R3  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 : 5 : 0
      | 15 :  2 :  7 :  1 | 15 : 1 : 15 : 0 |}
@@ -157,8 +160,9 @@ R4  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 :  5 : 0
 ```
 
 
+[R]:     https://github.com/seinokatsuhiro/abc-of-koshucode/tree/master/draft/section/R
 [W.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/W/W.k
-[koshu-w.hs]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/W/kohsu-w.hs
+[koshu-w.hs]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/W/koshu-w.hs
 
 <!-- ------------------------------------------------------------------
 |-- TERM  /ja0 'か  /ja '関係写像          /en "relmap"
