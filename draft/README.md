@@ -59,9 +59,9 @@
 
 [X. 関係と関数][X]
 
-Y. 演算子索引
+[Y. 演算子索引][Y]
 
-Z. 用語索引 または [Google 検索][Google]
+[Z. 用語索引][Z] または [Google 検索][Google]
 
 
 [A]: https://github.com/seinokatsuhiro/abc-of-koshucode/tree/master/draft/section/A
