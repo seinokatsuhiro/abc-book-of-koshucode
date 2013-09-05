@@ -84,12 +84,12 @@ relDivideQR xPos yPos q r (B.Rel h1 b1) =
              xDec <- C.needDec xCont
              yDec <- C.needDec yCont
 
-             if C.isDecimalZero yDec
+             if B.isDecimalZero yDec
              then Right []
              else consQR2 xDec yDec cs
 
       consQR2 xDec yDec cs =
-          do qDec <- C.decimalQuo xDec yDec
-             rDec <- C.decimalRem xDec yDec
+          do qDec <- B.decimalQuo xDec yDec
+             rDec <- B.decimalRem xDec yDec
              Right [C.putDec qDec : C.putDec rDec : cs]
 
