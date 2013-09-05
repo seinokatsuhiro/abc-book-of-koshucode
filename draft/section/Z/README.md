@@ -1,5 +1,9 @@
 # Z. 用語索引
 
+この節は、甲州計算機を使うときに必要になる用語を一覧しています。
+ここにない語彙を調べたいときは、この本の内容を対象とした
+[Google 検索][Google] を利用してください。
+
 
 | あ | 用語 | その用語に言及している節 |
 |:---:|:---:|:---:|
@@ -92,4 +96,6 @@
 [V]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/V
 [W]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/W
 [X]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/X
+
+[Google]: https://www.google.com/cse/publicurl?cx=014037774401679920196:skkz2klef7o
 
