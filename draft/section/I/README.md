@@ -50,8 +50,10 @@ affirm ABCD
 ```
 
 甲州記法の関係演算子は開かれた体系で、拡張する手段が用意されています。
-しかしながら、よく使う演算子や、基礎となる演算子というものがあり、
-入門書である本書では、そのような演算子に限定して説明しています。
+しかしながら、よく使う演算子や、基礎となる演算子があり、
+入門書である本書では、[W. 甲州計算機の拡張][W]
+で拡張された演算子の例を示す以外は、
+そのような演算子に限定して説明しています。
 それらの演算子は [`ROP.k`][ROP.k] に一覧されています。
 
 ``` text
@@ -75,4 +77,5 @@ affirm ABCD
 [B.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/B/B.k
 [C.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/C/C.k
 [ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/ROP.k
+[W]:     https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/section/W
 
