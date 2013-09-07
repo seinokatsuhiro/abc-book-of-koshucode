@@ -17,6 +17,5 @@
          /c "one plus two"
 |-- ABC  /a #true  /b #false
 
-affirm ABC
-  | source ABC /a /b /c
+|== ABC : source ABC /a /b /c
 

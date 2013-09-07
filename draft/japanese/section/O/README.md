@@ -39,7 +39,7 @@ index : source ROP-INDEX /file /rop
 `pick /rop` を使います。
 
 ``` text
-affirm PICK | index | pick /rop
+|== PICK : index | pick /rop
 ```
 
 この式の計算結果は、つぎのようになります。
@@ -57,7 +57,7 @@ affirm PICK | index | pick /rop
 項目 `/rop` を取り除くには、`cut /rop` を使います。
 
 ``` text
-affirm CUT | index | cut /rop
+|== CUT : index | cut /rop
 ```
 
 項目 `/rop` を除くと `/file` だけが残ります。
@@ -93,7 +93,7 @@ affirm CUT | index | cut /rop
 項目 `/rop` だけの空関係になります。
 
 ``` text
-affirm JOIN | index | join ( source PHANTOM /rop )
+|== JOIN : index | join ( source PHANTOM /rop )
 ```
 
 計算結果は、`pick /rop` と同じになります。
@@ -115,7 +115,7 @@ affirm JOIN | index | join ( source PHANTOM /rop )
 すべての項目が取り除かれた判断がひとつ出力されます。
 
 ``` text
-affirm CUT-ALL | index | cut /file /rop
+|== CUT-ALL : index | cut /file /rop
 ```
 ``` text
 |-- CUT-ALL
@@ -125,7 +125,7 @@ affirm CUT-ALL | index | cut /file /rop
 同じようになります。
 
 ``` text
-affirm PICK-NON | index | pick
+|== PICK-NON : index | pick
 ```
 ``` text
 |-- PICK-NON

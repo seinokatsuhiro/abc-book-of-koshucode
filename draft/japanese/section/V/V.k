@@ -20,11 +20,11 @@
 |-- A  /x 3  /xs { 1 : 3 : 5 }
 |-- A  /x 4  /xs { 1 : 3 : 5 }
 
-affirm A-MEET
+|== A-MEET
   | source A /x /xs
   | meet ( source MEMBER /x /xs )
 
-affirm A-MEM
+|== A-MEM
   | source A /x /xs
   | member /x /xs
 
@@ -33,11 +33,11 @@ affirm A-MEM
 |-- B  /xs { 1 : 3 : 5 }
 |-- B  /xs { 2 : 4 }
 
-affirm B-MEET
+|== B-MEET
   | source B /xs
   | meet ( source MEMBER /x /xs )
 
-affirm B-MEM
+|== B-MEM
   | source B /xs
   | member /x /xs
 

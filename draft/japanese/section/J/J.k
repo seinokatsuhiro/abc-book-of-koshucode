@@ -7,7 +7,7 @@
 **    koshu J.k ../ROP.k
 **
 
-affirm ROP
+|== ROP
   | source ROP /rop /desc
   | hold /rop = 'source
       or /rop = 'hold

@@ -40,7 +40,7 @@
 |-- A  /x [ 'source : 'pick : 'source ]
 |-- A  /x { 'source : 'pick : 'source }
 
-affirm A | source A /x
+|== A : source A /x
 ```
 
 この判断集合と計算式を甲州計算機で実行すると、
@@ -83,7 +83,7 @@ affirm A | source A /x
 つぎの計算式によって調べます。
 
 ``` text
-affirm B
+|== B
   | source B /x
   | add /a ( /x = [ 'クロワッサン : 'ベーグル ] )
         /b ( /x = { 'クロワッサン : 'ベーグル } )

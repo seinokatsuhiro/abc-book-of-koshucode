@@ -13,7 +13,5 @@
 
 **  計算式
 
-affirm ABCD
-  | source ABC /a /b /c
-  | add /d ( /a + /b + /c )
+|== ABCD : source ABC /a /b /c | add /d ( /a + /b + /c )
 

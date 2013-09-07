@@ -18,7 +18,7 @@
 これらは、そのような関数に相当します。
 
 ``` text
-affirm QR
+|== QR
   | source XY /x /y
   | hold /y <> 0
   | add  /q ( /x quo /y )

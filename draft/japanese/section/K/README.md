@@ -57,7 +57,7 @@ rop   : source ROP /rop /desc        ** 演算子の説明
 index : source ROP-INDEX /file /rop  ** 演算子の索引
 desc  : index | meet rop             ** index と rop の交わり
 
-affirm DESC | desc
+|== DESC : desc
 ```
 
 この判断集合と計算式を含む [`K.k`][K.k] と、

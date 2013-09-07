@@ -17,6 +17,9 @@
 xy   : source XY /x /y
 xyqr : divide /x /y /q /r
 
-affirm QR -fore /x /y | xy | xyqr
-affirm QR-MAYBE -fore /x /y | xy | maybe xyqr
+|== QR -fore /x /y
+  | xy | xyqr
+
+|== QR-MAYBE -fore /x /y
+  | xy | maybe xyqr
 

@@ -6,9 +6,9 @@
 出力するという計算式は、つぎのように書けます。
 
 ``` text
-affirm ABCD
-  | source ABC /a /b /c
-  | add /d ( /a + /b + /c )
+|== ABCD :
+  source ABC /a /b /c
+    | add /d ( /a + /b + /c )
 ```
 
 これを、(1) 読み込み、(2) 計算、
@@ -33,7 +33,7 @@ abcd : abc | add /d ( /a + /b + /c )
 判断の種類をあらわす記号 `ABCD` をつけて書き出します。
 
 ``` text
-affirm ABCD | abcd
+|== ABCD : abcd
 ```
 
 この名前つき計算式を含む [`D.k`][D.k] を入力として

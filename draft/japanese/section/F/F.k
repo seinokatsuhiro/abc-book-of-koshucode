@@ -17,6 +17,6 @@ abc  : source ABC /a /b /c
 eq   : abc | hold ( /a + /b =  /c )
 neq  : abc | hold ( /a + /b <> /c )
 
-affirm A-PLUS-B-EQ-C | eq
-deny   A-PLUS-B-EQ-C | neq
+|== A-PLUS-B-EQ-C : eq
+|=X A-PLUS-B-EQ-C : neq
 

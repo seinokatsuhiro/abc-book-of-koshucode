@@ -75,8 +75,7 @@
 この計算は [`koshu H.k`][H.k] により実行できます。
 
 ``` text
-affirm ABC
-  | source ABC /a /b /c
+|== ABC : source ABC /a /b /c
 ```
 
 いままで何回か出てきた、`1` `2` `3` を項目内容とする判断です。

@@ -37,7 +37,7 @@ file-rops  : file-group
            | add /rops ( /r/rop )
            | cut /r
 
-affirm FILE-ROPS -fore /file | file-rops
+|== FILE-ROPS -fore /file : file-rops
 ```
 
 `/rop` の内容をリストとして取り出したあと、

@@ -28,7 +28,7 @@ gen_koshu_element () {
 
 gen_rop_index () {
     stderr "Generate judges of INDEX"
-    koshu Y.k $1
+    koshu $1 $2
 }
 
 gen_rop_table () {
@@ -38,8 +38,9 @@ gen_rop_table () {
 
 mkdir -p output
 
-gen_link                       > output/LINK.md
-gen_koshu_element              > output/ELEMENT.k
-gen_rop_index output/ELEMENT.k > output/INDEX.k
-gen_rop_table output/INDEX.k   > output/TABLE.md
+gen_link                              > output/LINK.md
+gen_koshu_element                     > output/ELEMENT.k
+gen_rop_index Y.k  output/ELEMENT.k   > output/ROP-INDEX.k
+gen_rop_index Y2.k output/ROP-INDEX.k > output/INDEX.k
+gen_rop_table output/INDEX.k          > output/TABLE.md
 

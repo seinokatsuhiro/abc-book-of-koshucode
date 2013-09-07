@@ -23,7 +23,7 @@
 この文は、データの読み方、あるいは、解釈方法になっているので、
 判断種 `A-PLUS-B-EQ-C` の **データ解釈** とよばれます。
 データ解釈は、論理学の用語でいうところの **述語** に対応します。
-述語は、`/a` のような項目に具体的な内容を埋めると、
+述語は、`/a` のような項目すべてに具体的な内容を埋めると、
 真か偽が確定するような文です。
 
 つぎの 3 つの判断は、`A-PLUS-B-EQ-C`
@@ -42,7 +42,7 @@
  - `/a 1` と `/b 4` の和は `/c 5` である。
  - `/a 3` と `/b 2` の和は `/c 5` である。
 
-つぎの `|-X` が付与された 2 つの判断は、
+逆に、`|-X` が付与された 2 つの判断は、
 日本語の文を間違いにします。
 
 ``` text
@@ -68,12 +68,12 @@ eq   : abc | hold ( /a + /b =  /c )
 neq  : abc | hold ( /a + /b <> /c )
 ```
 
-`eq` を `affirm` (肯定する) で書き出し、
-`neq` を `deny` (否定する) で書き出します。
+`eq` を `|==` (肯定する) で書き出し、
+`neq` を `|=X` (否定する) で書き出します。
 
 ``` text
-affirm A-PLUS-B-EQ-C | eq
-deny   A-PLUS-B-EQ-C | neq
+|== A-PLUS-B-EQ-C : eq
+|=X A-PLUS-B-EQ-C : neq
 ```
 
 この計算式を [`F.k`][F.k] というファイルに保存し、
@@ -102,11 +102,4 @@ deny   A-PLUS-B-EQ-C | neq
 
 
 [F.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/F/F.k
-
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'こ  /ja '肯定判断            /en "affirmative judge"
-|-- TERM  /ja0 'じ  /ja '述語                /en "predicate"
-|-- TERM  /ja0 'で  /ja 'データ解釈          /en "data interpretation"
-|-- TERM  /ja0 'ひ  /ja '否定判断            /en "denied judge"
-------------------------------------------------------------------- -->
 

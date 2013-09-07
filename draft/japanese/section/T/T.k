@@ -40,5 +40,5 @@ file-rops  : file-group
            | add /rops ( /r/rop )
            | cut /r
 
-affirm FILE-ROPS -fore /file | file-rops
+|== FILE-ROPS -fore /file : file-rops
 

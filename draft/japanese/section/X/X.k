@@ -15,7 +15,7 @@
 |-- XY  /x 15  /y 1
 |-- XY  /x 15  /y 0
 
-affirm QR -fore /x /y
+|== QR -fore /x /y
   | source XY /x /y
   | hold /y <> 0
   | add  /q ( /x quo /y )

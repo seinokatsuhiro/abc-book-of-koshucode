@@ -37,5 +37,5 @@ index      : source ROP-INDEX /file /rop
 file       : index | pick  /file
 file-group : file  | group /r index
 
-affirm FILE-GROUP -fore /file | file-group
+|== FILE-GROUP -fore /file : file-group
 

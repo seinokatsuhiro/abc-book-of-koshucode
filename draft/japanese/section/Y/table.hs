@@ -41,14 +41,10 @@ main :: IO ()
 main =
     do [pat, order, line, column, alpha] <- Sys.getArgs
        let param = Param pat order line column alpha
-           root  = C.emptySection :: C.Section V.VContent
        code <- getContents
-       case C.sectionRead root "stdin" code of
-         Right sec -> putLines $ indexLines param $ C.sectionJudge sec
-         Left a    -> B.abort a
-
-putLines :: [String] -> IO ()
-putLines = putStr . unlines
+       case C.readJudges code :: B.AbortOr [B.Judge V.VContent] of
+         Right js -> B.putLines $ indexLines param js
+         Left a   -> B.abort a
 
 indexLines :: (C.CContent c) => Param -> [B.Judge c] -> [String]
 indexLines param = List.sort . map (indexLine param)

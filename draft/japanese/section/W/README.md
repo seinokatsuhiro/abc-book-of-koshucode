@@ -61,7 +61,8 @@ $ cabal install --bindir=.
 xy   : source XY /x /y
 xyqr : divide /x /y /q /r
 
-affirm QR -fore /x /y | xy | xyqr
+|== QR -fore /x /y
+  | xy | xyqr
 ```
 
 この判断集合と計算式を保存した [`W.k`][W.k] を
@@ -110,7 +111,8 @@ $ ./koshu-w W.k
 つぎのような形で `maybe xyqr` を使うと出力できます。
 
 ``` text
-affirm QR-MAYBE -fore /x /y | xy | maybe xyqr
+|== QR-MAYBE -fore /x /y
+  | xy | maybe xyqr
 ```
 
 `maybe` や `meet` など、引数に **関係写像** をとる演算子は、

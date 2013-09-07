@@ -6,9 +6,9 @@
 たとえば、[`B.k`][B.k] や [`C.k`][C.k] の計算式
 
 ``` text
-affirm ABCD
-  | source ABC /a /b /c
-  | add /d ( /a + /b + /c )
+|== ABCD :
+  source ABC /a /b /c
+    | add /d ( /a + /b + /c )
 ```
 
 では、項目 `/a` `/b` `/c` の内容を足して、

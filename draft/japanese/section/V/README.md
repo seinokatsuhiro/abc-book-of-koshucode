@@ -43,7 +43,7 @@
 つぎのような `MEMBER` との交わりを計算します。
 
 ``` text
-affirm A-MEET
+|== A-MEET
   | source A /x /xs
   | meet ( source MEMBER /x /xs )
 ```
@@ -60,7 +60,7 @@ affirm A-MEET
 つぎのような計算式に書き直せます。
 
 ``` text
-affirm A-MEM
+|== A-MEM
   | source A /x /xs
   | member /x /xs
 ```
@@ -91,7 +91,7 @@ affirm A-MEM
 未知の項目とする計算式をつくります。
 
 ``` text
-affirm B-MEM
+|== B-MEM
   | source B /xs
   | member /x /xs
 ```

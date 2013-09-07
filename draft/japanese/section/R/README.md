@@ -32,7 +32,7 @@
 index : source ROP-INDEX /file /rop
 rop   : source ROP /rop /desc
 
-affirm DESC -fore /file /rop | index | meet  rop
+|== DESC -fore /file /rop : index | meet  rop
 ```
 
 そうすると、`ROP` 側に `/rop 'source` の情報がないため、
@@ -48,7 +48,7 @@ affirm DESC -fore /file /rop | index | meet  rop
 そのためには、
 
 ``` text
-affirm DESC-2 -fore /file /rop | index | maybe rop
+|== DESC-2 -fore /file /rop : index | maybe rop
 ```
 
 のように演算子 `meet` の代わりに `maybe` を使うことで、

@@ -19,6 +19,6 @@
 x : source X /a /b
 y : source Y /b /c
 
-affirm Z | x | meet y
-affirm V | x | join y
+|== Z : x | meet y
+|== V : x | join y
 

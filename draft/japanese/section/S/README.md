@@ -46,7 +46,7 @@ file-group : file | group /r index
 それを
 
 ``` text
-affirm FILE-GROUP -fore /file | file-group
+|== FILE-GROUP -fore /file : file-group
 ```
 
 で書き出すと、つぎのようになります。
@@ -93,7 +93,7 @@ affirm FILE-GROUP -fore /file | file-group
 ## 判断集合と関係
 
 いままで、判断集合を `source` で関係として読み込み、
-関係を `affirm` または `deny` で判断集合として書き出すと説明してきました。
+関係を `|==` または `|=X` で判断集合として書き出すと説明してきました。
 これは、具体的には、
 
 ``` text
@@ -104,7 +104,7 @@ affirm FILE-GROUP -fore /file | file-group
 ```
 
 という判断集合を `source ROP-INDEX /file /rop` で読み込むと、
-下のような関係になり、この関係を `affirm ROP-INDEX` で書き出すと、
+下のような関係になり、この関係を `|== ROP-INDEX` で書き出すと、
 上の判断集合にもどることを意味します。
 
 ``` text
@@ -130,12 +130,4 @@ affirm FILE-GROUP -fore /file | file-group
 
 
 [S.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/S/S.k
-
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'い  /ja '入れ子の関係    /en "nested relation"
-|-- TERM  /ja0 'か  /ja '関係リテラル    /en "literal of relation"
-|-- TERM  /ja0 'く  /ja '組              /en "tuple"
-|-- TERM  /ja0 'ま  /ja '交わり部分関係  /en "meetable subrelation"
-|-- TERM  /ja0 'み  /ja '見出し          /en "heading"
-------------------------------------------------------------------- -->
 

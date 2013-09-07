@@ -26,6 +26,6 @@ z  : source Z /c
 xy : x | meet y
 xz : x | meet z
 
-affirm XY | xy
-affirm XZ | xz
+|== XY : xy
+|== XZ : xz
 
