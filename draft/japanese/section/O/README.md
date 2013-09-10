@@ -131,8 +131,9 @@ index : source ROP-INDEX /file /rop
 |-- PICK-NON
 ```
 
-つぎの節では、このような無項関係について調べましょう。
+[P. 関係の集合][P] では、このような無項関係について調べましょう。
 
 
-[O.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/O/O.k
+[O.k]:   O.k
+[P]:     ../P
 

@@ -44,7 +44,7 @@ $ koshu D.k
 ```
 
 計算式に名前をつけて分解しただけなので、
-前節と同じ結果が出力されます。
+[C. 判断集合][C] と同じ結果が出力されます。
 
 ```
 ** -*- koshu -*-
@@ -66,5 +66,6 @@ $ koshu D.k
 **
 ```
 
-[D.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/D/D.k
+[C]:    ../C
+[D.k]:  D.k
 

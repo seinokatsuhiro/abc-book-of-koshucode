@@ -1,7 +1,7 @@
 # N. 結び
 
 
-前節で、関係写像演算子の交わりが、
+[M. 共通部分と直積][M] で、関係写像演算子の交わりが、
 集合演算子の共通部分の一般化であることをみました。
 それでは、集合演算子の合併は、関係モデルのなかで、
 どのように一般化されるのでしょうか。
@@ -136,6 +136,7 @@ y : source Y /b /c
 ```
 
 
-[N.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/N/N.k
+[M]:       ../M
+[N.k]:     N.k
 [lattice]: http://ja.wikipedia.org/wiki/束論
 

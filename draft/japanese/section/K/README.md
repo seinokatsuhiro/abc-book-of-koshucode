@@ -1,7 +1,8 @@
 # K. 判断の連結
 
 
-前節で関係写像演算子を手短かに説明したデータ [`ROP.k`][ROP.k] を扱いました。
+[J. 入力の分割と合併][J] で関係写像演算子を
+手短かに説明したデータ [`ROP.k`][ROP.k] を扱いました。
 そのデータには判断種 `ROP` (relation-mapping operator、関係写像演算子)
 がついており、
 
@@ -112,7 +113,8 @@ $ koshu K.k ../ROP.k
 [`Q.k`][Q.k] に説明されています。
 
 
-[K.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/K/K.k
-[Q.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/Q/Q.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/ROP.k
+[J]:     ../J
+[K.k]:   K.k
+[Q.k]:   ../Q/Q.k
+[ROP.k]: ../ROP.k
 
