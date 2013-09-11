@@ -101,5 +101,5 @@ neq  : abc | hold ( /a + /b <> /c )
 ```
 
 
-[F.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/F/F.k
+[F.k]:  ../F/F.k
 

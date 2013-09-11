@@ -77,14 +77,7 @@
 
 
 
-[V.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/V/V.k
-[W.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/W/W.k
-[X.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/X/X.k
-
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'か  /ja '関係        /en "relation"
-|-- TERM  /ja0 'か  /ja '関数        /en "function"
-|-- TERM  /ja0 'け  /ja '計算        /en "calculation"
-|-- TERM  /ja0 'て  /ja 'データ      /en "data"
-------------------------------------------------------------------- -->
+[V.k]:   ../V/V.k
+[W.k]:   ../W/W.k
+[X.k]:   ../X/X.k
 

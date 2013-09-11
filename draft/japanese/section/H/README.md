@@ -168,17 +168,5 @@
 ```
 
 
-[H.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/H/H.k
-
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'こ  /ja '肯定判断記号     /en "affamative judgement sign"
-|-- TERM  /ja0 'こ  /ja '項目             /en "term"
-|-- TERM  /ja0 'こ  /ja '項目内容         /en "term content"
-|-- TERM  /ja0 'こ  /ja '項目名           /en "term name"
-|-- TERM  /ja0 'て  /ja 'データ解釈       /en "data interpretation"
-|-- TERM  /ja0 'は  /ja '判断             /en "judgement"
-|-- TERM  /ja0 'は  /ja '判断記号         /en "judgement sign"
-|-- TERM  /ja0 'は  /ja '判断種           /en "judgement pattern"
-|-- TERM  /ja0 'ひ  /ja '否定判断記号     /en "negative judgement sign"
-------------------------------------------------------------------- -->
+[H.k]:  ../H/H.k
 

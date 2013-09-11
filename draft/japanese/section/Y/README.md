@@ -52,30 +52,30 @@
   項目 `/A ...` をもつ関係として読み出します。
 
 
-[A]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/A
-[B]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/B
-[C]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/C
-[D]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/D
-[E]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/E
-[F]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/F
-[G]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/G
-[H]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/H
-[I]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/I
-[J]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/J
-[K]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/K
-[L]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/L
-[M]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/M
-[N]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/N
-[O]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/O
-[P]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/P
-[Q]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/Q
-[R]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/R
-[S]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/S
-[T]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/T
-[U]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/U
-[V]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/V
-[W]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/W
-[X]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/X
-[Y]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/Y
-[Z]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/Z
+[A]: ../A
+[B]: ../B
+[C]: ../C
+[D]: ../D
+[E]: ../E
+[F]: ../F
+[G]: ../G
+[H]: ../H
+[I]: ../I
+[J]: ../J
+[K]: ../K
+[L]: ../L
+[M]: ../M
+[N]: ../N
+[O]: ../O
+[P]: ../P
+[Q]: ../Q
+[R]: ../R
+[S]: ../S
+[T]: ../T
+[U]: ../U
+[V]: ../V
+[W]: ../W
+[X]: ../X
+[Y]: ../Y
+[Z]: ../Z
 

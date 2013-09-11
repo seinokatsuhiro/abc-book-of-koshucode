@@ -123,9 +123,5 @@
 `/xs` だけが与えられる場合に計算を行います。
 
 
-[V.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/V/V.k
-
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'し  /ja '所属関係        /en "membership"
-------------------------------------------------------------------- -->
+[V.k]:   ../V/V.k
 

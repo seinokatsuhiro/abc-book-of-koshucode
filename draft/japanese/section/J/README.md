@@ -87,7 +87,7 @@ $ koshu ../ROP.k J.k
 ```
 
 
-[F.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/F/F.k
-[J.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/J/J.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/ROP.k
+[F.k]:   ../F/F.k
+[J.k]:   ../J/J.k
+[ROP.k]: ../ROP.k
 

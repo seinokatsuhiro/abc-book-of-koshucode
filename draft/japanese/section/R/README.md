@@ -107,5 +107,5 @@ rop   : source ROP /rop /desc
 ```
 
 
-[R.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/R/R.k
+[R.k]:   ../R/R.k
 

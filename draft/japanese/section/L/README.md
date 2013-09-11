@@ -86,5 +86,5 @@ $ koshu L.k
 ```
 
 
-[L.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/L/L.k
+[L.k]:   ../L/L.k
 

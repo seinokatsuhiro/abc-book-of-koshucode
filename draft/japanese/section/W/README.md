@@ -107,7 +107,7 @@ $ ./koshu-w W.k
  - `/x 15` を `/y 0` で割ると、
    その商は `/q ()` で余りは `/r ()` である。
 
-この判断は、[R 節][R] で計算したのと同じように、
+この判断は、[R. たぶん][R] で計算したのと同じように、
 つぎのような形で `maybe xyqr` を使うと出力できます。
 
 ``` text
@@ -162,9 +162,9 @@ R4  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 :  5 : 0
 ```
 
 
-[R]:     https://github.com/seinokatsuhiro/abc-of-koshucode/tree/master/draft/japanese/section/R
-[W.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/W/W.k
-[koshu-w.hs]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/W/koshu-w.hs
+[R]:           ../R
+[W.k]:         ../W/W.k
+[koshu-w.hs]:  ../W/koshu-w.hs
 
 <!-- ------------------------------------------------------------------
 |-- TERM  /ja0 'か  /ja '関係写像          /en "relmap"

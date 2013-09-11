@@ -129,5 +129,5 @@ file-group : file | group /r index
  - 判断は関係より論理学的であり、関係は判断より数学的 (代数的) である。
 
 
-[S.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/S/S.k
+[S.k]:   ../S/S.k
 

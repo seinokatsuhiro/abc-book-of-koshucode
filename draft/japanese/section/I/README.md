@@ -74,8 +74,8 @@
 ```
 
 
-[B.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/B/B.k
-[C.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/C/C.k
-[ROP.k]: https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/ROP.k
-[W]:     https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/W
+[B.k]:   ../B/B.k
+[C.k]:   ../C/C.k
+[ROP.k]: ../ROP.k
+[W]:     ../W
 

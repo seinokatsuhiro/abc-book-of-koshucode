@@ -65,5 +65,5 @@ $ koshu B.k
 ```
 
 
-[B.k]:  https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/B/B.k
+[B.k]:  ../B/B.k
 

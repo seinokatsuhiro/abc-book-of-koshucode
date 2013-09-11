@@ -159,5 +159,5 @@ xz : x | meet z
 項目の名前が同じであれば、それらを共有しています。
 
 
-[M.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/M/M.k
+[M.k]:   ../M/M.k
 

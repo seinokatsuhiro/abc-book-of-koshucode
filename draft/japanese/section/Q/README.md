@@ -88,5 +88,5 @@ $ koshu Q.k ../ROP.k
 ```
 
 
-[Q.k]:   https://github.com/seinokatsuhiro/abc-of-koshucode/blob/master/draft/japanese/section/Q/Q.k
+[Q.k]:   ../Q/Q.k
 
