@@ -51,34 +51,36 @@ relmapDivide
     :: (C.CDec c) => C.RopUse c 
     -> String -> String -> String -> String
     -> C.Relmap c
-relmapDivide use x y q r = C.relmapCalc use "divide" sub where
-    sub _ r1 = relDivide x y q r r1
+relmapDivide use x y q r = C.relmapCalc use "divide" fy where
+    fy _ = relfyDivide x y q r
 
-relDivide
+relfyDivide
     :: (C.CDec c)
     => String -> String -> String -> String
-    -> B.AbMap (B.Rel c)
-relDivide x y q r r1
+    -> B.Relhead
+    -> B.Ab (C.Relfy c)
+relfyDivide x y q r h1
     | xHere && yHere && not qHere && not rHere
-        = relDivideQR xPos yPos q r r1
+        = relfyDivideQR xPos yPos q r h1
     | otherwise
         = Left $ B.AbortNoTerms [x, y, q, r]
     where
       ( [xPos, yPos, _, _],
         [xHere, yHere, qHere, rHere] )
-          = B.relPosHere r1 [x, y, q, r]
+          = B.posHere h1 [x, y, q, r]
 
-relDivideQR
+relfyDivideQR
     :: (C.CDec c)
     => B.TermPos -> B.TermPos -> String -> String
-    -> B.AbMap (B.Rel c)
-relDivideQR xPos yPos q r (B.Rel h1 b1) =
-    do b2 <- mapM consQR b1
-       Right $ B.Rel h2 $ concat b2
+    -> B.Relhead
+    -> B.Ab (C.Relfy c)
+relfyDivideQR xPos yPos q r h1 =
+    Right $ C.Relfy h2 (C.RelfyOneToAbMany False consQR)
     where
       h2     = B.headCons2 q r h1
       xyPick = B.posPick [xPos, yPos]
 
+      consQR :: (C.CDec c) => [c] -> B.Ab [[c]]
       consQR cs =
           do let [xCont, yCont] = xyPick cs
              xDec <- C.needDec xCont
