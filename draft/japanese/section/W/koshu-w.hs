@@ -1,4 +1,12 @@
-#!/usr/bin/env runhaskell
+-- ------------------------------------------------------------------
+--
+--  PROGRAM
+--    koshu-w
+--
+--  NOTE
+--    When you use ghci, please :set -idist/build/autogen
+--
+-- ------------------------------------------------------------------
 {-# LANGUAGE DoAndIfThenElse #-}
 {-# OPTIONS_GHC -Wall #-}
 
@@ -7,21 +15,25 @@ module Main (main) where
 import qualified Koshucode.Baala.Base as B
 import qualified Koshucode.Baala.Core as C
 import qualified Koshucode.Baala.Builtin as Rop
-import qualified Koshucode.Baala.Minimal as Rop
 import qualified Koshucode.Baala.Vanilla as Rop
 import qualified Koshucode.Baala.Toolkit.Main.KoshuMain as Main
+import qualified Koshucode.Baala.Toolkit.Library.Exit   as Main
+import qualified Paths_koshu_w as Paths
+
+
+-- ----------------------  main
 
 main :: IO ()
-main = Main.koshuMain rops where
-    rops = userRops
-           ++ Rop.builtinRops
-           ++ Rop.minimalRops
-           ++ Rop.vanillaRops
+main = Main.exit =<< Main.koshuMain g where
+    rops = C.globalRops Rop.vanillaGlobal
+    g = Rop.vanillaGlobal { C.globalVersion = Paths.version
+                          , C.globalRops    = userRops ++ rops }
 
+-- User-defined relmap operator
 userRops :: [C.Rop Rop.VContent]
 userRops = Rop.ropList "user"
-    [ o "divide /N /N /N /N" Rop.LikePos ropConsDivide
-    ] where o = (,,)
+    [ ( "divide /T /T /T /T", consDivide, C.sortEnum ["-1", "-2", "-3", "-4"] [] ) ]
+
 
 -- ----------------------  divide operator
 --
@@ -33,49 +45,38 @@ userRops = Rop.ropList "user"
 --    and remainder is /r.
 --
 --  INPUT : OUTPUT
---    case /x /y : /q /r
+--    /x /y : /q /r
 --      1 : 1
 --      1 : 0  if /y equals zero, no tuple returns.
---    otherwise error
 --    
 
-ropConsDivide :: (C.CDec c) => C.RopCons c
-ropConsDivide use =
+consDivide :: (C.CDec c) => C.RopCons c
+consDivide use =
   do x <- Rop.getTerm use "-1"
      y <- Rop.getTerm use "-2"
      q <- Rop.getTerm use "-3"
      r <- Rop.getTerm use "-4"
-     Right $ relmapDivide use x y q r
+     Right $ C.relmapCalc use $ relkitDivide (x, y, q, r)
 
-relmapDivide
-    :: (C.CDec c) => C.RopUse c 
-    -> String -> String -> String -> String
-    -> C.Relmap c
-relmapDivide use x y q r = C.relmapCalc use "divide" fy where
-    fy _ = relfyDivide x y q r
-
-relfyDivide
-    :: (C.CDec c)
-    => String -> String -> String -> String
-    -> B.Relhead
-    -> B.Ab (C.Relfy c)
-relfyDivide x y q r h1
+relkitDivide :: (C.CDec c) => B.Termname4 -> B.Relhead -> B.Ab (C.Relkit c)
+relkitDivide (x, y, q, r) h1
     | xHere && yHere && not qHere && not rHere
-        = relfyDivideQR xPos yPos q r h1
+        = relkitDivideQR xPos yPos q r h1
     | otherwise
-        = Left $ B.AbortNoTerms [x, y, q, r]
+        = Left $ B.abortTermIO ns here
     where
+      ns = [x, y, q, r]
       ( [xPos, yPos, _, _],
-        [xHere, yHere, qHere, rHere] )
-          = B.posHere h1 [x, y, q, r]
+        here@[xHere, yHere, qHere, rHere] )
+          = B.posHere h1 ns
 
-relfyDivideQR
+relkitDivideQR
     :: (C.CDec c)
-    => B.TermPos -> B.TermPos -> String -> String
+    => B.TermPos -> B.TermPos -> B.Termname -> B.Termname
     -> B.Relhead
-    -> B.Ab (C.Relfy c)
-relfyDivideQR xPos yPos q r h1 =
-    Right $ C.Relfy h2 (C.RelfyOneToAbMany False consQR)
+    -> B.Ab (C.Relkit c)
+relkitDivideQR xPos yPos q r h1 =
+    Right $ C.relkit h2 (C.RelkitOneToAbMany False consQR)
     where
       h2     = B.headCons2 q r h1
       xyPick = B.posPick [xPos, yPos]
