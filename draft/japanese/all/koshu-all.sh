@@ -9,6 +9,8 @@
 #
 
 all () {
+    echo "** -*- koshu -*-"
+    echo
     for k in ../section/[A-X]/*.k; do
         ddir=`dirname "$k"`
         dir=`basename "$ddir"`
@@ -22,7 +24,7 @@ all () {
 each () {
     case "$1" in
         W)
-            ./koshu-w "$2" ;;
+            invoke_koshu_w "$2" ;;
         [JKQ])
             koshu "$2" ../ROP.k ;;
         *)
@@ -37,6 +39,18 @@ stderr () {
 abort () {
     stderr "ABORTED"
     exit 1
+}
+
+invoke_koshu_w () {
+    if which koshu-w > /dev/null ; then
+        stderr "use installed koshu-w"
+        koshu-w "$1"
+    elif [ -x ./koshu-w ]; then
+        stderr "use local koshu-w"
+        ./koshu-w "$1"
+    else
+        stderr "skip koshu-w"
+    fi
 }
 
 all > KOSHU.k
