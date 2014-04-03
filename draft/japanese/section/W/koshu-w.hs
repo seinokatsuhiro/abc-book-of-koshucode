@@ -8,34 +8,36 @@
 --
 -- ------------------------------------------------------------------
 {-# LANGUAGE DoAndIfThenElse #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 {-# OPTIONS_GHC -Wall #-}
 
 module Main (main) where
 
-import qualified Koshucode.Baala.Base as B
-import qualified Koshucode.Baala.Core as C
-import qualified Koshucode.Baala.Builtin as Rop
-import qualified Koshucode.Baala.Vanilla as Rop
+import qualified Koshucode.Baala.Base                   as B
+import qualified Koshucode.Baala.Core                   as C
+import qualified Koshucode.Baala.Op                     as Op
+import qualified Koshucode.Baala.Op.Message             as Message
 import qualified Koshucode.Baala.Toolkit.Main.KoshuMain as Main
 import qualified Koshucode.Baala.Toolkit.Library.Exit   as Main
-import qualified Paths_koshu_w as Paths
+import qualified Paths_koshu_w                          as Paths
 
 
 -- ----------------------  main
 
 main :: IO ()
 main = Main.exit =<< Main.koshuMain g where
-    rops = C.globalRops Rop.vanillaGlobal
-    g = Rop.vanillaGlobal { C.globalVersion = Paths.version
+    rops = C.globalRops Op.vanillaGlobal
+    g = Op.vanillaGlobal { C.globalVersion = Paths.version
                           , C.globalRops    = userRops ++ rops }
 
 -- User-defined relmap operator
-userRops :: [C.Rop Rop.VContent]
-userRops = Rop.ropList "user"
-    [ ( "divide /T /T /T /T", consDivide, C.sortEnum ["-1", "-2", "-3", "-4"] [] ) ]
+userRops :: [C.Rop Op.VContent]
+userRops = Op.ropList "user"
+    [ ( "divide /T /T /T /T", consDivide,
+        C.sortEnum ["-1", "-2", "-3", "-4"] [] ) ]
 
 
--- ----------------------  divide operator
+-- ----------------------  divide
 --
 --  SYNOPSIS
 --    divide /x /y /q /r
@@ -52,47 +54,38 @@ userRops = Rop.ropList "user"
 
 consDivide :: (C.CDec c) => C.RopCons c
 consDivide use =
-  do x <- Rop.getTerm use "-1"
-     y <- Rop.getTerm use "-2"
-     q <- Rop.getTerm use "-3"
-     r <- Rop.getTerm use "-4"
-     Right $ C.relmapCalc use $ relkitDivide (x, y, q, r)
+  do x <- Op.getTerm use "-1"
+     y <- Op.getTerm use "-2"
+     q <- Op.getTerm use "-3"
+     r <- Op.getTerm use "-4"
+     Right $ C.relmapFlow use $ relkitDivide [x, y, q, r]
 
-relkitDivide :: (C.CDec c) => B.Termname4 -> B.Relhead -> B.Ab (C.Relkit c)
-relkitDivide (x, y, q, r) h1
-    | xHere && yHere && not qHere && not rHere
-        = relkitDivideQR xPos yPos q r h1
-    | otherwise
-        = Left $ B.abortTermIO ns here
+relkitDivide :: (C.CDec c) => [B.TermName] -> C.RelkitCalc c
+relkitDivide ns@[_, _, q, r] he1'@(Just he1)
+    | B.operand [xi, yi] [qi, ri] = relkitDivideQR (xi, yi, q, r) he1'
+    | otherwise = Message.unkTerm ns he1
     where
-      ns = [x, y, q, r]
-      ( [xPos, yPos, _, _],
-        here@[xHere, yHere, qHere, rHere] )
-          = B.posHere h1 ns
+      [xi, yi, qi, ri] = ns `B.snipFull` B.headNames he1
+relkitDivide _ _ = Right C.relkitNothing
 
-relkitDivideQR
-    :: (C.CDec c)
-    => B.TermPos -> B.TermPos -> B.Termname -> B.Termname
-    -> B.Relhead
-    -> B.Ab (C.Relkit c)
-relkitDivideQR xPos yPos q r h1 =
-    Right $ C.relkit h2 (C.RelkitOneToAbMany False consQR)
-    where
-      h2     = B.headCons2 q r h1
-      xyPick = B.posPick [xPos, yPos]
+relkitDivideQR :: forall c. (C.CDec c)
+    => (Int, Int, B.TermName, B.TermName) -> C.RelkitCalc c
+relkitDivideQR _ Nothing = Right C.relkitNothing
+relkitDivideQR (xi, yi, q, r) (Just he1) = Right kit2 where
+    he2    = B.headCons2 (q, r) he1
+    kit2   = C.relkitJust he2 $ C.RelkitOneToAbMany False kitf2 []
+    kitf2 _ cs1 =
+        do let [xc, yc] = B.snipFrom [xi, yi] cs1
+               xDec     = C.gDec xc
+               yDec     = C.gDec yc
 
-      consQR :: (C.CDec c) => [c] -> B.Ab [[c]]
-      consQR cs =
-          do let [xCont, yCont] = xyPick cs
-             xDec <- C.needDec xCont
-             yDec <- C.needDec yCont
+           if B.isDecimalZero yDec
+           then Right []
+           else consQR xDec yDec cs1
 
-             if B.isDecimalZero yDec
-             then Right []
-             else consQR2 xDec yDec cs
-
-      consQR2 xDec yDec cs =
-          do qDec <- B.decimalQuo xDec yDec
-             rDec <- B.decimalRem xDec yDec
-             Right [C.putDec qDec : C.putDec rDec : cs]
+    consQR :: B.Decimal -> B.Decimal -> [c] -> B.Ab [[c]]
+    consQR xDec yDec cs1 =
+        do qDec <- B.decimalQuo xDec yDec
+           rDec <- B.decimalRem xDec yDec
+           Right [C.pDec qDec : C.pDec rDec : cs1]
 
