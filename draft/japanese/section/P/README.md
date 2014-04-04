@@ -6,7 +6,7 @@
 この節では、まず、空のデータを調べまてみましょう。
 空ではないデータから始めて、それを空のデータに変換します。
 
-``` text
+```text
 |-- ROP-INDEX  /file 'P.k  /rop 'cut
 |-- ROP-INDEX  /file 'P.k  /rop 'keep
 |-- ROP-INDEX  /file 'P.k  /rop 'reldee
@@ -16,13 +16,13 @@
 
 この判断集合を、つぎの式で関係として読み出します。
 
-``` text
+```text
 index : source ROP-INDEX /file /rop
 ```
 
 この関係を項目 `/rop` の内容で制限します。
 
-``` text
+```text
 index-cut    : index | keep /rop = 'cut
 index-delete : index | keep /rop = 'delete
 ```
@@ -33,7 +33,7 @@ index-delete : index | keep /rop = 'delete
 理解を助けるために、これらの関係を図示すると、
 `index-cut` は左のように、`index-delete` は右のように書けます。
 
-``` text
+```text
 | /file : /rop |    | /file : /rop |    関係の見出し (項目)
 ----------------    ----------------    
 | 'P.k  : 'cut |                        関係の本体 (組の集合)
@@ -63,7 +63,7 @@ index-delete : index | keep /rop = 'delete
 関係 `index-cut` と `index-delete` から項目
 `/file` と `/rop` を取り除き、項目のない関係に変換します。
 
-``` text
+```text
 some-cut    : index-cut    | cut /file /rop
 some-delete : index-delete | cut /file /rop
 ```
@@ -71,7 +71,7 @@ some-delete : index-delete | cut /file /rop
 このように定式化された関係 `some-cut` と `some-delete` は、
 上の図から `|` に囲まれた部分を取り除いたような図として書けます。
 
-``` text
+```text
 |  |        |  |
 ----        ----
 |  |
@@ -89,14 +89,14 @@ some-delete : index-delete | cut /file /rop
 
 これらの関係を、つぎの式により判断集合に変換すると、
 
-``` text
+```text
 |== SOME-CUT    : some-cut
 |== SOME-DELETE : some-delete
 ```
 
 判断種 `SOME-CUT` の判断だけが、項目なしで出力されます。
 
-``` text
+```text
 |-- SOME-CUT
 ```
 
@@ -128,7 +128,7 @@ tabledum と tabledee ともよばれ、
 たとえば、つぎのような関係 `a` と `b` は共有項目をもたないため、
 `c` は `reldee` と同じ関係になります。
 
-``` text
+```text
 |-- A  /a 1
 |-- B  /b 1
 

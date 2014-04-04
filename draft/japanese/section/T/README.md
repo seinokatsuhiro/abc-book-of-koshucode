@@ -5,7 +5,7 @@
 項目 `/file` と `/rop` をもつ入れ子の関係 `/r` をつくり、
 つぎのような判断として書き出されていました。
 
-``` text
+```text
 |-- FILE-GROUP  /file 'O.k
                 /r {| /file : /rop
                     | 'O.k  : 'source
@@ -19,7 +19,7 @@
 上の例から、項目 `/rop` の内容だけを抜き出して、
 ファイルごとの演算子のリストをつくりましょう。
 
-``` text
+```text
 |-- FILE-ROPS
       /file 'O.k
       /rops [ 'source : 'pick : 'join : 'cut ]
@@ -29,7 +29,7 @@
 `/r/rop` は、項目 `/r` が関係で、そのなかの項目 `/rop`
 の内容をすべて取り出すということを意味します。
 
-``` text
+```text
 index      : source ROP-INDEX /file /rop
 file       : index | pick  /file
 file-group : file  | group /r index
@@ -46,7 +46,7 @@ file-rops  : file-group
 この計算式を含む [`T.k`][T.k] を実行すると、
 つぎのような計算結果が出力されます。
 
-``` text
+```text
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
 |-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'reldum : 'reldee : 'keep : 'cut ]
 |-- FILE-ROPS  /file 'Q.k  /rops [ 'source : 'rename : 'meet ]

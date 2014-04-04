@@ -7,7 +7,7 @@
 分かりやすくするために、`**` から始まる注釈をつけています。
 注釈は、人間のためのものなので、甲州計算機は無視します。
 
-``` text
+```text
 |-- ABC  /a 1  /b 2  /c 3    ** /a = 1  /b = 2
 |-- ABC  /a 1  /b 4  /c 5    ** /a = 1
 |-- ABC  /a 3  /b 2  /c 5    **         /b = 2
@@ -20,14 +20,14 @@
 その各組に対して、`/a = 1 and /b = 2` を計算し、
 この条件をみたす組を選びます。
 
-``` text
+```text
 abc  : source ABC /a /b /c
 abc2 : abc | keep /a = 1 and /b = 2
 ```
 
 `abc2` の計算結果を `ABC2` という種類の判断として書き出します。
 
-``` text
+```text
 |== ABC2 : abc2
 ```
 
@@ -35,7 +35,7 @@ abc2 : abc | keep /a = 1 and /b = 2
 `koshu E.k` で甲州計算機を実行すると、
 ひとつの判断だけが出力されます。
 
-``` text
+```text
 ** -*- koshu -*-
 **  
 **  INPUT
@@ -57,14 +57,14 @@ abc2 : abc | keep /a = 1 and /b = 2
 `keep` の計算式を少し変えてみましょう。
 [`E2.k`][E2.k] は項目 `/a` だけの条件をもちます。
 
-``` text
+```text
 abc  : source ABC /a /b /c
 abc2 : abc | keep /a = 1
 ```
 
 このとき、2 つの判断が出力されます。
 
-``` text
+```text
 |-- ABC2  /a 1  /b 2  /c 3
 |-- ABC2  /a 1  /b 4  /c 5
 ```
@@ -76,14 +76,14 @@ abc2 : abc | keep /a = 1
 `and` は両方がみたされなければならないのに対して、
 `or` はどちらか一方でかまいません。
 
-``` text
+```text
 abc  : source ABC /a /b /c
 abc2 : abc | keep /a = 1 or /b = 2
 ```
 
 どちらかの条件をみたす判断が出力されます。
 
-``` text
+```text
 |-- ABC2  /a 1  /b 2  /c 3
 |-- ABC2  /a 1  /b 4  /c 5
 |-- ABC2  /a 3  /b 2  /c 5
@@ -95,7 +95,7 @@ abc2 : abc | keep /a = 1 or /b = 2
 最後に、`keep` の代わりに `add` を使って、
 条件式の計算結果を確認します。
 
-``` text
+```text
 abc  : source ABC /a /b /c
 abcd : abc | add /d ( /a = 1 or /b = 2 )
 ```
@@ -108,7 +108,7 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 あるいは、間違っていることをあらわします。
 `keep` は `#true` の組だけを選び出します。
 
-``` text
+```text
 |-- ABCD  /d #true  /a 1  /b 2  /c 3
 |-- ABCD  /d #true  /a 1  /b 4  /c 5
 |-- ABCD  /d #true  /a 3  /b 2  /c 5

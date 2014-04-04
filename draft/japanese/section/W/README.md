@@ -19,7 +19,7 @@
 Haskell を使える環境をもっているならば、
 つぎのようにして `koshu-w` コマンドをつくれます。
 
-``` sh
+```sh
 $ cabal install --bindir=.
 ```
 
@@ -47,7 +47,7 @@ $ cabal install --bindir=.
 
 例として、項目 `/x` と `/y` をもつ 5 つの判断を用意します。
 
-``` text
+```text
 |-- XY  /x 15  /y 4
 |-- XY  /x 15  /y 3
 |-- XY  /x 15  /y 2
@@ -57,7 +57,7 @@ $ cabal install --bindir=.
 
 これを読み込み、`divide` を使って商 `/q` と余り `/r` を計算します。
 
-``` text
+```text
 xy   : source XY /x /y
 xyqr : divide /x /y /q /r
 
@@ -68,13 +68,13 @@ xyqr : divide /x /y /q /r
 この判断集合と計算式を保存した [`W.k`][W.k] を
 拡張された甲州計算機で実行します。
 
-``` sh
+```sh
 $ ./koshu-w W.k
 ```
 
 その結果、つぎのような 4 つの判断が出力されます。
 
-``` text
+```text
 |-- QR  /x 15  /y 4  /q 3  /r 3
 |-- QR  /x 15  /y 3  /q 5  /r 0
 |-- QR  /x 15  /y 2  /q 7  /r 1
@@ -110,7 +110,7 @@ $ ./koshu-w W.k
 この判断は、[R. たぶん][R] で計算したのと同じように、
 つぎのような形で `maybe xyqr` を使うと出力できます。
 
-``` text
+```text
 |== QR-MAYBE -fore /x /y
   | xy | maybe xyqr
 ```
@@ -141,7 +141,7 @@ $ ./koshu-w W.k
 このなかの関係 R1、R2、R3、R4 は、
 具体的には、つぎようになります。
 
-``` text
+```text
 R1  {| | |}  (reldee)
 R2  {| /x : /y | 15 : 4 | 15 : 3 | 15 : 2 | 15 : 1 | 15 : 0 |}
 R3  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 : 5 : 0
@@ -153,7 +153,7 @@ R4  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 :  5 : 0
 関係 R4 に判断種 `QR-MAYBE` が与えられて、
 最終的に、つぎの判断集合が出力されます。
 
-``` text
+```text
 |-- QR-MAYBE  /x 15  /y 4  /q 3  /r 3
 |-- QR-MAYBE  /x 15  /y 3  /q 5  /r 0
 |-- QR-MAYBE  /x 15  /y 2  /q 7  /r 1

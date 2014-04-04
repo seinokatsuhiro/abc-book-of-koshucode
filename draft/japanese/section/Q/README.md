@@ -5,7 +5,7 @@
 いままで、演算子の項目名を `/rop` としていましたが、
 ここでは、`/operator` になっているとしましょう。
 
-``` text
+```text
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /operator を使っている。
 
@@ -18,7 +18,7 @@
 一方の項目名が `/operator` で、他方の項目名が `/rop` なので、
 このままでは、共有項目になりません。
 
-``` text
+```text
 |-- ROP  /rop 'meet        /desc 'ふたつの関係の交わりを計算する
 |-- ROP  /rop 'pick        /desc '指定された項目を取り除く
 |-- ROP  /rop 'reldee      /desc '無項万有関係
@@ -33,7 +33,7 @@
 複数の項目を同時に変更するときは、
 `|--` で判断を書くときと同じように、繰り返して書けます。
 
-``` text
+```text
 **  /operator を /rop に項目名変更
 index : source ROP-INDEX /file /operator
       | rename /rop /operator
@@ -44,7 +44,7 @@ index : source ROP-INDEX /file /operator
 `/file` `/rop` と `/rop` `/desc`
 を組み合わせる関係を計算できます。
 
-``` text
+```text
 rop   : source ROP /rop /desc
 desc  : index | meet rop
 ```
@@ -56,19 +56,19 @@ desc  : index | meet rop
 `-fore /file /rop` のように指定することで、
 先頭が `/file` で 2 番目が `/rop` になります。
 
-``` text
+```text
 |== DESC -fore /file /rop : desc
 ```
 
 これらをファイル [`Q.k`][Q.k] に保存し、つぎのコマンド
 
-``` sh
+```sh
 $ koshu Q.k ../ROP.k
 ```
 
 で計算を実行すると、計算結果は、つぎのようになります。
 
-``` text
+```text
 ** -*- koshu -*-
 **
 **  INPUT

@@ -3,7 +3,7 @@
 
 この節では、判断集合を、一定の基準で、肯定と否定に分類します。
 
-``` text
+```text
 |-- ABC  /a 1  /b 2  /c 3
 |-- ABC  /a 1  /b 4  /c 5
 |-- ABC  /a 3  /b 2  /c 5
@@ -29,7 +29,7 @@
 つぎの 3 つの判断は、`A-PLUS-B-EQ-C`
 に対応する文を正しくします。
 
-``` text
+```text
 |-- A-PLUB-B-EQ-C  /a 1  /b 2  /c 3
 |-- A-PLUB-B-EQ-C  /a 1  /b 4  /c 5
 |-- A-PLUB-B-EQ-C  /a 3  /b 2  /c 5
@@ -45,7 +45,7 @@
 逆に、`|-X` が付与された 2 つの判断は、
 日本語の文を間違いにします。
 
-``` text
+```text
 |-X A-PLUB-B-EQ-C  /a 4  /b 7  /c 3
 |-X A-PLUB-B-EQ-C  /a 2  /b 7  /c 7
 ```
@@ -62,7 +62,7 @@
 `keep` の条件式として `=` (等しい) と `<>` (等しくない)
 のふたつをつくり、それぞれの式の名前を `eq` と `neq` とします。
 
-``` text
+```text
 abc  : source ABC /a /b /c
 eq   : abc | keep ( /a + /b =  /c )
 neq  : abc | keep ( /a + /b <> /c )
@@ -71,7 +71,7 @@ neq  : abc | keep ( /a + /b <> /c )
 `eq` を `|==` (肯定する) で書き出し、
 `neq` を `|=X` (否定する) で書き出します。
 
-``` text
+```text
 |== A-PLUS-B-EQ-C : eq
 |=X A-PLUS-B-EQ-C : neq
 ```
@@ -80,7 +80,7 @@ neq  : abc | keep ( /a + /b <> /c )
 `koshu F.k` で甲州計算機を実行すると、
 3 つの肯定判断と 2 つの否定判断が出力されます。
 
-``` text
+```text
 ** -*- koshu -*-
 **  
 **  INPUT

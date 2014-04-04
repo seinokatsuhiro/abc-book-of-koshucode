@@ -5,7 +5,7 @@
 それに項目 `/d` を追加し、種類 `ABCD` の判断として
 出力するという計算式は、つぎのように書けます。
 
-``` text
+```text
 |== ABCD :
   source ABC /a /b /c
     | add /d ( /a + /b + /c )
@@ -17,7 +17,7 @@
 計算式に名前をつけるときは、コロン `:` の左に名前、
 右に計算式を書きます。
 
-``` text
+```text
 abc : source ABC /a /b /c
 ```
 
@@ -25,21 +25,21 @@ abc : source ABC /a /b /c
 項目 `/d` を追加するという計算式に
 `abcd` という名前をつけます。
 
-``` text
+```text
 abcd : abc | add /d ( /a + /b + /c )
 ```
 
 最後に、この `abcd` の計算結果に、
 判断の種類をあらわす記号 `ABCD` をつけて書き出します。
 
-``` text
+```text
 |== ABCD : abcd
 ```
 
 この名前つき計算式を含む [`D.k`][D.k] を入力として
 甲州計算機を実行します。
 
-``` sh
+```sh
 $ koshu D.k
 ```
 

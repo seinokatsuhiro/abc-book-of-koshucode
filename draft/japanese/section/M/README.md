@@ -44,7 +44,7 @@
 
 判断種 `X` は項目 `/a` `/b` をもちます。
 
-``` text
+```text
 |-- X  /a 'A1  /b 'B1
 |-- X  /a 'A1  /b 'B2
 |-- X  /a 'A2  /b 'B3
@@ -52,7 +52,7 @@
 
 判断種 `Y` も判断種 `X` と同じく項目 `/a` `/b` をもちます。
 
-``` text
+```text
 |-- Y  /a 'A1  /b 'B2
 |-- Y  /a 'A2  /b 'B3
 |-- Y  /a 'A3  /b 'B3
@@ -60,7 +60,7 @@
 
 これを、つぎの式で計算します。
 
-``` text
+```text
 x  : source X /a /b
 y  : source Y /a /b
 xy : x | meet y
@@ -71,7 +71,7 @@ xy : x | meet y
 計算結果は、`/a` `/b` が完全に一致する判断集合になります。
 これは、判断集合 `X` と `Y` の共通部分と同じです。
 
-``` text
+```text
 |-- XY  /a 'A1  /b 'B2
 |-- XY  /a 'A2  /b 'B3
 ```
@@ -103,7 +103,7 @@ xy : x | meet y
 
 判断種 `Z` は項目 `/c` をもちます。
 
-``` text
+```text
 |-- Z  /c 'C1
 |-- Z  /c 'C2
 |-- Z  /c 'C3
@@ -111,7 +111,7 @@ xy : x | meet y
 
 `X` と `Z` の交わりを計算します。
 
-``` text
+```text
 x  : source X /a /b
 z  : source Z /c
 xz : x | meet z
@@ -122,7 +122,7 @@ xz : x | meet z
 結果は `X` と `Z` のすべての組み合わせからなる判断が計算されます。
 見やすさのために、3 行ごとに空行を入れています。
 
-``` text
+```text
 |-- XZ  /c 'C3  /a 'A1  /b 'B1
 |-- XZ  /c 'C2  /a 'A1  /b 'B1
 |-- XZ  /c 'C1  /a 'A1  /b 'B1

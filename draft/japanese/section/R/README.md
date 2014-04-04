@@ -6,7 +6,7 @@
 ファイル [`R.k`][R.k] のなかで使っている演算子を一覧すると、
 つぎのようになります。
 
-``` text
+```text
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /rop を使っている。
 
@@ -18,7 +18,7 @@
 いま、演算子の手短かな説明のなかに、
 `source` の説明がないとしましょう。
 
-``` text
+```text
 **  ROP
 **    演算子 /rop は、手短かに、/desc と説明される。
 
@@ -28,7 +28,7 @@
 
 この `ROP-INDEX` と `ROP` の交わりを計算します。
 
-``` text
+```text
 index : source ROP-INDEX /file /rop
 rop   : source ROP /rop /desc
 
@@ -38,7 +38,7 @@ rop   : source ROP /rop /desc
 そうすると、`ROP` 側に `/rop 'source` の情報がないため、
 つぎのふたつの判断だけが出力されます。
 
-``` text
+```text
 |-- DESC  /desc 'ふたつの関係の交わりを計算する  /file 'R.k  /rop 'meet
 |-- DESC  /desc '片側の関係が成立しなくてもよい交わり  /file 'R.k  /rop 'maybe
 ```
@@ -47,7 +47,7 @@ rop   : source ROP /rop /desc
 `/rop 'source` についての判断を出力したい場合もあるでしょう。
 そのためには、
 
-``` text
+```text
 |== DESC-2 -fore /file /rop : index | maybe rop
 ```
 
@@ -56,7 +56,7 @@ rop   : source ROP /rop /desc
 項目内容が空になることは、 **ニル** という記号であらわされ、
 甲州記法では `()` と書かれます。
 
-``` text
+```text
 |-- DESC-2  /desc 'ふたつの関係の交わりを計算する  /file 'R.k  /rop 'meet
 |-- DESC-2  /desc '片側の関係が成立しなくてもよい交わり  /file 'R.k  /rop 'maybe
 |-- DESC-2  /desc ()  /file 'R.k  /rop 'source
@@ -86,7 +86,7 @@ rop   : source ROP /rop /desc
 **全称否定** が成立しているといえます。
 全称否定というのは、つぎのような判断を考えたとき、
 
-``` text
+```text
 |-- ROP  /rop 'source  /desc ???
 ```
 
@@ -97,7 +97,7 @@ rop   : source ROP /rop /desc
 考えうるあらゆる項目内容を `/desc` に与えた
 `ROP` の否定が延々と続いていると想像できます。
 
-``` text
+```text
 |-X ROP  /rop 'source  /desc '片側の関係が成立しなくてもよい交わり
 |-X ROP  /rop 'source  /desc 'ふたつの関係の交わりを計算する
 |-X ROP  /rop 'source  /desc 'ぶどう狩りをする

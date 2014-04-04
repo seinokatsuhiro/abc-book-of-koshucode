@@ -29,7 +29,7 @@
 いま、A から G までのファイルを調べると、
 `ROP-INDEX` をみたす判断は、つぎのようになります。
 
-``` text
+```text
 |-- ROP-INDEX  /file 'B.k   /rop 'add
 |-- ROP-INDEX  /file 'B.k   /rop 'source
 |-- ROP-INDEX  /file 'C.k   /rop 'add
@@ -53,7 +53,7 @@
 この計算は `ROP-INDEX` に対して `ROP` にある説明を追加する
 というように想像できます。
 
-``` text
+```text
 rop   : source ROP /rop /desc        ** 演算子の説明
 index : source ROP-INDEX /file /rop  ** 演算子の索引
 desc  : index | meet rop             ** index と rop の交わり
@@ -65,13 +65,13 @@ desc  : index | meet rop             ** index と rop の交わり
 関係写像演算子の説明 [`ROP.k`][ROP.k] をいっしょにして、
 甲州計算機を実行します。
 
-``` sh
+```sh
 $ koshu K.k ../ROP.k
 ```
 
 計算結果として、項目 `/desc` `/file` `/rop` をもつ判断が出力されます。
 
-``` text
+```text
 ** -*- koshu -*-
 **  
 **  INPUT

@@ -10,7 +10,7 @@
 題材は、ふたたび、`ROP-INDEX` を使い、
 `O.k` から `S.k` までの索引があるとします。
 
-``` text
+```text
 |-- ROP-INDEX  /file 'O.k  /rop 'cut
 |-- ROP-INDEX  /file 'O.k  /rop 'join
 |-- ROP-INDEX  /file 'O.k  /rop 'pick
@@ -27,7 +27,7 @@
 その関係を `/file` ごとの小さな関係に分割してみましょう。
 そのために、まず、`/file` だけをもつ関係をつくります。
 
-``` text
+```text
 index : source ROP-INDEX /file /rop
 file  : index | pick /file
 ```
@@ -35,7 +35,7 @@ file  : index | pick /file
 つぎに、この関係 `file` で関係 `index` を分割し、
 分割結果の関係を項目 `/r` として追加します。
 
-``` text
+```text
 file-group : file | group /r index
 ```
 
@@ -45,7 +45,7 @@ file-group : file | group /r index
 `'O.k` から `'S.k` の 5 つに分割されます。
 それを
 
-``` text
+```text
 |== FILE-GROUP -fore /file : file-group
 ```
 
@@ -53,7 +53,7 @@ file-group : file | group /r index
 場所をとりすぎないように、`/file 'O.k` についてだけ整形して示し、
 残りの判断は途中を省略します。
 
-``` text
+```text
 |-- FILE-GROUP  /file 'O.k
                 /r {| /file : /rop
                     | 'O.k  : 'source
@@ -73,14 +73,14 @@ file-group : file | group /r index
 それぞれの項目の内容を記述した **組** の集合を `|` で区切り、
 `{|` と `|}` で囲んだ式で表現されます。
 
-``` text
+```text
 {| 見出し | 組 | 組 | 組 | ... |}
 ```
 
 項目を `:` で区切ってあらわします。
 すべて同じ数だけ区切られていなければなりません。
 
-``` text
+```text
 {| 項目 : 項目 | 内容 : 内容 | 内容 : 内容 | ... |}
 ```
 
@@ -96,7 +96,7 @@ file-group : file | group /r index
 関係を `|==` または `|=X` で判断集合として書き出すと説明してきました。
 これは、具体的には、
 
-``` text
+```text
 |-- ROP-INDEX  /file 'O.k  /rop 'cut
 |-- ROP-INDEX  /file 'O.k  /rop 'join
 |-- ROP-INDEX  /file 'O.k  /rop 'pick
@@ -107,7 +107,7 @@ file-group : file | group /r index
 下のような関係になり、この関係を `|== ROP-INDEX` で書き出すと、
 上の判断集合にもどることを意味します。
 
-``` text
+```text
 {| /file : /rop
  | 'O.k  : 'source
  | 'O.k  : 'pick

@@ -6,13 +6,13 @@
 たとえば、`source ROP-INDEX /file /rop` は
 ふたつの項目 `/file` `/rop` をもつ関係を出力します。
 
-``` text
+```text
 index : source ROP-INDEX /file /rop
 ```
 
 この式でつぎの判断集合を読み出します。
 
-``` text
+```text
 **  ROP-INDEX
 **    ファイル /file のなかで関係写像演算子 /rop を使用している。
 
@@ -38,13 +38,13 @@ index : source ROP-INDEX /file /rop
 これを項目 `/rop` だけの関係に変換するには、
 `pick /rop` を使います。
 
-``` text
+```text
 |== PICK : index | pick /rop
 ```
 
 この式の計算結果は、つぎのようになります。
 
-``` text
+```text
 |-- PICK  /rop 'cut
 |-- PICK  /rop 'join
 |-- PICK  /rop 'pick
@@ -56,7 +56,7 @@ index : source ROP-INDEX /file /rop
 
 項目 `/rop` を取り除くには、`cut /rop` を使います。
 
-``` text
+```text
 |== CUT : index | cut /rop
 ```
 
@@ -64,7 +64,7 @@ index : source ROP-INDEX /file /rop
 いま、`/file` の内容は `'O.k` しかないので、
 ひとつの判断だけが出力されます。
 
-``` text
+```text
 |-- CUT  /file 'O.k
 ```
 
@@ -92,13 +92,13 @@ index : source ROP-INDEX /file /rop
 `source PHANTOM /rop` が
 項目 `/rop` だけの空関係になります。
 
-``` text
+```text
 |== JOIN : index | join ( source PHANTOM /rop )
 ```
 
 計算結果は、`pick /rop` と同じになります。
 
-``` text
+```text
 |-- JOIN  /rop 'cut
 |-- JOIN  /rop 'join
 |-- JOIN  /rop 'pick
@@ -114,20 +114,20 @@ index : source ROP-INDEX /file /rop
 実際に、計算式を書くと、予想どおり、
 すべての項目が取り除かれた判断がひとつ出力されます。
 
-``` text
+```text
 |== CUT-ALL : index | cut /file /rop
 ```
-``` text
+```text
 |-- CUT-ALL
 ```
 
 `pick` に項目を与えずに使用したときも、
 同じようになります。
 
-``` text
+```text
 |== PICK-NON : index | pick
 ```
-``` text
+```text
 |-- PICK-NON
 ```
 
