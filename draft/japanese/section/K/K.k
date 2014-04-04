@@ -24,14 +24,14 @@ desc  : index | meet rop             ** index と rop の交わり
 |-- ROP-INDEX  /file 'C.k   /rop 'source
 |-- ROP-INDEX  /file 'D.k   /rop 'add
 |-- ROP-INDEX  /file 'D.k   /rop 'source
-|-- ROP-INDEX  /file 'E.k   /rop 'hold
+|-- ROP-INDEX  /file 'E.k   /rop 'keep
 |-- ROP-INDEX  /file 'E.k   /rop 'source
-|-- ROP-INDEX  /file 'E2.k  /rop 'hold
+|-- ROP-INDEX  /file 'E2.k  /rop 'keep
 |-- ROP-INDEX  /file 'E2.k  /rop 'source
-|-- ROP-INDEX  /file 'E3.k  /rop 'hold
+|-- ROP-INDEX  /file 'E3.k  /rop 'keep
 |-- ROP-INDEX  /file 'E3.k  /rop 'source
 |-- ROP-INDEX  /file 'E4.k  /rop 'add
 |-- ROP-INDEX  /file 'E4.k  /rop 'source
-|-- ROP-INDEX  /file 'F.k   /rop 'hold
+|-- ROP-INDEX  /file 'F.k   /rop 'keep
 |-- ROP-INDEX  /file 'F.k   /rop 'source
 

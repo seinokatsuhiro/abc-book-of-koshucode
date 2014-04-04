@@ -29,12 +29,12 @@
 しかし、あいまいさのないときは、関係写像演算子を、
 単に、関係演算子ということもあります。
 
-これまでに登場した関係写像演算子は `add` `hold` `source` だけです。
+これまでに登場した関係写像演算子は `add` `keep` `source` だけです。
 これらの演算子の機能を、手短かに説明すると、つぎのように書けるでしょう。
 
 ``` text
 |-- ROP  /rop 'add         /desc '項目の内容を計算し、新しい項目を追加する
-|-- ROP  /rop 'hold        /desc '条件をみたす組を選び出す
+|-- ROP  /rop 'keep        /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'source      /desc '判断集合を関係として読み出す
 ```
 
@@ -46,7 +46,7 @@
 間違っていることになります。
 
 ``` text
-|-X ROP  /rop 'hold        /desc '判断集合を関係として読み出す
+|-X ROP  /rop 'keep        /desc '判断集合を関係として読み出す
 ```
 
 甲州記法の関係演算子は開かれた体系で、拡張する手段が用意されています。
@@ -60,8 +60,8 @@
 |-- ROP  /rop 'add         /desc '項目の内容を計算し、新しい項目を追加する
 |-- ROP  /rop 'cut         /desc '指定された項目を取り除く
 |-- ROP  /rop 'group       /desc '交わり部分関係を新しい項目として追加する
-|-- ROP  /rop 'hold        /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'join        /desc 'ふたつの関係の結びを計算する
+|-- ROP  /rop 'keep        /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'maybe       /desc '片側の関係が成立しなくてもよい交わり
 |-- ROP  /rop 'maybe-both  /desc 'どちらかがの関係が成立すればよい交わり
 |-- ROP  /rop 'meet        /desc 'ふたつの関係の交わりを計算する

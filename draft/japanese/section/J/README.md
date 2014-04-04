@@ -15,8 +15,8 @@
 ``` text
 |== ROP
   | source ROP /rop /desc
-  | hold /rop = 'source
-      or /rop = 'hold
+  | keep /rop = 'source
+      or /rop = 'keep
 ```
 
 この計算式を [`J.k`][J.k] というファイルに保存し、
@@ -39,7 +39,7 @@ $ koshu J.k ../ROP.k
 **    ../ROP.k
 **    
 
-|-- ROP  /rop 'hold  /desc '条件をみたす組を選び出す
+|-- ROP  /rop 'keep  /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'source  /desc '判断集合を関係として読み出す
 
 **  

@@ -8,7 +8,7 @@
 
 ``` text
 |-- ROP-INDEX  /file 'P.k  /rop 'cut
-|-- ROP-INDEX  /file 'P.k  /rop 'hold
+|-- ROP-INDEX  /file 'P.k  /rop 'keep
 |-- ROP-INDEX  /file 'P.k  /rop 'reldee
 |-- ROP-INDEX  /file 'P.k  /rop 'reldum
 |-- ROP-INDEX  /file 'P.k  /rop 'source
@@ -23,8 +23,8 @@ index : source ROP-INDEX /file /rop
 この関係を項目 `/rop` の内容で制限します。
 
 ``` text
-index-cut    : index | hold /rop = 'cut
-index-delete : index | hold /rop = 'delete
+index-cut    : index | keep /rop = 'cut
+index-delete : index | keep /rop = 'delete
 ```
 
 関係 `index-cut` はひとつの組をもち、

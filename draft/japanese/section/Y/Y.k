@@ -9,7 +9,7 @@
 
 |== ROP-INDEX -fore /sect
   | source KOSHU-RELMAP-ROP /res /rop
-  | hold /rop <> 'id
+  | keep /rop <> 'id
   | add /sect ( sub-index /res 1 1 )
   | pick /rop /sect
 

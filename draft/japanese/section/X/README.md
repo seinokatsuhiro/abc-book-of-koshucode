@@ -20,7 +20,7 @@
 ``` text
 |== QR
   | source XY /x /y
-  | hold /y <> 0
+  | keep /y <> 0
   | add  /q ( /x quo /y )
          /r ( /x rem /y )
 ```

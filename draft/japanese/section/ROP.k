@@ -12,8 +12,8 @@
 |-- ROP  /rop 'add         /desc '項目の内容を計算し、新しい項目を追加する
 |-- ROP  /rop 'cut         /desc '指定された項目を取り除く
 |-- ROP  /rop 'group       /desc '交わり部分関係を新しい項目として追加する
-|-- ROP  /rop 'hold        /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'join        /desc 'ふたつの関係の結びを計算する
+|-- ROP  /rop 'keep        /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'maybe       /desc '片側の関係が成立しなくてもよい交わり
 |-- ROP  /rop 'maybe-both  /desc 'どちらかがの関係が成立すればよい交わり
 |-- ROP  /rop 'meet        /desc 'ふたつの関係の交わりを計算する

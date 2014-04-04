@@ -161,7 +161,7 @@
 **    ../ROP.k
 **
 
-|-- ROP  /rop 'hold  /desc '条件をみたす組を選び出す
+|-- ROP  /rop 'keep  /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'source  /desc '判断集合を関係として読み出す
 
 **
@@ -184,16 +184,16 @@
 |-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file 'D.k  /rop 'add
 
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'D.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E.k  /rop 'hold
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E.k  /rop 'keep
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'E.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E2.k  /rop 'hold
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E2.k  /rop 'keep
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'E2.k  /rop 'source
 
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E3.k  /rop 'hold
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'E3.k  /rop 'keep
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'E3.k  /rop 'source
 |-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file 'E4.k  /rop 'add
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'E4.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'F.k  /rop 'hold
+|-- DESC  /desc '条件をみたす組を選び出す  /file 'F.k  /rop 'keep
 
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'F.k  /rop 'source
 
@@ -372,7 +372,7 @@
 **
 
 |-- FILE-GROUP  /file 'O.k  /r {| /file : /rop | 'O.k : 'source | 'O.k : 'pick | 'O.k : 'join | 'O.k : 'cut |}
-|-- FILE-GROUP  /file 'P.k  /r {| /file : /rop | 'P.k : 'source | 'P.k : 'reldum | 'P.k : 'reldee | 'P.k : 'hold | 'P.k : 'cut |}
+|-- FILE-GROUP  /file 'P.k  /r {| /file : /rop | 'P.k : 'source | 'P.k : 'reldum | 'P.k : 'reldee | 'P.k : 'keep | 'P.k : 'cut |}
 |-- FILE-GROUP  /file 'Q.k  /r {| /file : /rop | 'Q.k : 'source | 'Q.k : 'rename | 'Q.k : 'meet |}
 |-- FILE-GROUP  /file 'R.k  /r {| /file : /rop | 'R.k : 'source | 'R.k : 'maybe | 'R.k : 'meet |}
 |-- FILE-GROUP  /file 'S.k  /r {| /file : /rop | 'S.k : 'source | 'S.k : 'pick | 'S.k : 'group |}
@@ -390,7 +390,7 @@
 **
 
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
-|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'reldum : 'reldee : 'hold : 'cut ]
+|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'reldum : 'reldee : 'keep : 'cut ]
 |-- FILE-ROPS  /file 'Q.k  /rops [ 'source : 'rename : 'meet ]
 |-- FILE-ROPS  /file 'R.k  /rops [ 'source : 'maybe : 'meet ]
 |-- FILE-ROPS  /file 'S.k  /rops [ 'source : 'pick : 'group ]

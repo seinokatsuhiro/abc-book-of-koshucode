@@ -9,6 +9,6 @@
 
 |== ROP
   | source ROP /rop /desc
-  | hold /rop = 'source
-      or /rop = 'hold
+  | keep /rop = 'source
+      or /rop = 'keep
 

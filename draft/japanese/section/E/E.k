@@ -14,7 +14,7 @@
 |-- ABC  /a 2  /b 7  /c 7
 
 abc  : source ABC /a /b /c
-abc2 : abc | hold /a = 1 and /b = 2
+abc2 : abc | keep /a = 1 and /b = 2
 
 |== ABC2 : abc2
 

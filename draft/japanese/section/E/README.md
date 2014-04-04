@@ -15,14 +15,14 @@
 |-- ABC  /a 2  /b 7  /c 7
 ```
 
-演算子 `hold` は条件をみたす組だけを残します。
-つぎの例では、`hold` に対して、`|` の左から 5 つの組がわたされ、
+演算子 `keep` は条件をみたす組だけを残します。
+つぎの例では、`keep` に対して、`|` の左から 5 つの組がわたされ、
 その各組に対して、`/a = 1 and /b = 2` を計算し、
 この条件をみたす組を選びます。
 
 ``` text
 abc  : source ABC /a /b /c
-abc2 : abc | hold /a = 1 and /b = 2
+abc2 : abc | keep /a = 1 and /b = 2
 ```
 
 `abc2` の計算結果を `ABC2` という種類の判断として書き出します。
@@ -54,12 +54,12 @@ abc2 : abc | hold /a = 1 and /b = 2
 
 ## 単独の条件
 
-`hold` の計算式を少し変えてみましょう。
+`keep` の計算式を少し変えてみましょう。
 [`E2.k`][E2.k] は項目 `/a` だけの条件をもちます。
 
 ``` text
 abc  : source ABC /a /b /c
-abc2 : abc | hold /a = 1
+abc2 : abc | keep /a = 1
 ```
 
 このとき、2 つの判断が出力されます。
@@ -78,7 +78,7 @@ abc2 : abc | hold /a = 1
 
 ``` text
 abc  : source ABC /a /b /c
-abc2 : abc | hold /a = 1 or /b = 2
+abc2 : abc | keep /a = 1 or /b = 2
 ```
 
 どちらかの条件をみたす判断が出力されます。
@@ -92,7 +92,7 @@ abc2 : abc | hold /a = 1 or /b = 2
 
 ## 条件式の内容
 
-最後に、`hold` の代わりに `add` を使って、
+最後に、`keep` の代わりに `add` を使って、
 条件式の計算結果を確認します。
 
 ``` text
@@ -106,7 +106,7 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 `/a = 1 or /b = 2` という式が成り立つこと、あるいは、正しいこと、
 偽 `#false` は、この式が成り立たないこと、
 あるいは、間違っていることをあらわします。
-`hold` は `#true` の組だけを選び出します。
+`keep` は `#true` の組だけを選び出します。
 
 ``` text
 |-- ABCD  /d #true  /a 1  /b 2  /c 3
