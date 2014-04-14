@@ -11,3 +11,4 @@ This summary is produced by the command `koshu-inout-summary.sh`
 - OK – [INOUT.md](section/D/INOUT.md) in section / D
 - OK – [INOUT.md](section/E/INOUT.md) in section / E
 - OK – [INOUT.md](section/F/INOUT.md) in section / F
+- OK – [INOUT.md](section/H/INOUT.md) in section / H
