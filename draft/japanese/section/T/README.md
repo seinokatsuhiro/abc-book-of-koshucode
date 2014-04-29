@@ -48,7 +48,7 @@ file-rops  : file-group
 
 ```text
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
-|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'reldum : 'reldee : 'keep : 'cut ]
+|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'dum : 'dee : 'keep : 'cut ]
 |-- FILE-ROPS  /file 'Q.k  /rops [ 'source : 'rename : 'meet ]
 |-- FILE-ROPS  /file 'R.k  /rops [ 'source : 'maybe : 'meet ]
 |-- FILE-ROPS  /file 'S.k  /rops [ 'source : 'pick : 'group ]

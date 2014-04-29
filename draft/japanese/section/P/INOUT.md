@@ -18,8 +18,8 @@
 
 |-- ROP-INDEX  /file 'P.k  /rop 'cut
 |-- ROP-INDEX  /file 'P.k  /rop 'keep
-|-- ROP-INDEX  /file 'P.k  /rop 'reldee
-|-- ROP-INDEX  /file 'P.k  /rop 'reldum
+|-- ROP-INDEX  /file 'P.k  /rop 'dee
+|-- ROP-INDEX  /file 'P.k  /rop 'dum
 |-- ROP-INDEX  /file 'P.k  /rop 'source
 
 index            : source ROP-INDEX /file /rop
@@ -42,10 +42,10 @@ some-delete      : index-delete | cut /file /rop
 
 **  事前に定義された無項関係
 
-|== DUM : reldum
-|== DEE : reldee
+|== DUM : dum
+|== DEE : dee
 
-**  結びを使った reldee
+**  結びを使った dee
 
 |-- A  /a 1
 |-- B  /b 1

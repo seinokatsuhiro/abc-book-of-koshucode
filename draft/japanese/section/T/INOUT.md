@@ -26,8 +26,8 @@
 
 |-- ROP-INDEX  /file 'P.k  /rop 'cut
 |-- ROP-INDEX  /file 'P.k  /rop 'keep
-|-- ROP-INDEX  /file 'P.k  /rop 'reldee
-|-- ROP-INDEX  /file 'P.k  /rop 'reldum
+|-- ROP-INDEX  /file 'P.k  /rop 'dee
+|-- ROP-INDEX  /file 'P.k  /rop 'dum
 |-- ROP-INDEX  /file 'P.k  /rop 'source
 
 |-- ROP-INDEX  /file 'Q.k  /rop 'meet
@@ -63,7 +63,7 @@ Command `koshu T.k` produces:
 **
 
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
-|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'reldum : 'reldee : 'keep : 'cut ]
+|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'dum : 'dee : 'keep : 'cut ]
 |-- FILE-ROPS  /file 'Q.k  /rops [ 'source : 'rename : 'meet ]
 |-- FILE-ROPS  /file 'R.k  /rops [ 'source : 'maybe : 'meet ]
 |-- FILE-ROPS  /file 'S.k  /rops [ 'source : 'pick : 'group ]

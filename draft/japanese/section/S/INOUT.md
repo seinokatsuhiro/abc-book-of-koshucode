@@ -26,8 +26,8 @@
 
 |-- ROP-INDEX  /file 'P.k  /rop 'cut
 |-- ROP-INDEX  /file 'P.k  /rop 'keep
-|-- ROP-INDEX  /file 'P.k  /rop 'reldee
-|-- ROP-INDEX  /file 'P.k  /rop 'reldum
+|-- ROP-INDEX  /file 'P.k  /rop 'dee
+|-- ROP-INDEX  /file 'P.k  /rop 'dum
 |-- ROP-INDEX  /file 'P.k  /rop 'source
 
 |-- ROP-INDEX  /file 'Q.k  /rop 'meet
@@ -60,7 +60,7 @@ Command `koshu S.k` produces:
 **
 
 |-- FILE-GROUP  /file 'O.k  /r {| /file : /rop | 'O.k : 'source | 'O.k : 'pick | 'O.k : 'join | 'O.k : 'cut |}
-|-- FILE-GROUP  /file 'P.k  /r {| /file : /rop | 'P.k : 'source | 'P.k : 'reldum | 'P.k : 'reldee | 'P.k : 'keep | 'P.k : 'cut |}
+|-- FILE-GROUP  /file 'P.k  /r {| /file : /rop | 'P.k : 'source | 'P.k : 'dum | 'P.k : 'dee | 'P.k : 'keep | 'P.k : 'cut |}
 |-- FILE-GROUP  /file 'Q.k  /r {| /file : /rop | 'Q.k : 'source | 'Q.k : 'rename | 'Q.k : 'meet |}
 |-- FILE-GROUP  /file 'R.k  /r {| /file : /rop | 'R.k : 'source | 'R.k : 'maybe | 'R.k : 'meet |}
 |-- FILE-GROUP  /file 'S.k  /r {| /file : /rop | 'S.k : 'source | 'S.k : 'pick | 'S.k : 'group |}
