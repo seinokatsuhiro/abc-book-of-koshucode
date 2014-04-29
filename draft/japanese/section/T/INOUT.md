@@ -68,6 +68,8 @@ Command `koshu T.k` produces:
 |-- FILE-ROPS  /file 'R.k  /rops [ 'source : 'maybe : 'meet ]
 |-- FILE-ROPS  /file 'S.k  /rops [ 'source : 'pick : 'group ]
 
+*** 5 judges
+
 **
 **  SUMMARY
 **       5 judges on FILE-ROPS

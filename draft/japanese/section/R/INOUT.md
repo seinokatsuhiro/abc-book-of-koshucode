@@ -49,9 +49,13 @@ Command `koshu R.k` produces:
 |-- DESC  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
 |-- DESC  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
 
+*** 2 judges
+
 |-- DESC-2  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
 |-- DESC-2  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
 |-- DESC-2  /file 'R.k  /rop 'source  /desc ()
+
+*** 3 judges
 
 **
 **  SUMMARY

@@ -4,8 +4,9 @@
 **    甲州記法の ABC - W 甲州計算機の拡張
 **
 **  使用法
-**    cabal install --bindir=.
-**    ./koshu-w W.k
+**    cabal sandbox init --sandbox=KOSHUCODE-SANDBOX
+**    cabal build
+**    ./dist/build/koshu-w/koshu-w W.k
 **
 
 |-- XY  /x 15  /y 4

@@ -37,6 +37,8 @@ Command `koshu B.k` produces:
 
 |-- ABCD  /d 6  /a 1  /b 2  /c 3
 
+*** 1 judge 
+
 **
 **  SUMMARY
 **       1 judge  on ABCD

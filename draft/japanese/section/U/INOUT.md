@@ -47,8 +47,12 @@ Command `koshu U.k` produces:
 |-- A  /x [ 'source : 'pick : 'source ]
 |-- A  /x { 'source : 'pick }
 
+*** 2 judges
+
 |-- B  /a #false  /b #false  /x [ 'ベーグル : 'クロワッサン ]
 |-- B  /a #false  /b #true  /x { 'ベーグル : 'クロワッサン }
+
+*** 2 judges
 
 **
 **  SUMMARY

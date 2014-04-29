@@ -46,11 +46,14 @@ Command `koshu N.k` produces:
 |-- Z  /c 'C4  /a 'A1  /b 'B2
 |-- Z  /c 'C3  /a 'A1  /b 'B2
 
+*** 3 judges
+
 |-- V  /b 'B1
 |-- V  /b 'B2
-
 |-- V  /b 'B3
 |-- V  /b 'B4
+
+*** 4 judges
 
 **
 **  SUMMARY

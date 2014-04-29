@@ -53,17 +53,26 @@ Command `koshu O.k` produces:
 |-- PICK  /rop 'pick
 |-- PICK  /rop 'source
 
-|-- JOIN  /rop 'cut
+*** 4 judges
 
+|-- JOIN  /rop 'cut
 |-- JOIN  /rop 'join
 |-- JOIN  /rop 'pick
 |-- JOIN  /rop 'source
 
+*** 4 judges
+
 |-- CUT  /file 'O.k
+
+*** 1 judge 
 
 |-- PICK-NON
 
+*** 1 judge 
+
 |-- CUT-ALL
+
+*** 1 judge 
 
 **
 **  SUMMARY

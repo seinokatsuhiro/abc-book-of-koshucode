@@ -64,20 +64,26 @@ Command `koshu V.k` produces:
 |-- A-MEET  /x 1  /xs { 1 : 3 : 5 }
 |-- A-MEET  /x 3  /xs { 1 : 3 : 5 }
 
+*** 2 judges
+
 |-- A-MEM  /x 1  /xs { 1 : 3 : 5 }
 |-- A-MEM  /x 3  /xs { 1 : 3 : 5 }
 
-|-- B-MEET  /x 5  /xs { 1 : 3 : 5 }
+*** 2 judges
 
+|-- B-MEET  /x 5  /xs { 1 : 3 : 5 }
 |-- B-MEET  /x 3  /xs { 1 : 3 : 5 }
 |-- B-MEET  /x 1  /xs { 1 : 3 : 5 }
+
+*** 3 judges
 
 |-- B-MEM  /x 1  /xs { 1 : 3 : 5 }
 |-- B-MEM  /x 3  /xs { 1 : 3 : 5 }
 |-- B-MEM  /x 5  /xs { 1 : 3 : 5 }
-
 |-- B-MEM  /x 2  /xs { 2 : 4 }
 |-- B-MEM  /x 4  /xs { 2 : 4 }
+
+*** 5 judges
 
 **
 **  SUMMARY

@@ -49,6 +49,8 @@ Command `koshu C.k` produces:
 |-- ABCD  /d 14  /a 4  /b 7  /c 3
 |-- ABCD  /d 16  /a 2  /b 7  /c 7
 
+*** 5 judges
+
 **
 **  SUMMARY
 **       5 judges on ABCD

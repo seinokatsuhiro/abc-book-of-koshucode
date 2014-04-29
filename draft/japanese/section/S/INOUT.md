@@ -65,6 +65,8 @@ Command `koshu S.k` produces:
 |-- FILE-GROUP  /file 'R.k  /r {| /file : /rop | 'R.k : 'source | 'R.k : 'maybe | 'R.k : 'meet |}
 |-- FILE-GROUP  /file 'S.k  /r {| /file : /rop | 'S.k : 'source | 'S.k : 'pick | 'S.k : 'group |}
 
+*** 5 judges
+
 **
 **  SUMMARY
 **       5 judges on FILE-GROUP

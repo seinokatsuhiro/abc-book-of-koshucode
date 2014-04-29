@@ -110,6 +110,8 @@ Command `koshu ../ROP.k K.k` produces:
 
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'F.k  /rop 'source
 
+*** 16 judges
+
 **
 **  SUMMARY
 **      16 judges on DESC

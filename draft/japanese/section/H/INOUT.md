@@ -49,6 +49,8 @@ Command `koshu H.k` produces:
 |-- ABC  /a 'one  /b 'two  /c "one plus two"
 |-- ABC  /a #true  /b #false  /c ()
 
+*** 8 judges
+
 **
 **  SUMMARY
 **       8 judges on ABC

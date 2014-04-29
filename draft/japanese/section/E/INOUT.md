@@ -43,6 +43,8 @@ Command `koshu E.k` produces:
 
 |-- ABC2  /a 1  /b 2  /c 3
 
+*** 1 judge 
+
 **
 **  SUMMARY
 **       1 judge  on ABC2
@@ -88,6 +90,8 @@ Command `koshu E2.k` produces:
 
 |-- ABC2  /a 1  /b 2  /c 3
 |-- ABC2  /a 1  /b 4  /c 5
+
+*** 2 judges
 
 **
 **  SUMMARY
@@ -135,6 +139,8 @@ Command `koshu E3.k` produces:
 |-- ABC2  /a 1  /b 2  /c 3
 |-- ABC2  /a 1  /b 4  /c 5
 |-- ABC2  /a 3  /b 2  /c 5
+
+*** 3 judges
 
 **
 **  SUMMARY
@@ -184,6 +190,8 @@ Command `koshu E4.k` produces:
 |-- ABCD  /d #true  /a 3  /b 2  /c 5
 |-- ABCD  /d #false  /a 4  /b 7  /c 3
 |-- ABCD  /d #false  /a 2  /b 7  /c 7
+
+*** 5 judges
 
 **
 **  SUMMARY

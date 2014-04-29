@@ -52,17 +52,20 @@ Command `koshu M.k` produces:
 |-- XY  /a 'A1  /b 'B2
 |-- XY  /a 'A2  /b 'B3
 
+*** 2 judges
+
 |-- XZ  /c 'C3  /a 'A1  /b 'B1
 |-- XZ  /c 'C2  /a 'A1  /b 'B1
 |-- XZ  /c 'C1  /a 'A1  /b 'B1
-
 |-- XZ  /c 'C3  /a 'A1  /b 'B2
 |-- XZ  /c 'C2  /a 'A1  /b 'B2
+
 |-- XZ  /c 'C1  /a 'A1  /b 'B2
 |-- XZ  /c 'C3  /a 'A2  /b 'B3
 |-- XZ  /c 'C2  /a 'A2  /b 'B3
-
 |-- XZ  /c 'C1  /a 'A2  /b 'B3
+
+*** 9 judges
 
 **
 **  SUMMARY

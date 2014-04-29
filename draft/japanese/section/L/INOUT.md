@@ -49,14 +49,19 @@ Command `koshu L.k` produces:
 |-- Z  /c 'C4  /a 'A1  /b 'B2
 |-- Z  /c 'C3  /a 'A1  /b 'B2
 
+*** 3 judges
+
 |-- YX  /a 'A1  /b 'B1  /c 'C1
 |-- YX  /a 'A1  /b 'B2  /c 'C3
-
 |-- YX  /a 'A1  /b 'B2  /c 'C4
+
+*** 3 judges
 
 |-- XX  /a 'A1  /b 'B1
 |-- XX  /a 'A1  /b 'B2
 |-- XX  /a 'A2  /b 'B3
+
+*** 3 judges
 
 **
 **  SUMMARY

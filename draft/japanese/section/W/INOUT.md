@@ -13,8 +13,9 @@
 **    甲州記法の ABC - W 甲州計算機の拡張
 **
 **  使用法
-**    cabal install --bindir=.
-**    ./koshu-w W.k
+**    cabal sandbox init --sandbox=KOSHUCODE-SANDBOX
+**    cabal build
+**    ./dist/build/koshu-w/koshu-w W.k
 **
 
 |-- XY  /x 15  /y 4
@@ -47,6 +48,7 @@ Command `koshu-w W.k` produces:
 |-- QR  /x 15  /y 3  /q 5  /r 0
 |-- QR  /x 15  /y 2  /q 7  /r 1
 |-- QR  /x 15  /y 1  /q 15  /r 0
+
 |-- QR-MAYBE  /x 15  /y 4  /q 3  /r 3
 
 |-- QR-MAYBE  /x 15  /y 3  /q 5  /r 0

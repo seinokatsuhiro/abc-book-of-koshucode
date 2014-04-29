@@ -71,16 +71,29 @@ Command `koshu P.k` produces:
 
 |-- INDEX-CUT  /file 'P.k  /rop 'cut
 
+*** 1 judge 
+
+*** no judges
 
 |-- SOME-CUT
 
+*** 1 judge 
 
+*** no judges
+
+*** no judges
 
 |-- DEE
 
+*** 1 judge 
+
 |-- C
 
+*** 1 judge 
+
 |-- D  /b 1  /a 1
+
+*** 1 judge 
 
 **
 **  SUMMARY

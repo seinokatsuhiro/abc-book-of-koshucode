@@ -82,6 +82,8 @@ Command `koshu ../ROP.k Q.k` produces:
 |-- DESC  /file 'Q.k  /rop 'rename  /desc '項目名を変更する
 |-- DESC  /file 'Q.k  /rop 'source  /desc '判断集合を関係として読み出す
 
+*** 3 judges
+
 **
 **  SUMMARY
 **       3 judges on DESC

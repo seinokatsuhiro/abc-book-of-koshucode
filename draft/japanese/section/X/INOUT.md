@@ -49,6 +49,8 @@ Command `koshu X.k` produces:
 
 |-- QR  /x 15  /y 1  /q 15  /r 0
 
+*** 6 judges
+
 **
 **  SUMMARY
 **       6 judges on QR
