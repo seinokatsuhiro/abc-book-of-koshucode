@@ -1,6 +1,6 @@
-# I/O list of koshu-w
+# I/O List
 
-- koshu-w  [W.k](#wk)
+- koshu-w [W.k](#wk)
 
 
 
@@ -71,5 +71,5 @@ Command `koshu-w W.k` produces:
 This document is produced by the command:
 
 ```
-koshu-inout.sh -s -g -p koshu-w
+koshu-inout.sh -s -g koshu-w
 ```

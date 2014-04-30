@@ -1,4 +1,4 @@
-# I/O list of koshu
+# I/O List
 
 - [../ROP.k](#/ropk)
 - koshu ../ROP.k [Q.k](#qk)
@@ -93,5 +93,5 @@ Command `koshu ../ROP.k Q.k` produces:
 This document is produced by the command:
 
 ```
-koshu-inout.sh -s -g ../ROP.k
+koshu-inout.sh -s -g koshu ../ROP.k
 ```

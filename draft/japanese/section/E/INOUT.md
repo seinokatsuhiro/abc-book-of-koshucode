@@ -1,9 +1,9 @@
-# I/O list of koshu
+# I/O List
 
-- koshu  [E.k](#ek)
-- koshu  [E2.k](#e2k)
-- koshu  [E3.k](#e3k)
-- koshu  [E4.k](#e4k)
+- koshu [E.k](#ek)
+- koshu [E2.k](#e2k)
+- koshu [E3.k](#e3k)
+- koshu [E4.k](#e4k)
 
 
 
@@ -207,5 +207,5 @@ Command `koshu E4.k` produces:
 This document is produced by the command:
 
 ```
-koshu-inout.sh -s -g
+koshu-inout.sh -s -g koshu
 ```

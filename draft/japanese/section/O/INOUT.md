@@ -1,6 +1,6 @@
-# I/O list of koshu
+# I/O List
 
-- koshu  [O.k](#ok)
+- koshu [O.k](#ok)
 
 
 
@@ -92,5 +92,5 @@ Command `koshu O.k` produces:
 This document is produced by the command:
 
 ```
-koshu-inout.sh -s -g
+koshu-inout.sh -s -g koshu
 ```
