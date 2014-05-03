@@ -1,6 +1,6 @@
 # I/O List
 
-- [../ROP.k](#/ropk)
+- [../ROP.k](#ropk)
 - koshu ../ROP.k [Q.k](#qk)
 
 
