@@ -9,6 +9,7 @@
 本全体は [zip ファイル][zip] として入手できます。
 付属するファイルをコンピュータで実行しながら
 学習することをおすすめします。
+実行結果は [入出力リストの要約][sum] に一覧されています。
 
 
 [A. 甲州記法][A]
@@ -91,6 +92,7 @@
 [Y]: section/Y
 [Z]: section/Z
 
+[sum]: INOUT-SUMMARY.md
 [zip]: https://github.com/seinokatsuhiro/abc-of-koshucode/archive/master.zip
 [Google]: https://www.google.com/cse/publicurl?cx=014037774401679920196:skkz2klef7o
 
