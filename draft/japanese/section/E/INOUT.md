@@ -185,11 +185,11 @@ Command `koshu E4.k` produces:
 **    E4.k
 **
 
-|-- ABCD  /d #true  /a 1  /b 2  /c 3
-|-- ABCD  /d #true  /a 1  /b 4  /c 5
-|-- ABCD  /d #true  /a 3  /b 2  /c 5
-|-- ABCD  /d #false  /a 4  /b 7  /c 3
-|-- ABCD  /d #false  /a 2  /b 7  /c 7
+|-- ABCD  /d <1>  /a 1  /b 2  /c 3
+|-- ABCD  /d <1>  /a 1  /b 4  /c 5
+|-- ABCD  /d <1>  /a 3  /b 2  /c 5
+|-- ABCD  /d <0>  /a 4  /b 7  /c 3
+|-- ABCD  /d <0>  /a 2  /b 7  /c 7
 
 *** 5 judges
 

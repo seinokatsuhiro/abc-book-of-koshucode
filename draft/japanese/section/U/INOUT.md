@@ -49,8 +49,8 @@ Command `koshu U.k` produces:
 
 *** 2 judges
 
-|-- B  /a #false  /b #false  /x [ 'ベーグル : 'クロワッサン ]
-|-- B  /a #false  /b #true  /x { 'ベーグル : 'クロワッサン }
+|-- B  /a <0>  /b <0>  /x [ 'ベーグル : 'クロワッサン ]
+|-- B  /a <0>  /b <1>  /x { 'ベーグル : 'クロワッサン }
 
 *** 2 judges
 
