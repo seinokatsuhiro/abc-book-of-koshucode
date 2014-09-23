@@ -19,12 +19,12 @@
 このままでは、共有項目になりません。
 
 ```text
-|-- ROP  /rop 'dee         /desc '無項万有関係
-|-- ROP  /rop 'dum         /desc '無項空関係
-|-- ROP  /rop 'meet        /desc 'ふたつの関係の交わりを計算する
-|-- ROP  /rop 'pick        /desc '指定された項目を取り除く
-|-- ROP  /rop 'rename      /desc '項目名を変更する
-|-- ROP  /rop 'source      /desc '判断集合を関係として読み出す
+|-- ROP  /rop 'dee     /desc "無項万有関係"
+|-- ROP  /rop 'dum     /desc "無項空関係"
+|-- ROP  /rop 'meet    /desc "ふたつの関係の交わりを計算する"
+|-- ROP  /rop 'pick    /desc "指定された項目を選び出す"
+|-- ROP  /rop 'rename  /desc "項目名を変更する"
+|-- ROP  /rop 'source  /desc "判断集合を関係として読み出す"
 ```
 
 項目名が合わないときは、演算子 `rename` を使って

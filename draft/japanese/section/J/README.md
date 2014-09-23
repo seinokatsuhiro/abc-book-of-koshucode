@@ -33,16 +33,18 @@ $ koshu J.k ../ROP.k
 
 ```text
 ** -*- koshu -*-
-**  
+**
 **  INPUT
-**    J.k
 **    ../ROP.k
-**    
+**    J.k
+**
 
 |-- ROP  /rop 'keep  /desc '条件をみたす組を選び出す
 |-- ROP  /rop 'source  /desc '判断集合を関係として読み出す
 
-**  
+*** 2 judges
+
+**
 **  SUMMARY
 **       2 judges on ROP
 **       2 judges in total

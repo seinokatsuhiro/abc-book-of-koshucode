@@ -22,8 +22,8 @@
 **  ROP
 **    演算子 /rop は、手短かに、/desc と説明される。
 
-|-- ROP  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
-|-- ROP  /rop 'meet   /desc 'ふたつの関係の交わりを計算する
+|-- ROP  /rop 'maybe   /desc "片側の関係が成立しなくてもよい交わり"
+|-- ROP  /rop 'meet    /desc "ふたつの関係の交わりを計算する"
 ```
 
 この `ROP-INDEX` と `ROP` の交わりを計算します。
@@ -98,10 +98,10 @@ rop   : source ROP /rop /desc
 `ROP` の否定が延々と続いていると想像できます。
 
 ```text
-|-X ROP  /rop 'source  /desc '片側の関係が成立しなくてもよい交わり
-|-X ROP  /rop 'source  /desc 'ふたつの関係の交わりを計算する
-|-X ROP  /rop 'source  /desc 'ぶどう狩りをする
-|-X ROP  /rop 'source  /desc 'ワインの飲みくらべ
+|-X ROP  /rop 'source  /desc "片側の関係が成立しなくてもよい交わり"
+|-X ROP  /rop 'source  /desc "ふたつの関係の交わりを計算する"
+|-X ROP  /rop 'source  /desc "ぶどう狩りをする"
+|-X ROP  /rop 'source  /desc "ワインの飲みくらべ"
 |-X ROP  /rop 'source  /desc ...
 ... ... ...
 ```

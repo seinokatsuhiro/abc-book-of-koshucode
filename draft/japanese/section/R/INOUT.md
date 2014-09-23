@@ -26,15 +26,14 @@
 **  ROP
 **    演算子 /rop は、手短かに、/desc と説明される。
 
-|-- ROP  /rop 'maybe   /desc '片側の関係が成立しなくてもよい交わり
-|-- ROP  /rop 'meet    /desc 'ふたつの関係の交わりを計算する
+|-- ROP  /rop 'maybe   /desc "片側の関係が成立しなくてもよい交わり"
+|-- ROP  /rop 'meet    /desc "ふたつの関係の交わりを計算する"
 
 index  : source ROP-INDEX /file /rop
 rop    : source ROP /rop /desc
 
 |== DESC   -fore /file /rop : index | meet  rop
 |== DESC-2 -fore /file /rop : index | maybe rop
-
 ```
 
 Command `koshu R.k` produces:
@@ -53,7 +52,7 @@ Command `koshu R.k` produces:
 
 |-- DESC-2  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
 |-- DESC-2  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
-|-- DESC-2  /file 'R.k  /rop 'source  /desc ()
+|-- DESC-2  /file 'R.k  /rop 'source
 
 *** 3 judges
 
