@@ -17,8 +17,8 @@ import qualified Koshucode.Baala.Base                   as B
 import qualified Koshucode.Baala.Core                   as C
 import qualified Koshucode.Baala.Op.Global              as Op
 import qualified Koshucode.Baala.Op                     as Op
-import qualified Koshucode.Baala.Type.Vanilla           as Type
 import qualified Koshucode.Baala.Op.Message             as Msg
+import qualified Koshucode.Baala.Type.Vanilla           as Type
 import qualified Koshucode.Baala.Toolkit.Main.KoshuMain as Main
 import qualified Koshucode.Baala.Toolkit.Library.Exit   as Main
 import qualified Paths_koshu_w                          as Paths
@@ -26,18 +26,21 @@ import qualified Paths_koshu_w                          as Paths
 
 -- ----------------------  main
 
+-- Main function of koshu calculator.
 main :: IO ()
-main = Main.exit =<< Main.koshuMain koshuGlobal where
+main = Main.exit =<< Main.koshuMain koshuGlobal
 
+-- The global parameter that includes user-defined operator.
 koshuGlobal :: C.Global Type.VContent
-koshuGlobal = C.globalRopsAdd g' userRops where
-    g' = Op.vanillaGlobal { C.globalSynopsis = "The ABC of Koshucode"
-                          , C.globalVersion  = Paths.version }
+koshuGlobal = C.globalRopsAdd userRops g' where
+    g' = Op.vanillaGlobal
+         { C.globalSynopsis  = "The ABC of Koshucode"
+         , C.globalVersion   = Paths.version }
 
 -- User-defined relmap operator
 userRops :: [C.Rop Type.VContent]
 userRops = Op.ropList "user"
-    [ Op.ropE consDivide "divide /T /T /T /T"  "-1 -2 -3 -4" ]
+    [ Op.def consDivide "divide /T /T /T /T"  "E -1 -2 -3 -4" ]
 
 
 -- ----------------------  divide
