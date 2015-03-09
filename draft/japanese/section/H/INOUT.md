@@ -40,12 +40,12 @@ Command `koshu H.k` produces:
 
 |-- ABC  /a 1  /b 2  /c 3
 |-- ABC  /a 1  /b 4  /c 5
-|-- ABC  /a 3  /b 2  /c ()
+|-- ABC  /a 3  /b 2
 |-- ABC  /a 10 000  /b -20 000  /c 30 000.00
 |-- ABC  /a 'one  /b 'two  /c 'three
 
 |-- ABC  /a 'one  /b 'two  /c "one plus two"
-|-- ABC  /a <1>  /b <0>  /c ()
+|-- ABC  /a <1>  /b <0>
 
 *** 7 judges
 
