@@ -20,10 +20,11 @@ Haskell を使える環境をもっているならば、
 つぎのようにして `koshu-w` コマンドをつくれます。
 
 ```sh
-$ cabal install --bindir=.
+$ cabal sandbox init
+$ cabal install
 ```
 
-もし `koshu-w` をつくる手段が手元になくても、
+`koshu-w` をつくる手段が手元になくても、
 具体的な判断をいくつか書き、
 それらを一般化したデータ解釈を与え、
 その解釈をみたすように関係写像演算子を定義することで、
@@ -69,7 +70,7 @@ xyqr : divide /x /y /q /r
 拡張された甲州計算機で実行します。
 
 ```sh
-$ ./koshu-w W.k
+$ koshu-w W.k
 ```
 
 その結果、つぎのような 4 つの判断が出力されます。
@@ -158,7 +159,7 @@ R4  {| /x : /y : /q : /r | 15 : 4 :  3 : 3 | 15 : 3 :  5 : 0
 |-- QR-MAYBE  /x 15  /y 3  /q 5  /r 0
 |-- QR-MAYBE  /x 15  /y 2  /q 7  /r 1
 |-- QR-MAYBE  /x 15  /y 1  /q 15  /r 0
-|-- QR-MAYBE  /x 15  /y 0  /q ()  /r ()
+|-- QR-MAYBE  /x 15  /y 0
 ```
 
 

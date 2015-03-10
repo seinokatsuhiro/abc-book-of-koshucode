@@ -49,12 +49,15 @@ Command `koshu-w W.k` produces:
 |-- QR  /x 15  /y 2  /q 7  /r 1
 |-- QR  /x 15  /y 1  /q 15  /r 0
 
-|-- QR-MAYBE  /x 15  /y 4  /q 3  /r 3
+*** 4 judges
 
+|-- QR-MAYBE  /x 15  /y 4  /q 3  /r 3
 |-- QR-MAYBE  /x 15  /y 3  /q 5  /r 0
 |-- QR-MAYBE  /x 15  /y 2  /q 7  /r 1
 |-- QR-MAYBE  /x 15  /y 1  /q 15  /r 0
-|-- QR-MAYBE  /x 15  /y 0  /q ()  /r ()
+|-- QR-MAYBE  /x 15  /y 0
+
+*** 5 judges
 
 **
 **  SUMMARY
