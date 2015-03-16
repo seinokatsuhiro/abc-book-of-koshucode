@@ -32,15 +32,15 @@
 index : source ROP-INDEX /file /rop
 rop   : source ROP /rop /desc
 
-|== DESC -fore /file /rop : index | meet  rop
+|== DESC -fore /file /rop : index | meet rop
 ```
 
 そうすると、`ROP` 側に `/rop 'source` の情報がないため、
 つぎのふたつの判断だけが出力されます。
 
 ```text
-|-- DESC  /desc 'ふたつの関係の交わりを計算する  /file 'R.k  /rop 'meet
-|-- DESC  /desc '片側の関係が成立しなくてもよい交わり  /file 'R.k  /rop 'maybe
+|-- DESC  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
+|-- DESC  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
 ```
 
 しかし、`/desc` を空にしてもよいので、
@@ -53,19 +53,19 @@ rop   : source ROP /rop /desc
 
 のように演算子 `meet` の代わりに `maybe` を使うことで、
 `/desc` が空となる判断を出力できます。
-項目内容が空になることは、 **ニル** という記号であらわされ、
-甲州記法では `()` と書かれます。
 
 ```text
-|-- DESC-2  /desc 'ふたつの関係の交わりを計算する  /file 'R.k  /rop 'meet
-|-- DESC-2  /desc '片側の関係が成立しなくてもよい交わり  /file 'R.k  /rop 'maybe
-|-- DESC-2  /desc ()  /file 'R.k  /rop 'source
+|-- DESC-2  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
+|-- DESC-2  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
+|-- DESC-2  /file 'R.k  /rop 'source
 ```
 
 一般に、`x | meet y` は、`x` と `y` の両方が成り立つときのみ、
-出力結果が得られるのに対して、
+出力関係に含まれるのに対して、
 `x | maybe y` は、`x` が成り立つけど `y` が成り立たない場合も、
-`y` 側の項目内容を `()` にして、出力結果に含めます。
+`y` 側の項目内容を空番 `()` にした関係を出力します。
+空番を内容にもつ項目は、判断として出力するときに省略されるため、
+`/file` と `/rop` だけになります。
 
 判断種 `DESC-2` は、
 
