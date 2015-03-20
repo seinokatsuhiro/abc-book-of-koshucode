@@ -21,5 +21,6 @@ index : source ROP-INDEX /file /operator
 rop   : source ROP /rop /desc
 desc  : index | meet rop
 
-|== DESC -fore /file /rop : desc
+|== DESC : desc
+  --forward /file /rop
 

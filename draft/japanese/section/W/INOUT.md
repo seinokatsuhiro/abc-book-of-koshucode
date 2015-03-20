@@ -27,11 +27,11 @@
 xy   : source XY /x /y
 xyqr : divide /x /y /q /r
 
-|== QR -fore /x /y
-  | xy | xyqr
+|== QR : xy | xyqr
+  --forward /x /y
 
-|== QR-MAYBE -fore /x /y
-  | xy | maybe xyqr
+|== QR-MAYBE : xy | maybe xyqr
+  --forward /x /y
 
 ```
 

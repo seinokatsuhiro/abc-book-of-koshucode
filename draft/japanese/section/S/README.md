@@ -46,7 +46,8 @@ file-group : file | group /r index
 それを
 
 ```text
-|== FILE-GROUP -fore /file : file-group
+|== FILE-GROUP : file-group
+  --forward /file
 ```
 
 で書き出すと、つぎのようになります。

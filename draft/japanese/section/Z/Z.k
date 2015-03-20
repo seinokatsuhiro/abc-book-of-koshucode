@@ -15,9 +15,10 @@ term-sect
   | member /term /terms
   | cut /terms
 
-|== INDEX -fore /furi /term
+|== INDEX
   | term
   | group /r term-sect
   | add /sects ( /r/sect )
   | cut /r
+  --forward /furi /term
 

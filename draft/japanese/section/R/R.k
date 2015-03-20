@@ -23,5 +23,5 @@
 index  : source ROP-INDEX /file /rop
 rop    : source ROP /rop /desc
 
-|== DESC   -fore /file /rop : index | meet  rop
-|== DESC-2 -fore /file /rop : index | maybe rop
+|== DESC   : index | meet  rop  --forward /file /rop
+|== DESC-2 : index | maybe rop  --forward /file /rop
