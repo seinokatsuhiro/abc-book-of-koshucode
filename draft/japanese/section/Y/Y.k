@@ -7,9 +7,10 @@
 **    koshu Y.k output/ELEMENT.k > output/ROP-INDEX.k
 **
 
-|== ROP-INDEX -fore /sect
-  | source KOSHU-RELMAP-ROP /res /rop
+|== ROP-INDEX
+  | source KOSHU-RELMAP-BASE /point /rop
   | keep /rop <> 'id
-  | add /sect ( sub-index /res 1 1 )
+  | add /sect ( sub-index /point 1 1 )
   | pick /rop /sect
+  --forward /sect
 

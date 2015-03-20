@@ -18,13 +18,15 @@
 --
 -- ------------------------------------------------------------
 
-import qualified Data.List                as List
-import qualified Data.Maybe               as Maybe
-import qualified System.Environment       as Sys
-import qualified Text.PrettyPrint         as Pretty
-import qualified Koshucode.Baala.Base     as B
-import qualified Koshucode.Baala.Core     as C
-import qualified Koshucode.Baala.Vanilla  as V
+import qualified Data.List                     as List
+import qualified System.Environment            as Sys
+import qualified Text.PrettyPrint              as Pretty
+import qualified Koshucode.Baala.Base          as B
+import qualified Koshucode.Baala.Core          as C
+import qualified Koshucode.Baala.Op.Global     as Op
+import qualified Koshucode.Baala.Type.Vanilla  as V
+
+type C = V.VContent
 
 data Param = Param
     { paramPattern :: String
@@ -41,31 +43,35 @@ main :: IO ()
 main =
     do [pat, order, line, column, alpha] <- Sys.getArgs
        let param = Param pat order line column alpha
+           res   = C.resEmpty { C.resGlobal = Op.vanillaGlobal } :: C.Resource C
        code <- getContents
-       case C.readJudges code :: B.AbortOr [B.Judge V.VContent] of
-         Right js -> B.putLines $ indexLines param js
-         Left a   -> B.abort a
+       case C.readResourceText res code of
+         Right res' -> B.putLines $ indexLines param $ C.resJudge res'
+         Left a     -> B.abort [] a
 
 indexLines :: (C.CContent c) => Param -> [B.Judge c] -> [String]
 indexLines param = List.sort . map (indexLine param)
 
 indexLine :: (C.CContent c) => Param -> B.Judge c -> String
-indexLine param (B.Judge True p xs)
+indexLine param (B.JudgeAffirm p xs)
     | p == paramPattern param
         = show $ B.doch line where
-    the n = Maybe.fromJust $ lookup n xs
-    order = C.getText $ the (paramOrder param)
-    word  = C.getText $ the (paramLine  param)
-    sects = List.sort $ getTextList $ the (paramColumn param)
-    bar   = B.doc "|"
-    line  = [ bar, B.doc (B.padRight 28 order)
-            , bar, B.doc word
-            , bar, Pretty.hcat $ map B.doc $ linkCode param sects
-            , bar ]
+    the ('/':n)  = case lookup n xs of
+                     Just v  -> v
+                     Nothing -> error n
+    the n  = error n
+    order  = C.gText $ the (paramOrder param)
+    word   = C.gText $ the (paramLine  param)
+    sects  = List.sort $ getTextList $ the (paramColumn param)
+    bar    = B.doc "|"
+    line   = [ bar, B.doc (B.padRight 28 order)
+             , bar, B.doc word
+             , bar, Pretty.hcat $ map B.doc $ linkCode param sects
+             , bar ]
 indexLine p j = error $ show (p, j)
 
 getTextList :: (C.CText c, C.CList c) => c -> [String]
-getTextList = map C.getText . C.getList
+getTextList = map C.gText . C.gList
 
 linkCode :: Param -> B.Map [String]
 linkCode param files = map link $ sourceList param where

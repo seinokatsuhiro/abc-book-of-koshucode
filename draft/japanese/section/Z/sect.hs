@@ -16,39 +16,57 @@
 --
 -- ------------------------------------------------------------
 
-import qualified System.Environment      as Sys
-import qualified Data.List               as List
-import qualified Data.Char               as Char
-import qualified Koshucode.Baala.Base    as B
-import qualified Koshucode.Baala.Core    as C
-import qualified Koshucode.Baala.Vanilla as V
+import qualified System.Environment            as Sys
+import qualified Data.List                     as List
+import qualified Data.Char                     as Char
+import qualified Koshucode.Baala.Base          as B
+import qualified Koshucode.Baala.Core          as C
+import qualified Koshucode.Baala.Type.Vanilla  as V
 
-infix 0 -:-
-(-:-) :: a -> b -> (a, b)
-(-:-) = (,)
+infix 0 +-
+(+-) :: a -> b -> (a, b)
+(+-) = (,)
+
+type C = V.VContent
 
 main :: IO ()
 main = 
-    do (termFile : draftFiles) <- Sys.getArgs
-       terms  <- readTerm termFile
-       sectJs <- mapM (indexJudge terms) draftFiles
+    do (termFile : mdFiles) <- Sys.getArgs
+       heading
+
+       terms <- readTerm termFile
        let termJs = map termJudge terms
-       B.putJudges $ termJs ++ sectJs
+
+       sectJs <- sectJudges terms `mapM` mdFiles
+       let js = termJs ++ sectJs
+
+       _ <- B.putJudges 0 js
+       return ()
+
+heading :: IO ()
+heading =
+    do putStrLn "-*- koshu -*-"
+       putStrLn "**"
+       putStrLn "**  INTERPRETATION"
+       putStrLn "**    TERM <<< /term is pronounced as /furi. >>>"
+       putStrLn "**    SECT <<< Words in /terms is in /sect. >>>"
+       putStrLn "**"
+       putStrLn ""
 
 
 -- ----------------------  Judges
 
-sectJudge :: String -> [String] -> B.Judge V.VContent
+sectJudge :: String -> [String] -> B.Judge C
 sectJudge sect terms =
-    B.Judge True "SECT"
-         [ "/sect"   -:- C.putText sect
-         , "/terms"  -:- C.putTextSet terms ]
+    B.JudgeAffirm "SECT"
+         [ "sect"   +- C.pText sect
+         , "terms"  +- C.pSet (map C.pText terms) ]
 
-termJudge :: Term -> B.Judge V.VContent
+termJudge :: Term -> B.Judge C
 termJudge term =
-    B.Judge True "TERM"
-         [ "/term"  -:- C.putText (termWord term)
-         , "/furi"  -:- C.putText (termFuri term) ]
+    B.JudgeAffirm "TERM"
+         [ "term"   +- C.pText (termWord term)
+         , "furi"   +- C.pText (termFuri term) ]
 
 
 -- ----------------------  Terms
@@ -61,38 +79,39 @@ data Term = Term
 readTerm :: FilePath -> IO [Term]
 readTerm path =
     do text <- readFile path
-       return $ map makeTerm . delComment . B.linesCrlf $ text
+       return $ map makeTerm $ omitLines $ B.linesCrlf text
 
-delComment :: [String] -> [String]
-delComment = filter (not . isComment)
+o :: B.Bin (a -> Bool)
+o f g x = f x || g x
+
+omitLines :: B.Map [String]
+omitLines = B.omit (null `o` isComment)
 
 isComment :: String -> Bool
 isComment = ("--" `List.isPrefixOf`)
 
 makeTerm :: String -> Term
 makeTerm s = case B.divide ':' s of
-           [w,f] -> Term (trim w) (trim f)
-           _     -> error $ "expect word and furigana : " ++ s
+               [w,f] -> Term (trim w) (trim f)
+               _     -> error $ "expect word and furigana : " ++ s
 
-trim :: String -> String
+trim :: B.Map String
 trim = B.trimLeft . reverse . B.trimLeft . reverse
 
 
--- ----------------------  INDEX judge
+-- ----------------------  SECT judge
 
-indexJudge :: [Term] -> String -> IO (B.Judge V.VContent)
-indexJudge terms draftFile =
-    do draft <- readFile draftFile
-       let sect = theSection draftFile
-       return $ sectJudge sect $ draft `contains` map termWord terms
+sectJudges :: [Term] -> FilePath -> IO (B.Judge C)
+sectJudges terms path =
+    do text <- readFile path
+       let sect = theSection path
+           ws   = text `contains` map termWord terms
+       return $ sectJudge sect ws
 
 contains :: String -> [String] -> [String]
-contains draft = filter (`List.isInfixOf` draft)
+contains text = filter (`List.isInfixOf` text)
 
-
--- ----------------------  Section name
-
-theSection :: String -> String
+theSection :: B.Map FilePath
 theSection path =
     case List.find isOneLetter $ B.divide '/' path of
       Just sect -> sect
@@ -100,5 +119,5 @@ theSection path =
 
 isOneLetter :: String -> Bool
 isOneLetter [c] | Char.isAlpha c = True
-isOneLetter _ = False
+isOneLetter _                    = False
 

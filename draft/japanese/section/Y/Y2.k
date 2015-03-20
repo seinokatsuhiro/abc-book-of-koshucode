@@ -14,10 +14,11 @@ rop
   | sect-rop
   | pick /rop
 
-|== INDEX -fore /order /rop
+|== INDEX
   | rop
   | group /g sect-rop
   | add /sects ( /g/sect )
         /order '
   | cut /g
+  --forward /order /rop
 

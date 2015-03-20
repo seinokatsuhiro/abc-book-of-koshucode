@@ -26,7 +26,7 @@ runhaskell_koshu () {
 }
 
 gen_sect () {
-    runhaskell_koshu sect.hs TERM.txt ../[A-X]/*.md
+    runhaskell_koshu sect.hs TERM.txt ../[A-X]/README.md
     stderr "$? <- Generate judges of TERM and SECT"
 }
 
