@@ -60,6 +60,9 @@ Command `koshu V.k` produces:
 **  INPUT
 **    V.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- A-MEET  /x 1  /xs { 1 : 3 : 5 }
 |-- A-MEET  /x 3  /xs { 1 : 3 : 5 }

@@ -76,6 +76,9 @@ Command `koshu ../ROP.k Q.k` produces:
 **    ../ROP.k
 **    Q.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- DESC  /file 'Q.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
 |-- DESC  /file 'Q.k  /rop 'rename  /desc '項目名を変更する

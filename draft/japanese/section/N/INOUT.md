@@ -41,6 +41,9 @@ Command `koshu N.k` produces:
 **  INPUT
 **    N.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- Z  /c 'C1  /a 'A1  /b 'B1
 |-- Z  /c 'C4  /a 'A1  /b 'B2

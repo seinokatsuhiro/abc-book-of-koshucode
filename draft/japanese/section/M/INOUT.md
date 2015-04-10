@@ -48,6 +48,9 @@ Command `koshu M.k` produces:
 **  INPUT
 **    M.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- XY  /a 'A1  /b 'B2
 |-- XY  /a 'A2  /b 'B3

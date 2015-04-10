@@ -37,6 +37,9 @@ Command `koshu H.k` produces:
 **  INPUT
 **    H.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- ABC  /a 1  /b 2  /c 3
 |-- ABC  /a 1  /b 4  /c 5

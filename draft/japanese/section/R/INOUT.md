@@ -44,6 +44,9 @@ Command `koshu R.k` produces:
 **  INPUT
 **    R.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- DESC  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
 |-- DESC  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり

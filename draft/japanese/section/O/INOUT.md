@@ -47,6 +47,9 @@ Command `koshu O.k` produces:
 **  INPUT
 **    O.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- PICK  /rop 'cut
 |-- PICK  /rop 'join

@@ -62,6 +62,9 @@ Command `koshu T.k` produces:
 **  INPUT
 **    T.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
 |-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'dum : 'dee : 'keep : 'cut ]

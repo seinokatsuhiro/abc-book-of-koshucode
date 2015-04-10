@@ -42,6 +42,9 @@ Command `koshu C.k` produces:
 **  INPUT
 **    C.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- ABCD  /d 6  /a 1  /b 2  /c 3
 |-- ABCD  /d 10  /a 1  /b 4  /c 5

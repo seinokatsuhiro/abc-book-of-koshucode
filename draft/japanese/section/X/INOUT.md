@@ -41,6 +41,9 @@ Command `koshu X.k` produces:
 **  INPUT
 **    X.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- QR  /x 15  /y 6  /q 2  /r 3
 |-- QR  /x 15  /y 5  /q 3  /r 0

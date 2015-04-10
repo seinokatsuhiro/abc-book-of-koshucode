@@ -59,6 +59,9 @@ Command `koshu S.k` produces:
 **  INPUT
 **    S.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- FILE-GROUP  /file 'O.k  /r {| /file : /rop | 'O.k : 'source | 'O.k : 'pick | 'O.k : 'join | 'O.k : 'cut |}
 |-- FILE-GROUP  /file 'P.k  /r {| /file : /rop | 'P.k : 'source | 'P.k : 'dum | 'P.k : 'dee | 'P.k : 'keep | 'P.k : 'cut |}

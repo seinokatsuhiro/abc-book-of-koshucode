@@ -43,6 +43,9 @@ Command `koshu U.k` produces:
 **  INPUT
 **    U.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- A  /x [ 'source : 'pick : 'source ]
 |-- A  /x { 'source : 'pick }

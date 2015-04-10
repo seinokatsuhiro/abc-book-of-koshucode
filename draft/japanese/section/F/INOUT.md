@@ -39,6 +39,9 @@ Command `koshu F.k` produces:
 **  INPUT
 **    F.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- A-PLUS-B-EQ-C  /a 1  /b 2  /c 3
 |-- A-PLUS-B-EQ-C  /a 1  /b 4  /c 5

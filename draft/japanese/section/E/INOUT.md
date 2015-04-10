@@ -40,6 +40,9 @@ Command `koshu E.k` produces:
 **  INPUT
 **    E.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- ABC2  /a 1  /b 2  /c 3
 
@@ -86,6 +89,9 @@ Command `koshu E2.k` produces:
 **
 **  INPUT
 **    E2.k
+**
+**  OUTPUT
+**    <stdout>
 **
 
 |-- ABC2  /a 1  /b 2  /c 3
@@ -135,6 +141,9 @@ Command `koshu E3.k` produces:
 **  INPUT
 **    E3.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- ABC2  /a 1  /b 2  /c 3
 |-- ABC2  /a 1  /b 4  /c 5
@@ -183,6 +192,9 @@ Command `koshu E4.k` produces:
 **
 **  INPUT
 **    E4.k
+**
+**  OUTPUT
+**    <stdout>
 **
 
 |-- ABCD  /d <1>  /a 1  /b 2  /c 3

@@ -34,6 +34,9 @@ Command `koshu B.k` produces:
 **  INPUT
 **    B.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- ABCD  /d 6  /a 1  /b 2  /c 3
 

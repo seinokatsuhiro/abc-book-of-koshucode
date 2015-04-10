@@ -68,6 +68,9 @@ Command `koshu P.k` produces:
 **  INPUT
 **    P.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- INDEX-CUT  /file 'P.k  /rop 'cut
 

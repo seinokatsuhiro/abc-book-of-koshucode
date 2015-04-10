@@ -87,6 +87,9 @@ Command `koshu ../ROP.k K.k` produces:
 **    ../ROP.k
 **    K.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file 'B.k  /rop 'add
 |-- DESC  /desc '判断集合を関係として読み出す  /file 'B.k  /rop 'source
