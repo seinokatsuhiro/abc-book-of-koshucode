@@ -103,8 +103,11 @@ Command `koshu P.k` produces:
 **       1 judge  on C
 **       1 judge  on D
 **       1 judge  on DEE
+**      no judges on DUM
 **       1 judge  on INDEX-CUT
+**      no judges on INDEX-DELETE
 **       1 judge  on SOME-CUT
+**      no judges on SOME-DELETE
 **       5 judges in total
 **
 ```
