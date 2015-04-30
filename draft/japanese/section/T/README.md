@@ -7,22 +7,21 @@
 
 ```text
 |-- FILE-GROUP  /file 'O.k
-                /r {| /file : /rop
-                    | 'O.k  : 'source
-                    | 'O.k  : 'pick
-                    | 'O.k  : 'join
-                    | 'O.k  : 'cut
+                /r {| /file /rop
+                    [ 'O.k | 'source ]
+                    [ 'O.k | 'pick ]
+                    [ 'O.k | 'join ]
+                    [ 'O.k | 'cut ]
                     |}
 ```
 
 この節では、入れ子の関係の項目を抜き出す方法を取り上げます。
 上の例から、項目 `/rop` の内容だけを抜き出して、
-ファイルごとの演算子のリストをつくりましょう。
+つぎのようなファイルごとの演算子のリストをつくりましょう。
 
 ```text
-|-- FILE-ROPS
-      /file 'O.k
-      /rops [ 'source : 'pick : 'join : 'cut ]
+|-- FILE-ROPS  /file 'O.k
+               /rops [ 'source | 'pick | 'join | 'cut ]
 ```
 
 そのためには `/r/rop` という項目名をつなげた式を使います。
@@ -48,15 +47,15 @@ file-rops  : file-group
 つぎのような計算結果が出力されます。
 
 ```text
-|-- FILE-ROPS  /file 'O.k  /rops [ 'source : 'pick : 'join : 'cut ]
-|-- FILE-ROPS  /file 'P.k  /rops [ 'source : 'dum : 'dee : 'keep : 'cut ]
-|-- FILE-ROPS  /file 'Q.k  /rops [ 'source : 'rename : 'meet ]
-|-- FILE-ROPS  /file 'R.k  /rops [ 'source : 'maybe : 'meet ]
-|-- FILE-ROPS  /file 'S.k  /rops [ 'source : 'pick : 'group ]
+|-- FILE-ROPS  /file 'O.k  /rops [ 'source | 'pick | 'join | 'cut ]
+|-- FILE-ROPS  /file 'P.k  /rops [ 'source | 'dum | 'dee | 'keep | 'cut ]
+|-- FILE-ROPS  /file 'Q.k  /rops [ 'source | 'rename | 'meet ]
+|-- FILE-ROPS  /file 'R.k  /rops [ 'source | 'maybe | 'meet ]
+|-- FILE-ROPS  /file 'S.k  /rops [ 'source | 'pick | 'group ]
 ```
 
 この出力結果が示しているように、演算子の **リスト**
-は演算子の名前をコロン `:` で区切り、
+は演算子の名前をたて棒 `|` で区切り、
 全体を角括弧 `[`...`]` に囲んで表現されます。
 `{|`...`|}` が **関係** をあらわすのに対して、
 括弧の種類が異なると、別の種類のデータになります。
