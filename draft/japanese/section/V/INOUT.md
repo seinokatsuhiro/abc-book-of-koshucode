@@ -18,16 +18,16 @@
 
 **  member
 
-|-- MEMBER  /x 1  /xs { 1 : 3 : 5 }
-|-- MEMBER  /x 3  /xs { 1 : 3 : 5 }
-|-- MEMBER  /x 5  /xs { 1 : 3 : 5 }
+|-- MEMBER  /x 1  /xs { 1 | 3 | 5 }
+|-- MEMBER  /x 3  /xs { 1 | 3 | 5 }
+|-- MEMBER  /x 5  /xs { 1 | 3 | 5 }
 
 **  検査
 
-|-- A  /x 1  /xs { 1 : 3 : 5 }
-|-- A  /x 2  /xs { 1 : 3 : 5 }
-|-- A  /x 3  /xs { 1 : 3 : 5 }
-|-- A  /x 4  /xs { 1 : 3 : 5 }
+|-- A  /x 1  /xs { 1 | 3 | 5 }
+|-- A  /x 2  /xs { 1 | 3 | 5 }
+|-- A  /x 3  /xs { 1 | 3 | 5 }
+|-- A  /x 4  /xs { 1 | 3 | 5 }
 
 |== A-MEET
   | source A /x /xs
@@ -39,8 +39,8 @@
 
 **  展開
 
-|-- B  /xs { 1 : 3 : 5 }
-|-- B  /xs { 2 : 4 }
+|-- B  /xs { 1 | 3 | 5 }
+|-- B  /xs { 2 | 4 }
 
 |== B-MEET
   | source B /xs
@@ -64,27 +64,27 @@ Command `koshu V.k` produces:
 **    <stdout>
 **
 
-|-- A-MEET  /x 1  /xs { 1 : 3 : 5 }
-|-- A-MEET  /x 3  /xs { 1 : 3 : 5 }
+|-- A-MEET  /x 1  /xs { 1 | 3 | 5 }
+|-- A-MEET  /x 3  /xs { 1 | 3 | 5 }
 
 *** 2 judges
 
-|-- A-MEM  /x 1  /xs { 1 : 3 : 5 }
-|-- A-MEM  /x 3  /xs { 1 : 3 : 5 }
+|-- A-MEM  /x 1  /xs { 1 | 3 | 5 }
+|-- A-MEM  /x 3  /xs { 1 | 3 | 5 }
 
 *** 2 judges
 
-|-- B-MEET  /x 5  /xs { 1 : 3 : 5 }
-|-- B-MEET  /x 3  /xs { 1 : 3 : 5 }
-|-- B-MEET  /x 1  /xs { 1 : 3 : 5 }
+|-- B-MEET  /x 5  /xs { 1 | 3 | 5 }
+|-- B-MEET  /x 3  /xs { 1 | 3 | 5 }
+|-- B-MEET  /x 1  /xs { 1 | 3 | 5 }
 
 *** 3 judges
 
-|-- B-MEM  /x 1  /xs { 1 : 3 : 5 }
-|-- B-MEM  /x 3  /xs { 1 : 3 : 5 }
-|-- B-MEM  /x 5  /xs { 1 : 3 : 5 }
-|-- B-MEM  /x 2  /xs { 2 : 4 }
-|-- B-MEM  /x 4  /xs { 2 : 4 }
+|-- B-MEM  /x 1  /xs { 1 | 3 | 5 }
+|-- B-MEM  /x 3  /xs { 1 | 3 | 5 }
+|-- B-MEM  /x 5  /xs { 1 | 3 | 5 }
+|-- B-MEM  /x 2  /xs { 2 | 4 }
+|-- B-MEM  /x 4  /xs { 2 | 4 }
 
 *** 5 judges
 
