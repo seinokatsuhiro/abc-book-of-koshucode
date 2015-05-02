@@ -18,20 +18,20 @@
 
 **  内容の重複
 
-|-- A  /x [ 'source : 'pick : 'source ]
-|-- A  /x { 'source : 'pick : 'source }
+|-- A  /x [ 'source | 'pick | 'source ]
+|-- A  /x { 'source | 'pick | 'source }
 
 |== A : source A /x
 
 **  内容の順序
 
-|-- B  /x [ 'ベーグル : 'クロワッサン ]
-|-- B  /x { 'ベーグル : 'クロワッサン }
+|-- B  /x [ 'ベーグル | 'クロワッサン ]
+|-- B  /x { 'ベーグル | 'クロワッサン }
 
 |== B
   | source B /x
-  | add /a ( /x = [ 'クロワッサン : 'ベーグル ] )
-        /b ( /x = { 'クロワッサン : 'ベーグル } )
+  | add /a ( /x = [ 'クロワッサン | 'ベーグル ] )
+        /b ( /x = { 'クロワッサン | 'ベーグル } )
 
 ```
 
@@ -47,13 +47,13 @@ Command `koshu U.k` produces:
 **    <stdout>
 **
 
-|-- A  /x [ 'source : 'pick : 'source ]
-|-- A  /x { 'source : 'pick }
+|-- A  /x [ 'source | 'pick | 'source ]
+|-- A  /x { 'source | 'pick }
 
 *** 2 judges
 
-|-- B  /a <0>  /b <0>  /x [ 'ベーグル : 'クロワッサン ]
-|-- B  /a <0>  /b <1>  /x { 'ベーグル : 'クロワッサン }
+|-- B  /a <0>  /b <0>  /x [ 'ベーグル | 'クロワッサン ]
+|-- B  /a <0>  /b <1>  /x { 'ベーグル | 'クロワッサン }
 
 *** 2 judges
 
