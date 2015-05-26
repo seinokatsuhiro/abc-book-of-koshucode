@@ -36,7 +36,7 @@ file  : index | pick /file
 分割結果の関係を項目 `/r` として追加します。
 
 ```text
-file-group : file | group /r index
+file-group : file | group index -to /r
 ```
 
 `index` は `file` の各組と交わり可能な部分関係、

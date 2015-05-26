@@ -35,7 +35,7 @@
 
 index      : source ROP-INDEX /file /rop
 file       : index | pick  /file
-file-group : file  | group /r index
+file-group : file  | group index -to /r
 file-rops  : file-group
            | add /rops ( /r/rop )
            | cut /r
