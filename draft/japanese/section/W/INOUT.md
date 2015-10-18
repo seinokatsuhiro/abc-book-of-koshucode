@@ -43,6 +43,9 @@ Command `koshu-w W.k` produces:
 **  INPUT
 **    W.k
 **
+**  OUTPUT
+**    <stdout>
+**
 
 |-- QR  /x 15  /y 4  /q 3  /r 3
 |-- QR  /x 15  /y 3  /q 5  /r 0

@@ -1,6 +1,6 @@
 -- The name and version of the package.
 name:                koshu-w
-version:             0.5.0.0
+version:             0.6.0.0
 
 -- A descriptions of the package.
 category:            Example
@@ -25,9 +25,10 @@ executable koshu-w
   
   -- Other library packages from which modules are imported.
   build-depends:     base                       == 4.*,
-                     koshucode-baala-base       >= 0.95,
-                     koshucode-baala-core       >= 0.95,
-                     koshucode-baala-operator   >= 0.95,
-                     koshucode-baala-content    >= 0.95,
-                     koshucode-baala-calculator >= 0.95
+                     koshucode-baala-base       >= 0.123,
+                     koshucode-baala-data       >= 0.123,
+                     koshucode-baala-core       >= 0.123,
+                     koshucode-baala-rop-flat   >= 0.123,
+                     koshucode-baala-content    >= 0.123,
+                     koshucode-baala-calculator >= 0.123
 
