@@ -29,6 +29,5 @@ executable koshu-w
                      koshucode-baala-data       >= 0.123,
                      koshucode-baala-core       >= 0.123,
                      koshucode-baala-rop-flat   >= 0.123,
-                     koshucode-baala-content    >= 0.123,
                      koshucode-baala-calculator >= 0.123
 

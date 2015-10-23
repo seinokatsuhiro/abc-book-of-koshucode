@@ -13,15 +13,14 @@
 
 module Main (main) where
 
-import qualified Koshucode.Baala.Base                   as B
-import qualified Koshucode.Baala.Data                   as D
-import qualified Koshucode.Baala.Core                   as C
-import qualified Koshucode.Baala.Op.Global              as Op
-import qualified Koshucode.Baala.Rop                    as Op
-import qualified Koshucode.Baala.Rop.Message            as Msg
-import qualified Koshucode.Baala.Type.Vanilla           as Type
-import qualified Koshucode.Baala.Toolkit.Main.KoshuMain as Main
-import qualified Paths_koshu_w                          as Paths
+import qualified Koshucode.Baala.Base                     as B
+import qualified Koshucode.Baala.Data                     as D
+import qualified Koshucode.Baala.Core                     as C
+import qualified Koshucode.Baala.Rop                      as Rop
+import qualified Koshucode.Baala.Rop.Message              as Msg
+import qualified Koshucode.Baala.Toolkit.Library.Global   as G
+import qualified Koshucode.Baala.Toolkit.Main.KoshuMain   as Main
+import qualified Paths_koshu_w                            as Paths
 
 
 -- ----------------------  main
@@ -31,16 +30,16 @@ main :: IO ()
 main = B.exitWith =<< Main.koshuMain koshuGlobal
 
 -- The global parameter that includes user-defined operator.
-koshuGlobal :: C.Global Type.VContent
+koshuGlobal :: C.Global D.BaalaC
 koshuGlobal = C.globalRopsAdd userRops g' where
-    g' = Op.vanillaGlobal
+    g' = G.baalaGlobal
          { C.globalSynopsis  = "The ABC of Koshucode"
          , C.globalVersion   = Paths.version }
 
 -- User-defined relmap operator
-userRops :: [C.Rop Type.VContent]
-userRops = Op.ropList "user"
-    [ Op.def consDivide "divide /T /T /T /T"  "E -1 -2 -3 -4" ]
+userRops :: [C.Rop D.BaalaC]
+userRops = Rop.ropList "user"
+    [ Rop.def consDivide "divide /T /T /T /T"  "E -1 -2 -3 -4" ]
 
 
 -- ----------------------  divide
@@ -60,10 +59,10 @@ userRops = Op.ropList "user"
 
 consDivide :: (D.CDec c) => C.RopCons c
 consDivide use =
-  do x <- Op.getTerm use "-1"
-     y <- Op.getTerm use "-2"
-     q <- Op.getTerm use "-3"
-     r <- Op.getTerm use "-4"
+  do x <- Rop.getTerm use "-1"
+     y <- Rop.getTerm use "-2"
+     q <- Rop.getTerm use "-3"
+     r <- Rop.getTerm use "-4"
      Right $ C.relmapFlow use $ relkitDivide [x, y, q, r]
 
 relkitDivide :: (D.CDec c) => [D.TermName] -> C.RelkitFlow c
