@@ -16,8 +16,8 @@ module Main (main) where
 import qualified Koshucode.Baala.Base                     as B
 import qualified Koshucode.Baala.Data                     as D
 import qualified Koshucode.Baala.Core                     as C
-import qualified Koshucode.Baala.Rop                      as Rop
-import qualified Koshucode.Baala.Rop.Message              as Msg
+import qualified Koshucode.Baala.Rop.Base                 as Rop
+import qualified Koshucode.Baala.Rop.Flat.Message         as Msg
 import qualified Koshucode.Baala.Toolkit.Library.Global   as G
 import qualified Koshucode.Baala.Toolkit.Main.KoshuMain   as Main
 import qualified Paths_koshu_w                            as Paths
