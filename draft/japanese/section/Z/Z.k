@@ -17,7 +17,7 @@ term-sect
 
 |== INDEX
   | term
-  | group /r term-sect
+  | group term-sect -to /r
   | add /sects ( /r/sect )
   | cut /r
   --forward /furi /term

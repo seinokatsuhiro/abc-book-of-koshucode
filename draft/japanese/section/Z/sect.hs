@@ -20,14 +20,13 @@ import qualified System.Environment            as Sys
 import qualified Data.List                     as List
 import qualified Data.Char                     as Char
 import qualified Koshucode.Baala.Base          as B
+import qualified Koshucode.Baala.Data          as D
 import qualified Koshucode.Baala.Core          as C
-import qualified Koshucode.Baala.Type.Vanilla  as V
+import qualified Koshucode.Baala.Writer        as W
 
 infix 0 +-
 (+-) :: a -> b -> (a, b)
 (+-) = (,)
-
-type C = V.VContent
 
 main :: IO ()
 main = 
@@ -40,7 +39,7 @@ main =
        sectJs <- sectJudges terms `mapM` mdFiles
        let js = termJs ++ sectJs
 
-       _ <- B.putJudges 0 js
+       _ <- W.putJudges js
        return ()
 
 heading :: IO ()
@@ -56,17 +55,17 @@ heading =
 
 -- ----------------------  Judges
 
-sectJudge :: String -> [String] -> B.Judge C
+sectJudge :: String -> [String] -> C.JudgeC
 sectJudge sect terms =
-    B.JudgeAffirm "SECT"
-         [ "sect"   +- C.pText sect
-         , "terms"  +- C.pSet (map C.pText terms) ]
+    D.JudgeAffirm "SECT"
+         [ "sect"   +- D.pText sect
+         , "terms"  +- D.pSet (map D.pText terms) ]
 
-termJudge :: Term -> B.Judge C
+termJudge :: Term -> C.JudgeC
 termJudge term =
-    B.JudgeAffirm "TERM"
-         [ "term"   +- C.pText (termWord term)
-         , "furi"   +- C.pText (termFuri term) ]
+    D.JudgeAffirm "TERM"
+         [ "term"   +- D.pText (termWord term)
+         , "furi"   +- D.pText (termFuri term) ]
 
 
 -- ----------------------  Terms
@@ -101,7 +100,7 @@ trim = B.trimLeft . reverse . B.trimLeft . reverse
 
 -- ----------------------  SECT judge
 
-sectJudges :: [Term] -> FilePath -> IO (B.Judge C)
+sectJudges :: [Term] -> FilePath -> IO (C.JudgeC)
 sectJudges terms path =
     do text <- readFile path
        let sect = theSection path
