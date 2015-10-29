@@ -16,7 +16,7 @@ rop
 
 |== INDEX
   | rop
-  | group /g sect-rop
+  | group sect-rop -to /g
   | add /sects ( /g/sect )
         /order '
   | cut /g

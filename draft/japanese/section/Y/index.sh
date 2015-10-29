@@ -19,10 +19,10 @@ stderr () {
 }
 
 runhaskell_koshu () {
-    if [ -z "$KOSHU_PKGDB" ]; then
-        runhaskell "$@"
+    if [ -e cabal.sandbox.config ]; then
+        cabal exec runhaskell "$@"
     else
-        runhaskell -package-db --ghc-arg="$KOSHU_PKGDB" "$@"
+        runhaskell "$@"
     fi
 }
 

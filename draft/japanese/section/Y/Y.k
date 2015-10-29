@@ -10,7 +10,7 @@
 |== ROP-INDEX
   | source KOSHU-RELMAP-BASE /point /rop
   | keep /rop <> 'id
-  | add /sect ( sub-index /point 1 1 )
+  | add /sect ( take 1 /point )
   | pick /rop /sect
   --forward /sect
 

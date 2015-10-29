@@ -18,15 +18,13 @@
 --
 -- ------------------------------------------------------------
 
-import qualified Data.List                     as List
-import qualified System.Environment            as Sys
-import qualified Text.PrettyPrint              as Pretty
-import qualified Koshucode.Baala.Base          as B
-import qualified Koshucode.Baala.Core          as C
-import qualified Koshucode.Baala.Op.Global     as Op
-import qualified Koshucode.Baala.Type.Vanilla  as V
-
-type C = V.VContent
+import qualified Data.List                               as List
+import qualified System.Environment                      as Sys
+import qualified Text.PrettyPrint                        as Pretty
+import qualified Koshucode.Baala.Base                    as B
+import qualified Koshucode.Baala.Data                    as D
+import qualified Koshucode.Baala.Core                    as C
+import qualified Koshucode.Baala.Toolkit.Library.Global  as K
 
 data Param = Param
     { paramPattern :: String
@@ -43,25 +41,25 @@ main :: IO ()
 main =
     do [pat, order, line, column, alpha] <- Sys.getArgs
        let param = Param pat order line column alpha
-           res   = C.resEmpty { C.resGlobal = Op.vanillaGlobal } :: C.Resource C
+           res   = C.resEmpty { C.resGlobal = K.baalaGlobal } :: C.ResourceC
        code <- getContents
        case C.readResourceText res code of
          Right res' -> B.putLines $ indexLines param $ C.resJudge res'
          Left a     -> B.abort [] a
 
-indexLines :: (C.CContent c) => Param -> [B.Judge c] -> [String]
+indexLines :: (D.CContent c) => Param -> [D.Judge c] -> [String]
 indexLines param = List.sort . map (indexLine param)
 
-indexLine :: (C.CContent c) => Param -> B.Judge c -> String
-indexLine param (B.JudgeAffirm p xs)
+indexLine :: (D.CContent c) => Param -> D.Judge c -> String
+indexLine param (D.JudgeAffirm p xs)
     | p == paramPattern param
         = show $ B.doch line where
     the ('/':n)  = case lookup n xs of
                      Just v  -> v
                      Nothing -> error n
     the n  = error n
-    order  = C.gText $ the (paramOrder param)
-    word   = C.gText $ the (paramLine  param)
+    order  = D.gText $ the (paramOrder param)
+    word   = D.gText $ the (paramLine  param)
     sects  = List.sort $ getTextList $ the (paramColumn param)
     bar    = B.doc "|"
     line   = [ bar, B.doc (B.padRight 28 order)
@@ -70,8 +68,8 @@ indexLine param (B.JudgeAffirm p xs)
              , bar ]
 indexLine p j = error $ show (p, j)
 
-getTextList :: (C.CText c, C.CList c) => c -> [String]
-getTextList = map C.gText . C.gList
+getTextList :: (D.CText c, D.CList c) => c -> [String]
+getTextList = map D.gText . D.gList
 
 linkCode :: Param -> B.Map [String]
 linkCode param files = map link $ sourceList param where
