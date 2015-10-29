@@ -62,9 +62,10 @@ indexLine param (D.JudgeAffirm p xs)
     word   = D.gText $ the (paramLine  param)
     sects  = List.sort $ getTextList $ the (paramColumn param)
     bar    = B.doc "|"
+    code x = B.doc "<code>" B.<> x B.<> B.doc "</code>"
     line   = [ bar, B.doc (B.padRight 28 order)
              , bar, B.doc word
-             , bar, Pretty.hcat $ map B.doc $ linkCode param sects
+             , bar, code $ Pretty.hsep $ map B.doc $ linkCode param sects
              , bar ]
 indexLine p j = error $ show (p, j)
 
@@ -73,8 +74,8 @@ getTextList = map D.gText . D.gList
 
 linkCode :: Param -> B.Map [String]
 linkCode param files = map link $ sourceList param where
-    link x | x `elem` files = "[`" ++ x ++ "`][" ++ x ++ "]"
-           | otherwise      = "`-`"
+    link x | x `elem` files = "[" ++ x ++ "][" ++ x ++ "]"
+           | otherwise      = "-"
 
 sourceList :: Param -> [String]
 sourceList param = filter (/= "-") $ paramPages param
