@@ -6,10 +6,6 @@
 #  USAGE
 #    ./index.sh
 #
-#  NOTE
-#    Please set envvar 'KOSHU_PKGDB' when using a Cabal sandbox, e.g., 
-#    export KOSHU_PKGDB=SANDBOX/GHC-PLATFORM-packages.conf.d
-#
 
 alpha=A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X
 
@@ -35,16 +31,16 @@ gen_term_index () {
     stderr "$? <- Generate judges of INDEX"
 }
 
-gen_term_table () {
-    runhaskell_koshu ../Y/table.hs INDEX /furi /term /sects $alpha < $1
+gen_term_matrix () {
+    runhaskell_koshu ../Y/matrix.hs INDEX /furi /term /sects $alpha < $1
     stderr "$? <- Generate index table in markdown"
 }
 
 mkdir -p output
 
-gen_sect                      > output/SECT.k
-gen_term_index output/SECT.k  > output/INDEX.k
-gen_term_table output/INDEX.k > output/TABLE.md
+gen_sect                       > output/SECT.k
+gen_term_index  output/SECT.k  > output/INDEX.k
+gen_term_matrix output/INDEX.k > output/MATRIX.md
 
 echo
 ls -l output
