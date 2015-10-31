@@ -3,7 +3,7 @@
 -- ------------------------------------------------------------
 --
 --  DESCRIPTION
---    Generate index table in markdown.
+--    Generate index matrix in markdown.
 --    
 --    Input is in koshucode
 --      |-- INDEX  /order text
@@ -11,10 +11,10 @@
 --                 /sects [ text ]
 --    
 --    Output is in markdown table
---      | order | word | [`A`][A] ... |
+--      | order | word | <code> ··· [K][K] ···  </code> |
 --
 --  USAGE
---    ./table.hs INDEX /order /word /sects A-B-C-D-E-F-G
+--    ./maxtrix.hs INDEX /order /word /sects A-B-C-D-E-F-G
 --
 -- ------------------------------------------------------------
 
@@ -75,7 +75,7 @@ getTextList = map D.gText . D.gList
 linkCode :: Param -> B.Map [String]
 linkCode param files = map link $ sourceList param where
     link x | x `elem` files = "[" ++ x ++ "][" ++ x ++ "]"
-           | otherwise      = "-"
+           | otherwise      = "·"
 
 sourceList :: Param -> [String]
 sourceList param = filter (/= "-") $ paramPages param

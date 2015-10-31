@@ -6,12 +6,7 @@
 #  USAGE
 #    ./index.sh
 #
-#  NOTE
-#    Please set envvar 'KOSHU_PKGDB' when using a Cabal sandbox, e.g., 
-#    export KOSHU_PKGDB=SANDBOX/GHC-PLATFORM-packages.conf.d
-#
 
-github=https://github.com/seinokatsuhiro/abc-of-koshucode
 alpha=A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z
 
 stderr () {
@@ -29,7 +24,7 @@ runhaskell_koshu () {
 gen_link () {
     stderr "Generate links in markdown"
     for a in `echo $alpha | tr - ' '` ; do
-        echo "[$a]: $github/blob/master/draft/japanese/section/$a"
+        echo "[$a]: ../$a"
     done
 }
 
@@ -56,8 +51,8 @@ gen_rop_index () {
     stderr "$? <- Generate judges of INDEX"
 }
 
-gen_rop_table () {
-    runhaskell_koshu table.hs INDEX /order /rop /sects $alpha < $1
+gen_rop_maxtrix () {
+    runhaskell_koshu matrix.hs INDEX /order /rop /sects $alpha < $1
     stderr "$? <- Generate index table in markdown"
 }
 
@@ -67,5 +62,5 @@ gen_link                              > output/LINK.md
 gen_koshu_element                     > output/ELEMENT.k
 gen_rop_index Y.k  output/ELEMENT.k   > output/ROP-INDEX.k
 gen_rop_index Y2.k output/ROP-INDEX.k > output/INDEX.k
-gen_rop_table output/INDEX.k          > output/TABLE.md
+gen_rop_maxtrix    output/INDEX.k     > output/MATRIX.md
 
