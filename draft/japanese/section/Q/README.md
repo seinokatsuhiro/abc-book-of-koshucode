@@ -61,13 +61,11 @@ desc  : index | meet rop
   --forward /file /rop
 ```
 
-これらをファイル [`Q.k`][Q.k] に保存し、つぎのコマンド
+これらをファイル [`Q.k`][Q.k] に保存し、甲州計算機を実行します。
 
-```sh
-$ koshu Q.k ../ROP.k
-```
+* [koshu Q.k ../ROP.k]
 
-で計算を実行すると、計算結果は、つぎのようになります。
+その計算結果は、つぎのようになります。
 
 ```text
 ** -*- koshu -*-
@@ -90,4 +88,4 @@ $ koshu Q.k ../ROP.k
 
 
 [Q.k]:   ../Q/Q.k
-
+[koshu Q.k ../ROP.k]: INOUT.md
