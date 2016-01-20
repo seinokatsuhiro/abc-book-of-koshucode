@@ -55,9 +55,7 @@ z : x | meet y
 
 これらをファイル [`L.k`][L.k] に保存して、甲州計算機を実行します。
 
-```sh
-$ koshu L.k
-```
+* [koshu L.k]
 
 計算結果として 3 つの判断が出力されます。
 
@@ -87,4 +85,5 @@ $ koshu L.k
 
 
 [L.k]:   ../L/L.k
+[koshu L.k]: INOUT.md
 
