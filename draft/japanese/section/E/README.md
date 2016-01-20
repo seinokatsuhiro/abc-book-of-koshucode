@@ -32,7 +32,7 @@ abc2 : abc | keep /a = 1 and /b = 2
 ```
 
 このデータと計算式を [`E.k`][E.k] というファイルに保存して、
-`koshu E.k` で甲州計算機を実行すると、
+[`koshu E.k`][koshu E.k] で甲州計算機を実行すると、
 ひとつの判断だけが出力されます。
 
 ```text
@@ -62,7 +62,7 @@ abc  : source ABC /a /b /c
 abc2 : abc | keep /a = 1
 ```
 
-このとき、2 つの判断が出力されます。
+[`koshu E2.k`][koshu E2.k] は 2 つの判断を出力します。
 
 ```text
 |-- ABC2  /a 1  /b 2  /c 3
@@ -81,7 +81,7 @@ abc  : source ABC /a /b /c
 abc2 : abc | keep /a = 1 or /b = 2
 ```
 
-どちらかの条件をみたす判断が出力されます。
+[`koshu E3.k`][koshu E3.k] は、どちらかの条件をみたす判断を出力します。
 
 ```text
 |-- ABC2  /a 1  /b 2  /c 3
@@ -100,7 +100,7 @@ abc  : source ABC /a /b /c
 abcd : abc | add /d ( /a = 1 or /b = 2 )
 ```
 
-この計算を実行すると、項目 `/d` は真か偽をあらわす
+この計算を [`koshu E4.k`][koshu E4.k] で実行すると、項目 `/d` は真か偽をあらわす
 `<1>` か `<0>` になります。
 真 `<1>` は、特定の `/a` と `/b` に対して、
 `/a = 1 or /b = 2` という式が成り立つこと、あるいは、正しいこと、
@@ -121,4 +121,7 @@ abcd : abc | add /d ( /a = 1 or /b = 2 )
 [E2.k]: ../E/E2.k
 [E3.k]: ../E/E3.k
 [E4.k]: ../E/E4.k
-
+[koshu E.k]: INOUT.md#ek
+[koshu E2.k]: INOUT.md#e2k
+[koshu E3.k]: INOUT.md#e3k
+[koshu E4.k]: INOUT.md#e4k

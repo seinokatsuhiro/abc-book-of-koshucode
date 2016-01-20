@@ -77,7 +77,7 @@ neq  : abc | keep ( /a + /b <> /c )
 ```
 
 この計算式を [`F.k`][F.k] というファイルに保存し、
-`koshu F.k` で甲州計算機を実行すると、
+[`koshu F.k`][koshu F.k] で甲州計算機を実行すると、
 3 つの肯定判断と 2 つの否定判断が出力されます。
 
 ```text
@@ -102,4 +102,5 @@ neq  : abc | keep ( /a + /b <> /c )
 
 
 [F.k]:  ../F/F.k
+[koshu F.k]: INOUT.md
 

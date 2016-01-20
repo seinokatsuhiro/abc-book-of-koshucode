@@ -108,7 +108,7 @@ y : source Y /b /c
 |== V : x | join y
 ```
 
-を [`koshu N.k`][N.k] で実行すると、
+を [`koshu N.k`][koshu N.k] で実行すると、
 つぎの計算結果が得られます。
 
 ```text
@@ -136,7 +136,7 @@ y : source Y /b /c
 ```
 
 
-[M]:       ../M
-[N.k]:     N.k
+[M]: ../M
+[koshu N.k]: INOUT.md
 [lattice]: http://ja.wikipedia.org/wiki/束論
 
