@@ -65,9 +65,7 @@ desc  : index | meet rop             ** index と rop の交わり
 関係写像演算子の説明 [`ROP.k`][ROP.k] をいっしょにして、
 甲州計算機を実行します。
 
-```sh
-$ koshu K.k ../ROP.k
-```
+* [koshu K.k ../ROP.k]
 
 計算結果として、項目 `/desc` `/file` `/rop` をもつ判断が出力されます。
 
@@ -117,4 +115,4 @@ $ koshu K.k ../ROP.k
 [K.k]:   K.k
 [Q.k]:   ../Q/Q.k
 [ROP.k]: ../ROP.k
-
+[koshu K.k ../ROP.k]: INOUT.md
