@@ -5,7 +5,7 @@
 項目 `/file` と `/rop` をもつ入れ子の関係 `/r` をつくり、
 つぎのような判断として書き出されていました。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
 |-- FILE-GROUP  /file 'O.k
                 /r {| /file /rop
                     [ 'O.k | 'source ]
@@ -13,22 +13,22 @@
                     [ 'O.k | 'join ]
                     [ 'O.k | 'cut ]
                     |}
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この節では、入れ子の関係の項目を抜き出す方法を取り上げます。
 上の例から、項目 `/rop` の内容だけを抜き出して、
 つぎのようなファイルごとの演算子のリストをつくりましょう。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
 |-- FILE-ROPS  /file 'O.k
                /rops [ 'source | 'pick | 'join | 'cut ]
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 そのためには `/r/rop` という項目名をつなげた式を使います。
 `/r/rop` は、項目 `/r` が関係で、そのなかの項目 `/rop`
 の内容をすべて取り出すということを意味します。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
 index      : source ROP-INDEX /file /rop
 file       : index | pick  /file
 file-group : file  | group index -to /r
@@ -38,7 +38,7 @@ file-rops  : file-group
 
 |== FILE-ROPS : file-rops
   --forward /file
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `/rop` の内容をリストとして取り出したあと、
 `cut /r` で関係 `/r` を取り除いているので、
@@ -46,13 +46,13 @@ file-rops  : file-group
 この計算式を含む [`T.k`][T.k] を実行すると、
 つぎのような計算結果が出力されます。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
 |-- FILE-ROPS  /file 'O.k  /rops [ 'source | 'pick | 'join | 'cut ]
 |-- FILE-ROPS  /file 'P.k  /rops [ 'source | 'dum | 'dee | 'keep | 'cut ]
 |-- FILE-ROPS  /file 'Q.k  /rops [ 'source | 'rename | 'meet ]
 |-- FILE-ROPS  /file 'R.k  /rops [ 'source | 'maybe | 'meet ]
 |-- FILE-ROPS  /file 'S.k  /rops [ 'source | 'pick | 'group ]
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この出力結果が示しているように、演算子の **リスト**
 は演算子の名前をたて棒 `|` で区切り、

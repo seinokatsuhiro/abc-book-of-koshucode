@@ -29,7 +29,7 @@
 いま、A から G までのファイルを調べると、
 `ROP-INDEX` をみたす判断は、つぎのようになります。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
 |-- ROP-INDEX  /file 'B.k   /rop 'add
 |-- ROP-INDEX  /file 'B.k   /rop 'source
 |-- ROP-INDEX  /file 'C.k   /rop 'add
@@ -46,20 +46,20 @@
 |-- ROP-INDEX  /file 'E4.k  /rop 'source
 |-- ROP-INDEX  /file 'F.k   /rop 'keep
 |-- ROP-INDEX  /file 'F.k   /rop 'source
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 判断種 `ROP-INDEX` と `ROP` との判断集合を関係として読み込み、
 関係写像演算子 `meet` を使って、それらを連結させます。
 この計算は `ROP-INDEX` に対して `ROP` にある説明を追加する
 というように想像できます。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
 rop   : source ROP /rop /desc        ** 演算子の説明
 index : source ROP-INDEX /file /rop  ** 演算子の索引
 desc  : index | meet rop             ** index と rop の交わり
 
 |== DESC : desc
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この判断集合と計算式を含む [`K.k`][K.k] と、
 関係写像演算子の説明 [`ROP.k`][ROP.k] をいっしょにして、
@@ -69,7 +69,7 @@ desc  : index | meet rop             ** index と rop の交わり
 
 計算結果として、項目 `/desc` `/file` `/rop` をもつ判断が出力されます。
 
-```text
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
 ** -*- koshu -*-
 **  
 **  INPUT
@@ -102,7 +102,7 @@ desc  : index | meet rop             ** index と rop の交わり
 **      16 judges on DESC
 **      16 judges in total
 **
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 判断としては、項目がどのような順番で並んでいても解釈の違いを生じませんが、
 人が読むときは、`/desc` `/file` `/rop` よりも
