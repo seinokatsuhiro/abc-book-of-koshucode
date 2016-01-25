@@ -8,18 +8,11 @@
 この場合、`/b` が共有項目で、
 `/a` が左側の片側項目、`/c` が右側の片側項目です。
 
-  <div style="margin-left:10px">
-    <table>
-     <tr>
-      <td bgcolor="#def">左片側項目</td>
-      <td><tt>/a</tt></td>
-      <td bgcolor="#bdf">共有項目</td>
-      <td><tt>/b</tt></td>
-      <td bgcolor="#def">右片側項目</td>
-      <td><tt>/c</tt></td>
-     </tr>
-    </table>
-  </div>
+<ul class="term-placement">
+ <li><span>左片側項目</span> <code>/a</code></li>
+ <li><span>共有項目</span> <code>/b</code></li>
+ <li><span>右片側項目</span> <code>/c</code></li>
+</ul>
 
 この節では、交わりの特殊形として、
 共有項目のみの場合と、共有項目をもたない場合を取り上げます。
@@ -29,18 +22,11 @@
 
 項目 `/a` `/b` を共有し、片側項目がない例をつくります。
 
-  <div style="margin-left:10px">
-    <table>
-     <tr>
-      <td bgcolor="#def">左片側項目</td>
-      <td></td>
-      <td bgcolor="#bdf">共有項目</td>
-      <td><tt>/a /b</tt></td>
-      <td bgcolor="#def">右片側項目</td>
-      <td></td>
-     </tr>
-    </table>
-  </div>
+<ul class="term-placement">
+ <li><span>左片側項目</span> <code></code></li>
+ <li><span>共有項目</span> <code>/a /b</code></li>
+ <li><span>右片側項目</span> <code></code></li>
+</ul>
 
 判断種 `X` は項目 `/a` `/b` をもちます。
 
@@ -88,18 +74,11 @@ xy : x | meet y
 上の判断種 `X` `/a` `/b` と、
 新しい判断種 `Z` `/c` を使うことにしましょう。
 
-  <div style="margin-left:10px">
-    <table>
-     <tr>
-      <td bgcolor="#def">左片側項目</td>
-      <td><tt>/a /b</tt></td>
-      <td bgcolor="#bdf">共有項目</td>
-      <td></td>
-      <td bgcolor="#def">右片側項目</td>
-      <td><tt>/c</tt></td>
-     </tr>
-    </table>
-  </div>
+<ul class="term-placement">
+ <li><span>左片側項目</span> <code>/a /b</code></li>
+ <li><span>共有項目</span> <code></code></li>
+ <li><span>右片側項目</span> <code>/c</code></li>
+</ul>
 
 判断種 `Z` は項目 `/c` をもちます。
 
