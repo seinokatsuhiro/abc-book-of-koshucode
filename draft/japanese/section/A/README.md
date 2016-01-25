@@ -62,8 +62,3 @@ $ koshu
 [ウェブ・サービス]: http://relatis.jp/koshu/lr
 [GitHub]: https://github.com/seinokatsuhiro/koshucode
 
-<!-- ------------------------------------------------------------------
-|-- TERM  /ja0 'こ  /ja '甲州記法            /en "koshucode"
-|-- TERM  /ja0 'こ  /ja '甲州計算機          /en "koshu calculator"
-------------------------------------------------------------------- -->
-
