@@ -13,8 +13,8 @@
 |-- ABC  /a 4  /b 7  /c 3
 |-- ABC  /a 2  /b 7  /c 7
 
-abc  : source ABC /a /b /c
-abcd : abc | add /d ( /a = 1 or /b = 2 )
+abc : source ABC /a /b /c
+e4  : abc | add /d ( /a = 1 or /b = 2 )
 
-|== ABCD : abcd
+|== E4 : e4
 
