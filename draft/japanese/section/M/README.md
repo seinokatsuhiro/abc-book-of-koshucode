@@ -9,9 +9,9 @@
 `/a` が左側の片側項目、`/c` が右側の片側項目です。
 
 <ul class="term-placement">
- <li><span>左片側項目</span> <code>/a</code></li>
- <li><span>共有項目</span> <code>/b</code></li>
- <li><span>右片側項目</span> <code>/c</code></li>
+ <li><span>左片側<span class="word-term">項目</span></span> <code>/a</code></li>
+ <li><span>共有<span class="word-term">項目</span></span> <code>/b</code></li>
+ <li><span>右片側<span class="word-term">項目</span></span> <code>/c</code></li>
 </ul>
 
 この節では、交わりの特殊形として、
@@ -23,9 +23,9 @@
 項目 `/a` `/b` を共有し、片側項目がない例をつくります。
 
 <ul class="term-placement">
- <li><span>左片側項目</span> <code></code></li>
- <li><span>共有項目</span> <code>/a /b</code></li>
- <li><span>右片側項目</span> <code></code></li>
+ <li><span>左片側<span class="word-term">項目</span></span> <code></code></li>
+ <li><span>共有<span class="word-term">項目</span></span> <code>/a /b</code></li>
+ <li><span>右片側<span class="word-term">項目</span></span> <code></code></li>
 </ul>
 
 判断種 `X` は項目 `/a` `/b` をもちます。
@@ -75,9 +75,9 @@ xy : x | meet y
 新しい判断種 `Z` `/c` を使うことにしましょう。
 
 <ul class="term-placement">
- <li><span>左片側項目</span> <code>/a /b</code></li>
- <li><span>共有項目</span> <code></code></li>
- <li><span>右片側項目</span> <code>/c</code></li>
+ <li><span>左片側<span class="word-term">項目</span></span> <code>/a /b</code></li>
+ <li><span>共有<span class="word-term">項目</span></span> <code></code></li>
+ <li><span>右片側<span class="word-term">項目</span></span> <code>/c</code></li>
 </ul>
 
 判断種 `Z` は項目 `/c` をもちます。
