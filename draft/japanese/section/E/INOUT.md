@@ -67,11 +67,11 @@ Command `koshu E.k` produces:
 
 *** 3 judges
 
-|-- E4  /d <1>  /a 1  /b 2  /c 3
-|-- E4  /d <1>  /a 1  /b 4  /c 5
-|-- E4  /d <1>  /a 3  /b 2  /c 5
-|-- E4  /d <0>  /a 4  /b 7  /c 3
-|-- E4  /d <0>  /a 2  /b 7  /c 7
+|-- E4  /d (+)  /a 1  /b 2  /c 3
+|-- E4  /d (+)  /a 1  /b 4  /c 5
+|-- E4  /d (+)  /a 3  /b 2  /c 5
+|-- E4  /d (-)  /a 4  /b 7  /c 3
+|-- E4  /d (-)  /a 2  /b 7  /c 7
 
 *** 5 judges
 
@@ -277,11 +277,11 @@ Command `koshu E4.k` produces:
 **    <stdout>
 **
 
-|-- E4  /d <1>  /a 1  /b 2  /c 3
-|-- E4  /d <1>  /a 1  /b 4  /c 5
-|-- E4  /d <1>  /a 3  /b 2  /c 5
-|-- E4  /d <0>  /a 4  /b 7  /c 3
-|-- E4  /d <0>  /a 2  /b 7  /c 7
+|-- E4  /d (+)  /a 1  /b 2  /c 3
+|-- E4  /d (+)  /a 1  /b 4  /c 5
+|-- E4  /d (+)  /a 3  /b 2  /c 5
+|-- E4  /d (-)  /a 4  /b 7  /c 3
+|-- E4  /d (-)  /a 2  /b 7  /c 7
 
 *** 5 judges
 

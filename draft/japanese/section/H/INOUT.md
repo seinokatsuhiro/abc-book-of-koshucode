@@ -48,7 +48,7 @@ Command `koshu H.k` produces:
 |-- ABC  /a 'one  /b 'two  /c 'three
 
 |-- ABC  /a 'one  /b 'two  /c "one plus two"
-|-- ABC  /a <1>  /b <0>
+|-- ABC  /a (+)  /b (-)
 
 *** 7 judges
 
