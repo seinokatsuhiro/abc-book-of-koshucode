@@ -10,9 +10,9 @@
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /rop を使っている。
 
-|-- ROP-INDEX  /file 'R.k  /rop 'meet
-|-- ROP-INDEX  /file 'R.k  /rop 'maybe
-|-- ROP-INDEX  /file 'R.k  /rop 'source
+|-- ROP-INDEX  /file "R.k"  /rop 'meet
+|-- ROP-INDEX  /file "R.k"  /rop 'maybe
+|-- ROP-INDEX  /file "R.k"  /rop 'source
 
 **  ROP
 **    演算子 /rop は、手短かに、/desc と説明される。

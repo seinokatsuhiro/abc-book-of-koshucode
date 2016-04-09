@@ -19,9 +19,9 @@
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /rop を使っている。
 
-|-- ROP-INDEX  /file 'R.k  /rop 'meet
-|-- ROP-INDEX  /file 'R.k  /rop 'maybe
-|-- ROP-INDEX  /file 'R.k  /rop 'source
+|-- ROP-INDEX  /file "R.k"  /rop 'meet
+|-- ROP-INDEX  /file "R.k"  /rop 'maybe
+|-- ROP-INDEX  /file "R.k"  /rop 'source
 
 **  ROP
 **    演算子 /rop は、手短かに、/desc と説明される。
@@ -48,14 +48,14 @@ Command `koshu R.k` produces:
 **    <stdout>
 **
 
-|-- DESC  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
-|-- DESC  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
+|-- DESC  /file "R.k"  /rop 'meet  /desc "ふたつの関係の交わりを計算する"
+|-- DESC  /file "R.k"  /rop 'maybe  /desc "片側の関係が成立しなくてもよい交わり"
 
 *** 2 judges
 
-|-- DESC-2  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
-|-- DESC-2  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
-|-- DESC-2  /file 'R.k  /rop 'source
+|-- DESC-2  /file "R.k"  /rop 'meet  /desc "ふたつの関係の交わりを計算する"
+|-- DESC-2  /file "R.k"  /rop 'maybe  /desc "片側の関係が成立しなくてもよい交わり"
+|-- DESC-2  /file "R.k"  /rop 'source
 
 *** 3 judges
 

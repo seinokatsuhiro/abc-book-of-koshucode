@@ -10,9 +10,9 @@
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /rop を使っている。
 
-|-- ROP-INDEX  /file 'R.k  /rop 'meet
-|-- ROP-INDEX  /file 'R.k  /rop 'maybe
-|-- ROP-INDEX  /file 'R.k  /rop 'source
+|-- ROP-INDEX  /file "R.k"  /rop 'meet
+|-- ROP-INDEX  /file "R.k"  /rop 'maybe
+|-- ROP-INDEX  /file "R.k"  /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 いま、演算子の手短かな説明のなかに、
@@ -39,8 +39,8 @@ rop   : source ROP /rop /desc
 つぎのふたつの判断だけが出力されます。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- DESC  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
-|-- DESC  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
+|-- DESC  /file "R.k"  /rop 'meet  /desc "ふたつの関係の交わりを計算する"
+|-- DESC  /file "R.k"  /rop 'maybe  /desc "片側の関係が成立しなくてもよい交わり"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 しかし、`/desc` を空にしてもよいので、
@@ -55,9 +55,9 @@ rop   : source ROP /rop /desc
 `/desc` が空となる判断を出力できます。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- DESC-2  /file 'R.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
-|-- DESC-2  /file 'R.k  /rop 'maybe  /desc '片側の関係が成立しなくてもよい交わり
-|-- DESC-2  /file 'R.k  /rop 'source
+|-- DESC-2  /file "R.k"  /rop 'meet  /desc "ふたつの関係の交わりを計算する"
+|-- DESC-2  /file "R.k"  /rop 'maybe  /desc "片側の関係が成立しなくてもよい交わり"
+|-- DESC-2  /file "R.k"  /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 一般に、`x | meet y` は、`x` と `y` の両方が成り立つときのみ、

@@ -16,10 +16,10 @@ index : source ROP-INDEX /file /rop
 **  ROP-INDEX
 **    ファイル /file のなかで関係写像演算子 /rop を使用している。
 
-|-- ROP-INDEX  /file 'O.k  /rop 'cut
-|-- ROP-INDEX  /file 'O.k  /rop 'join
-|-- ROP-INDEX  /file 'O.k  /rop 'pick
-|-- ROP-INDEX  /file 'O.k  /rop 'source
+|-- ROP-INDEX  /file "O.k"  /rop 'cut
+|-- ROP-INDEX  /file "O.k"  /rop 'join
+|-- ROP-INDEX  /file "O.k"  /rop 'pick
+|-- ROP-INDEX  /file "O.k"  /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この節では、関係から特定の項目を抜き出して、
@@ -61,17 +61,17 @@ index : source ROP-INDEX /file /rop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 項目 `/rop` を除くと `/file` だけが残ります。
-いま、`/file` の内容は `'O.k` しかないので、
+いま、`/file` の内容は `"O.k"` しかないので、
 ひとつの判断だけが出力されます。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- CUT  /file 'O.k
+|-- CUT  /file "O.k"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この判断は、対応する `/rop` があるときのみ成り立つので、
 つぎのデータ解釈に対応しています。
 
- - ファイル `/file 'O.k` のなかで
+ - ファイル `/file "O.k"` のなかで
    なんらかの関係写像演算子が使われている。
 
 

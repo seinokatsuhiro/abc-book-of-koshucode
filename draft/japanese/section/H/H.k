@@ -12,9 +12,9 @@
 |-- ABC  /a 3  /b 2
 |-- ABC  /a 10 000  /b -20 000  /c + 30000.00
 |-- ABC  /a 'one  /b 'two  /c 'three
-|-- ABC  /a 'one  /b "two"
+|-- ABC  /a "one"  /b "two"
          /c "one plus two"
-|-- ABC  /a <1>  /b <0>
+|-- ABC  /a (+)  /b (-)
 
 |== ABC : source ABC /a /b /c
 

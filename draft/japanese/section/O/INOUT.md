@@ -19,10 +19,10 @@
 **  ROP-INDEX
 **    ファイル /file のなかで関係写像演算子 /rop を使用している。
 
-|-- ROP-INDEX  /file 'O.k  /rop 'cut
-|-- ROP-INDEX  /file 'O.k  /rop 'join
-|-- ROP-INDEX  /file 'O.k  /rop 'pick
-|-- ROP-INDEX  /file 'O.k  /rop 'source
+|-- ROP-INDEX  /file "O.k"  /rop 'cut
+|-- ROP-INDEX  /file "O.k"  /rop 'join
+|-- ROP-INDEX  /file "O.k"  /rop 'pick
+|-- ROP-INDEX  /file "O.k"  /rop 'source
 
 index : source ROP-INDEX /file /rop
 
@@ -65,7 +65,7 @@ Command `koshu O.k` produces:
 
 *** 4 judges
 
-|-- CUT  /file 'O.k
+|-- CUT  /file "O.k"
 
 *** 1 judge 
 

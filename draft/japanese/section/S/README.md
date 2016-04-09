@@ -11,16 +11,16 @@
 `O.k` から `S.k` までの索引があるとします。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
-|-- ROP-INDEX  /file 'O.k  /rop 'cut
-|-- ROP-INDEX  /file 'O.k  /rop 'join
-|-- ROP-INDEX  /file 'O.k  /rop 'pick
-|-- ROP-INDEX  /file 'O.k  /rop 'source
+|-- ROP-INDEX  /file "O.k"  /rop 'cut
+|-- ROP-INDEX  /file "O.k"  /rop 'join
+|-- ROP-INDEX  /file "O.k"  /rop 'pick
+|-- ROP-INDEX  /file "O.k"  /rop 'source
 
     ... ... ...
 
-|-- ROP-INDEX  /file 'S.k  /rop 'group
-|-- ROP-INDEX  /file 'S.k  /rop 'pick
-|-- ROP-INDEX  /file 'S.k  /rop 'source
+|-- ROP-INDEX  /file "S.k"  /rop 'group
+|-- ROP-INDEX  /file "S.k"  /rop 'pick
+|-- ROP-INDEX  /file "S.k"  /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この判断集合を関係として読み込んだら、
@@ -42,7 +42,7 @@ file-group : file | group index -to /r
 `index` は `file` の各組と交わり可能な部分関係、
 つまり、 **交わり部分関係** に分割されます。
 この場合、共有項目 `/file` を使って、
-`'O.k` から `'S.k` の 5 つに分割されます。
+`"O.k"` から `"S.k"` の 5 つに分割されます。
 それを
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
@@ -51,22 +51,22 @@ file-group : file | group index -to /r
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 で書き出すと、つぎのようになります。
-場所をとりすぎないように、`/file 'O.k` についてだけ整形して示し、
+場所をとりすぎないように、`/file "O.k"` についてだけ整形して示し、
 残りの判断は途中を省略します。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- FILE-GROUP  /file 'O.k
+|-- FILE-GROUP  /file "O.k"
                 /r {| /file /rop
-                    [ 'O.k | 'source ]
-                    [ 'O.k | 'pick ]
-                    [ 'O.k | 'join ]
-                    [ 'O.k | 'cut ]
+                    [ "O.k" | 'source ]
+                    [ "O.k" | 'pick ]
+                    [ "O.k" | 'join ]
+                    [ "O.k" | 'cut ]
                     |}
 
-|-- FILE-GROUP  /file 'P.k  /r {| /file /rop [ 'P.k | 'source ] ... |}
-|-- FILE-GROUP  /file 'Q.k  /r {| /file /rop [ 'Q.k | 'source ] ... |}
-|-- FILE-GROUP  /file 'R.k  /r {| /file /rop [ 'R.k | 'source ] ... |}
-|-- FILE-GROUP  /file 'S.k  /r {| /file /rop [ 'S.k | 'source ] ... |}
+|-- FILE-GROUP  /file "P.k"  /r {| /file /rop [ "P.k" | 'source ] ... |}
+|-- FILE-GROUP  /file "Q.k"  /r {| /file /rop [ "Q.k" | 'source ] ... |}
+|-- FILE-GROUP  /file "R.k"  /r {| /file /rop [ "R.k" | 'source ] ... |}
+|-- FILE-GROUP  /file "S.k"  /r {| /file /rop [ "S.k" | 'source ] ... |}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 項目 `/r` の内容は関係をあらわす **関係リテラル** になっており、
@@ -97,10 +97,10 @@ file-group : file | group index -to /r
 これは、具体的には、
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
-|-- ROP-INDEX  /file 'O.k  /rop 'cut
-|-- ROP-INDEX  /file 'O.k  /rop 'join
-|-- ROP-INDEX  /file 'O.k  /rop 'pick
-|-- ROP-INDEX  /file 'O.k  /rop 'source
+|-- ROP-INDEX  /file "O.k"  /rop 'cut
+|-- ROP-INDEX  /file "O.k"  /rop 'join
+|-- ROP-INDEX  /file "O.k"  /rop 'pick
+|-- ROP-INDEX  /file "O.k"  /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 という判断集合を `source ROP-INDEX /file /rop` で読み込むと、
@@ -109,10 +109,10 @@ file-group : file | group index -to /r
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu }
 {| /file /rop
- [ 'O.k | 'source ]
- [ 'O.k | 'pick ]
- [ 'O.k | 'join ]
- [ 'O.k | 'cut ]
+ [ "O.k" | 'source ]
+ [ "O.k" | 'pick ]
+ [ "O.k" | 'join ]
+ [ "O.k" | 'cut ]
  |}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

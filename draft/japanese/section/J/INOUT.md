@@ -68,8 +68,8 @@ Command `koshu ../ROP.k J.k` produces:
 **    <stdout>
 **
 
-|-- ROP  /rop 'keep  /desc '条件をみたす組を選び出す
-|-- ROP  /rop 'source  /desc '判断集合を関係として読み出す
+|-- ROP  /rop 'keep  /desc "条件をみたす組を選び出す"
+|-- ROP  /rop 'source  /desc "判断集合を関係として読み出す"
 
 *** 2 judges
 

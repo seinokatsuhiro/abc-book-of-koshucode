@@ -16,11 +16,11 @@
 **    koshu P.k
 **
 
-|-- ROP-INDEX  /file 'P.k  /rop 'cut
-|-- ROP-INDEX  /file 'P.k  /rop 'keep
-|-- ROP-INDEX  /file 'P.k  /rop 'dee
-|-- ROP-INDEX  /file 'P.k  /rop 'dum
-|-- ROP-INDEX  /file 'P.k  /rop 'source
+|-- ROP-INDEX  /file "P.k"  /rop 'cut
+|-- ROP-INDEX  /file "P.k"  /rop 'keep
+|-- ROP-INDEX  /file "P.k"  /rop 'dee
+|-- ROP-INDEX  /file "P.k"  /rop 'dum
+|-- ROP-INDEX  /file "P.k"  /rop 'source
 
 index            : source ROP-INDEX /file /rop
 
@@ -72,7 +72,7 @@ Command `koshu P.k` produces:
 **    <stdout>
 **
 
-|-- INDEX-CUT  /file 'P.k  /rop 'cut
+|-- INDEX-CUT  /file "P.k"  /rop 'cut
 
 *** 1 judge 
 

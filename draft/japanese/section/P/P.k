@@ -7,11 +7,11 @@
 **    koshu P.k
 **
 
-|-- ROP-INDEX  /file 'P.k  /rop 'cut
-|-- ROP-INDEX  /file 'P.k  /rop 'keep
-|-- ROP-INDEX  /file 'P.k  /rop 'dee
-|-- ROP-INDEX  /file 'P.k  /rop 'dum
-|-- ROP-INDEX  /file 'P.k  /rop 'source
+|-- ROP-INDEX  /file "P.k"  /rop 'cut
+|-- ROP-INDEX  /file "P.k"  /rop 'keep
+|-- ROP-INDEX  /file "P.k"  /rop 'dee
+|-- ROP-INDEX  /file "P.k"  /rop 'dum
+|-- ROP-INDEX  /file "P.k"  /rop 'source
 
 index            : source ROP-INDEX /file /rop
 

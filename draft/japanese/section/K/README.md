@@ -7,13 +7,13 @@
 がついており、
 
  - 関係写像演算子 `/rop 'add` の機能は、手短かに、
-   `/desc '項目の内容を計算し、新しい項目を追加する` と説明される。
+   `/desc "項目の内容を計算し、新しい項目を追加する"` と説明される。
 
 という解釈に対応していました。
 このデータを、これまでの例で使った演算子と組み合わせてみましょう。
 本の索引のように、どこで、どの演算子が使用されているかを述べた
 
- - ファイル `/file 'B.k` のなかで関係演算子
+ - ファイル `/file "B.k"` のなかで関係演算子
    `/rop 'add` を使用している。
 
 のようなパターンを判断種 `ROP-INDEX` であらわします。
@@ -22,30 +22,30 @@
 `/file` `/rop` と `/rop` `/desc` を合併した
 `/file` `/rop` `/desc` の 3 つの項目をもつ判断になります。
 
- - ファイル `/file 'B.k` のなかで関係写像演算子 `/rop 'add` を使用しており、
-   その演算子の機能は、`/desc '項目の内容を計算し、新しい項目を追加する`
+ - ファイル `/file "B.k"` のなかで関係写像演算子 `/rop 'add` を使用しており、
+   その演算子の機能は、`/desc "項目の内容を計算し、新しい項目を追加する"`
    と説明される。
 
 いま、A から G までのファイルを調べると、
 `ROP-INDEX` をみたす判断は、つぎのようになります。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .input }
-|-- ROP-INDEX  /file 'B.k   /rop 'add
-|-- ROP-INDEX  /file 'B.k   /rop 'source
-|-- ROP-INDEX  /file 'C.k   /rop 'add
-|-- ROP-INDEX  /file 'C.k   /rop 'source
-|-- ROP-INDEX  /file 'D.k   /rop 'add
-|-- ROP-INDEX  /file 'D.k   /rop 'source
-|-- ROP-INDEX  /file 'E.k   /rop 'keep
-|-- ROP-INDEX  /file 'E.k   /rop 'source
-|-- ROP-INDEX  /file 'E2.k  /rop 'keep
-|-- ROP-INDEX  /file 'E2.k  /rop 'source
-|-- ROP-INDEX  /file 'E3.k  /rop 'keep
-|-- ROP-INDEX  /file 'E3.k  /rop 'source
-|-- ROP-INDEX  /file 'E4.k  /rop 'add
-|-- ROP-INDEX  /file 'E4.k  /rop 'source
-|-- ROP-INDEX  /file 'F.k   /rop 'keep
-|-- ROP-INDEX  /file 'F.k   /rop 'source
+|-- ROP-INDEX  /file "B.k"   /rop 'add
+|-- ROP-INDEX  /file "B.k"   /rop 'source
+|-- ROP-INDEX  /file "C.k"   /rop 'add
+|-- ROP-INDEX  /file "C.k"   /rop 'source
+|-- ROP-INDEX  /file "D.k"   /rop 'add
+|-- ROP-INDEX  /file "D.k"   /rop 'source
+|-- ROP-INDEX  /file "E.k"   /rop 'keep
+|-- ROP-INDEX  /file "E.k"   /rop 'source
+|-- ROP-INDEX  /file "E2.k"  /rop 'keep
+|-- ROP-INDEX  /file "E2.k"  /rop 'source
+|-- ROP-INDEX  /file "E3.k"  /rop 'keep
+|-- ROP-INDEX  /file "E3.k"  /rop 'source
+|-- ROP-INDEX  /file "E4.k"  /rop 'add
+|-- ROP-INDEX  /file "E4.k"  /rop 'source
+|-- ROP-INDEX  /file "F.k"   /rop 'keep
+|-- ROP-INDEX  /file "F.k"   /rop 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 判断種 `ROP-INDEX` と `ROP` との判断集合を関係として読み込み、
@@ -77,25 +77,25 @@ desc  : index | meet rop             ** index と rop の交わり
 **    ../ROP.k
 **    
 
-|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'B.k  /rop 'add
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'B.k  /rop 'source
-|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'C.k  /rop 'add
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'C.k  /rop 'source
-|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'D.k  /rop 'add
+|-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file "B.k"  /rop 'add
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "B.k"  /rop 'source
+|-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file "C.k"  /rop 'add
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "C.k"  /rop 'source
+|-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file "D.k"  /rop 'add
 
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'D.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E.k  /rop 'keep
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'E.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E2.k  /rop 'keep
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'E2.k  /rop 'source
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "D.k"  /rop 'source
+|-- DESC  /desc "条件をみたす組を選び出す"  /file "E.k"  /rop 'keep
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "E.k"  /rop 'source
+|-- DESC  /desc "条件をみたす組を選び出す"  /file "E2.k"  /rop 'keep
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "E2.k"  /rop 'source
 
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'E3.k  /rop 'keep
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'E3.k  /rop 'source
-|-- DESC  /desc '項目の内容を計算し、新しい項目を追加する  /file 'E4.k  /rop 'add
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'E4.k  /rop 'source
-|-- DESC  /desc '条件をみたす組を選び出す  /file 'F.k  /rop 'keep
+|-- DESC  /desc "条件をみたす組を選び出す"  /file "E3.k"  /rop 'keep
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "E3.k"  /rop 'source
+|-- DESC  /desc "項目の内容を計算し、新しい項目を追加する"  /file "E4.k"  /rop 'add
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "E4.k"  /rop 'source
+|-- DESC  /desc "条件をみたす組を選び出す"  /file "F.k"  /rop 'keep
 
-|-- DESC  /desc '判断集合を関係として読み出す  /file 'F.k  /rop 'source
+|-- DESC  /desc "判断集合を関係として読み出す"  /file "F.k"  /rop 'source
 
 **  
 **  SUMMARY

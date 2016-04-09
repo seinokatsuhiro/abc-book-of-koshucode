@@ -9,9 +9,9 @@
 **  ROP-INDEX
 **    ファイル /file のなかで演算子 /operator を使っている。
 
-|-- ROP-INDEX  /file 'Q.k  /operator 'meet
-|-- ROP-INDEX  /file 'Q.k  /operator 'rename
-|-- ROP-INDEX  /file 'Q.k  /operator 'source
+|-- ROP-INDEX  /file "Q.k"  /operator 'meet
+|-- ROP-INDEX  /file "Q.k"  /operator 'rename
+|-- ROP-INDEX  /file "Q.k"  /operator 'source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 これと、つぎの判断集合 `ROP` との交わりを計算したいのですが、
@@ -75,9 +75,9 @@ desc  : index | meet rop
 **    ../ROP.k
 **
 
-|-- DESC  /file 'Q.k  /rop 'meet  /desc 'ふたつの関係の交わりを計算する
-|-- DESC  /file 'Q.k  /rop 'rename  /desc '項目名を変更する
-|-- DESC  /file 'Q.k  /rop 'source  /desc '判断集合を関係として読み出す
+|-- DESC  /file "Q.k"  /rop 'meet  /desc "ふたつの関係の交わりを計算する"
+|-- DESC  /file "Q.k"  /rop 'rename  /desc "項目名を変更する"
+|-- DESC  /file "Q.k"  /rop 'source  /desc "判断集合を関係として読み出す"
 
 **
 **  SUMMARY

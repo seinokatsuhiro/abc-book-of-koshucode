@@ -6,12 +6,12 @@
 つぎのような判断として書き出されていました。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- FILE-GROUP  /file 'O.k
+|-- FILE-GROUP  /file "O.k"
                 /r {| /file /rop
-                    [ 'O.k | 'source ]
-                    [ 'O.k | 'pick ]
-                    [ 'O.k | 'join ]
-                    [ 'O.k | 'cut ]
+                    [ "O.k" | 'source ]
+                    [ "O.k" | 'pick ]
+                    [ "O.k" | 'join ]
+                    [ "O.k" | 'cut ]
                     |}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -20,7 +20,7 @@
 つぎのようなファイルごとの演算子のリストをつくりましょう。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- FILE-ROPS  /file 'O.k
+|-- FILE-ROPS  /file "O.k"
                /rops [ 'source | 'pick | 'join | 'cut ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -47,11 +47,11 @@ file-rops  : file-group
 つぎのような計算結果が出力されます。
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ { .koshu .output }
-|-- FILE-ROPS  /file 'O.k  /rops [ 'source | 'pick | 'join | 'cut ]
-|-- FILE-ROPS  /file 'P.k  /rops [ 'source | 'dum | 'dee | 'keep | 'cut ]
-|-- FILE-ROPS  /file 'Q.k  /rops [ 'source | 'rename | 'meet ]
-|-- FILE-ROPS  /file 'R.k  /rops [ 'source | 'maybe | 'meet ]
-|-- FILE-ROPS  /file 'S.k  /rops [ 'source | 'pick | 'group ]
+|-- FILE-ROPS  /file "O.k"  /rops [ 'source | 'pick | 'join | 'cut ]
+|-- FILE-ROPS  /file "P.k"  /rops [ 'source | 'dum | 'dee | 'keep | 'cut ]
+|-- FILE-ROPS  /file "Q.k"  /rops [ 'source | 'rename | 'meet ]
+|-- FILE-ROPS  /file "R.k"  /rops [ 'source | 'maybe | 'meet ]
+|-- FILE-ROPS  /file "S.k"  /rops [ 'source | 'pick | 'group ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 この出力結果が示しているように、演算子の **リスト**
