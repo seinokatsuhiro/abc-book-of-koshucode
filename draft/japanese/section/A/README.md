@@ -59,6 +59,6 @@ $ koshu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-[ウェブ・サービス]: http://relatis.jp/koshu/lr
+[ウェブ・サービス]: http://relatis.jp/koshu/general
 [GitHub]: https://github.com/seinokatsuhiro/koshucode
 
