@@ -17,6 +17,6 @@ abc  : source ABC /a /b /c
 eq   : abc | keep ( /a + /b =  /c )
 neq  : abc | keep ( /a + /b <> /c )
 
-|== A-PLUS-B-EQ-C : eq
-|=X A-PLUS-B-EQ-C : neq
+|== PLUS : eq
+|=X PLUS : neq
 

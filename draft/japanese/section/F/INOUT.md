@@ -26,8 +26,8 @@ abc  : source ABC /a /b /c
 eq   : abc | keep ( /a + /b =  /c )
 neq  : abc | keep ( /a + /b <> /c )
 
-|== A-PLUS-B-EQ-C : eq
-|=X A-PLUS-B-EQ-C : neq
+|== PLUS : eq
+|=X PLUS : neq
 
 ```
 
@@ -43,20 +43,20 @@ Command `koshu F.k` produces:
 **    <stdout>
 **
 
-|-- A-PLUS-B-EQ-C  /a 1  /b 2  /c 3
-|-- A-PLUS-B-EQ-C  /a 1  /b 4  /c 5
-|-- A-PLUS-B-EQ-C  /a 3  /b 2  /c 5
+|-- PLUS  /a 1  /b 2  /c 3
+|-- PLUS  /a 1  /b 4  /c 5
+|-- PLUS  /a 3  /b 2  /c 5
 
 *** 3 judges
 
-|-X A-PLUS-B-EQ-C  /a 4  /b 7  /c 3
-|-X A-PLUS-B-EQ-C  /a 2  /b 7  /c 7
+|-X PLUS  /a 4  /b 7  /c 3
+|-X PLUS  /a 2  /b 7  /c 7
 
 *** 2 judges
 
 **
 **  SUMMARY
-**       5 judges on A-PLUS-B-EQ-C
+**       5 judges on PLUS
 **       5 judges in total
 **
 ```
