@@ -6,12 +6,12 @@
 項目 `/b` `/c` からなる組が両立するときに、
 それらを合併して、項目 `/a` `/b` `/c` からなる組をつくります。
 この場合、`/b` が共有項目で、
-`/a` が左側の片側項目、`/c` が右側の片側項目です。
+`/a` が左側の固有項目、`/c` が右側の固有項目です。
 
 <ul class="term-placement">
- <li><span>左片側<span class="word-term">項目</span></span> <code>/a</code></li>
+ <li><span>左固有<span class="word-term">項目</span></span> <code>/a</code></li>
  <li><span>共有<span class="word-term">項目</span></span> <code>/b</code></li>
- <li><span>右片側<span class="word-term">項目</span></span> <code>/c</code></li>
+ <li><span>右固有<span class="word-term">項目</span></span> <code>/c</code></li>
 </ul>
 
 この節では、交わりの特殊形として、
@@ -20,12 +20,12 @@
 
 ## 共有項目のみ
 
-項目 `/a` `/b` を共有し、片側項目がない例をつくります。
+項目 `/a` `/b` を共有し、固有項目がない例をつくります。
 
 <ul class="term-placement">
- <li><span>左片側<span class="word-term">項目</span></span> <code></code></li>
+ <li><span>左固有<span class="word-term">項目</span></span> <code></code></li>
  <li><span>共有<span class="word-term">項目</span></span> <code>/a /b</code></li>
- <li><span>右片側<span class="word-term">項目</span></span> <code></code></li>
+ <li><span>右固有<span class="word-term">項目</span></span> <code></code></li>
 </ul>
 
 判断種 `X` は項目 `/a` `/b` をもちます。
@@ -75,9 +75,9 @@ xy : x | meet y
 新しい判断種 `Z` `/c` を使うことにしましょう。
 
 <ul class="term-placement">
- <li><span>左片側<span class="word-term">項目</span></span> <code>/a /b</code></li>
+ <li><span>左固有<span class="word-term">項目</span></span> <code>/a /b</code></li>
  <li><span>共有<span class="word-term">項目</span></span> <code></code></li>
- <li><span>右片側<span class="word-term">項目</span></span> <code>/c</code></li>
+ <li><span>右固有<span class="word-term">項目</span></span> <code>/c</code></li>
 </ul>
 
 判断種 `Z` は項目 `/c` をもちます。
@@ -126,7 +126,7 @@ xz : x | meet z
 共有項目のみと共有項目なしは、交わりのふたつの端に位置する特殊形です。
 共有項目のみは共通部分と同じく、
 共有項目なしは直積と同じくなり、
-共有項目も片側項目もある交わりは、その中間であるといえます。
+共有項目も固有項目もある交わりは、その中間であるといえます。
 これらはいずれも、左の組と右の組が両立する組を計算するもので、
 日常のことばでは、「... かつ ...」や「...で、...」に相当します。
 
